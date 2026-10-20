@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ModuleData" format=3 uid="uid://qfq3k26us4li"]
+
+[ext_resource type="Script" uid="uid://dhq42bcmcs3rw" path="res://scripts/module_data.gd" id="1_module"]
+
+[resource]
+script = ExtResource("1_module")
+id = &"fire_rate"
+display_name = "Скорострельность"
+description = "+25% к темпу стрельбы."
+color = Color(0.72, 0.8, 0.95, 1)
+short_name = "СК"
+fire_rate_bonus = 0.25
+mine_ok = false

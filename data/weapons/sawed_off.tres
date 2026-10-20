@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/weapon_data.gd" id="1_weapon"]
+[ext_resource type="PackedScene" path="res://assets/guns/Shotgun_SawedOff.fbx" id="2_model"]
+
+[resource]
+script = ExtResource("1_weapon")
+display_name = "Обрез"
+damage = 15.0
+fire_rate = 2.2
+automatic = false
+pellets = 12
+spread_degrees = 24.0
+bullet_speed = 38.0
+bullet_range = 10.0
+magazine_size = 2
+reload_time = 1.5
+shot_sound = &"shot_shotgun"
+shot_volume_db = -15.0
+camera_kick = 0.14
+muzzle_flash_energy = 8.0
+icon = &"shotgun"
+recoil_shake = 0.38
+gun_kick = 0.16
+vibration_weak = 0.6
+vibration_strong = 0.9
+vibration_time = 0.18
+model = ExtResource("2_model")
+model_scale = 0.13
+model_yaw = 90.0
+model_offset = Vector3(0, -0.04, 0.03)

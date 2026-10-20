@@ -1,0 +1,173 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="1_player"]
+[ext_resource type="Script" path="res://scripts/camera_rig.gd" id="2_camera"]
+[ext_resource type="Script" path="res://scripts/bullet_pool.gd" id="3_pool"]
+[ext_resource type="PackedScene" path="res://scenes/bullet.tscn" id="4_bullet"]
+[ext_resource type="PackedScene" path="res://scenes/dummy.tscn" id="5_dummy"]
+
+[sub_resource type="Environment" id="Env_level"]
+background_mode = 1
+background_color = Color(0.02, 0.02, 0.03, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.4, 0.45, 0.55, 1)
+ambient_light_energy = 0.35
+tonemap_mode = 2
+glow_enabled = true
+fog_enabled = true
+fog_light_color = Color(0.06, 0.07, 0.09, 1)
+fog_density = 0.008
+
+[sub_resource type="StandardMaterial3D" id="Mat_floor"]
+albedo_color = Color(0.16, 0.16, 0.18, 1)
+metallic = 0.5
+roughness = 0.75
+
+[sub_resource type="StandardMaterial3D" id="Mat_wall"]
+albedo_color = Color(0.24, 0.25, 0.28, 1)
+metallic = 0.3
+roughness = 0.8
+
+[sub_resource type="StandardMaterial3D" id="Mat_crate"]
+albedo_color = Color(0.4, 0.28, 0.12, 1)
+metallic = 0.4
+roughness = 0.6
+
+[node name="Level" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Env_level")
+
+[node name="MoonLight" type="DirectionalLight3D" parent="."]
+rotation = Vector3(-0.96, 0.61, 0)
+light_color = Color(0.7, 0.8, 1, 1)
+light_energy = 0.45
+shadow_enabled = true
+
+[node name="Geometry" type="Node3D" parent="."]
+
+[node name="Floor" type="CSGBox3D" parent="Geometry"]
+position = Vector3(0, -0.5, 0)
+use_collision = true
+size = Vector3(40, 1, 40)
+material = SubResource("Mat_floor")
+
+[node name="WallNorth" type="CSGBox3D" parent="Geometry"]
+position = Vector3(0, 1.5, -20)
+use_collision = true
+size = Vector3(40, 3, 1)
+material = SubResource("Mat_wall")
+
+[node name="WallSouth" type="CSGBox3D" parent="Geometry"]
+position = Vector3(0, 1.5, 20)
+use_collision = true
+size = Vector3(40, 3, 1)
+material = SubResource("Mat_wall")
+
+[node name="WallEast" type="CSGBox3D" parent="Geometry"]
+position = Vector3(20, 1.5, 0)
+use_collision = true
+size = Vector3(1, 3, 40)
+material = SubResource("Mat_wall")
+
+[node name="WallWest" type="CSGBox3D" parent="Geometry"]
+position = Vector3(-20, 1.5, 0)
+use_collision = true
+size = Vector3(1, 3, 40)
+material = SubResource("Mat_wall")
+
+[node name="Crate1" type="CSGBox3D" parent="Geometry"]
+position = Vector3(-6, 1, -5)
+use_collision = true
+size = Vector3(2, 2, 2)
+material = SubResource("Mat_crate")
+
+[node name="Crate2" type="CSGBox3D" parent="Geometry"]
+position = Vector3(7, 1, -8)
+use_collision = true
+size = Vector3(2, 2, 2)
+material = SubResource("Mat_crate")
+
+[node name="Crate3" type="CSGBox3D" parent="Geometry"]
+position = Vector3(-10, 1, 7)
+use_collision = true
+size = Vector3(2, 2, 2)
+material = SubResource("Mat_crate")
+
+[node name="Crate4" type="CSGBox3D" parent="Geometry"]
+position = Vector3(4, 1, 9)
+use_collision = true
+size = Vector3(2, 2, 2)
+material = SubResource("Mat_crate")
+
+[node name="Crate5" type="CSGBox3D" parent="Geometry"]
+position = Vector3(12, 1, 2)
+use_collision = true
+size = Vector3(2, 2, 2)
+material = SubResource("Mat_crate")
+
+[node name="Crate6" type="CSGBox3D" parent="Geometry"]
+position = Vector3(-14, 1, -12)
+use_collision = true
+size = Vector3(2, 2, 2)
+material = SubResource("Mat_crate")
+
+[node name="Crate7" type="CSGBox3D" parent="Geometry"]
+position = Vector3(0, 1, -13)
+use_collision = true
+size = Vector3(2, 2, 2)
+material = SubResource("Mat_crate")
+
+[node name="Lights" type="Node3D" parent="."]
+
+[node name="AlarmLight1" type="OmniLight3D" parent="Lights"]
+position = Vector3(-17, 2.5, -17)
+light_color = Color(1, 0.12, 0.08, 1)
+light_energy = 3.0
+omni_range = 11.0
+
+[node name="AlarmLight2" type="OmniLight3D" parent="Lights"]
+position = Vector3(17, 2.5, 17)
+light_color = Color(1, 0.12, 0.08, 1)
+light_energy = 3.0
+omni_range = 11.0
+
+[node name="WarmLight" type="OmniLight3D" parent="Lights"]
+position = Vector3(16, 2.5, -15)
+light_color = Color(1, 0.55, 0.2, 1)
+light_energy = 3.0
+omni_range = 11.0
+
+[node name="ColdLight" type="OmniLight3D" parent="Lights"]
+position = Vector3(-15, 2.5, 15)
+light_color = Color(0.4, 0.7, 1, 1)
+light_energy = 3.0
+omni_range = 11.0
+
+[node name="Player" parent="." instance=ExtResource("1_player")]
+
+[node name="CameraRig" type="Node3D" parent="."]
+script = ExtResource("2_camera")
+target_path = NodePath("../Player")
+
+[node name="Camera3D" type="Camera3D" parent="CameraRig"]
+current = true
+fov = 50.0
+
+[node name="BulletPool" type="Node3D" parent="." groups=["bullet_pool"]]
+script = ExtResource("3_pool")
+bullet_scene = ExtResource("4_bullet")
+
+[node name="Dummies" type="Node3D" parent="."]
+
+[node name="Dummy1" parent="Dummies" instance=ExtResource("5_dummy")]
+position = Vector3(-4, 0, -9)
+
+[node name="Dummy2" parent="Dummies" instance=ExtResource("5_dummy")]
+position = Vector3(5, 0, -4)
+
+[node name="Dummy3" parent="Dummies" instance=ExtResource("5_dummy")]
+position = Vector3(9, 0, 8)
+
+[node name="Dummy4" parent="Dummies" instance=ExtResource("5_dummy")]
+position = Vector3(-11, 0, -2)

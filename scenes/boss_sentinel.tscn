@@ -1,0 +1,68 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/boss.gd" id="1_boss"]
+[ext_resource type="Script" path="res://scripts/health_bar_3d.gd" id="2_bar"]
+[ext_resource type="PackedScene" path="res://assets/essentials/Enemy_Trilobite.gltf" id="3_model"]
+[ext_resource type="PackedScene" path="res://scenes/robot_drone.tscn" id="4_summon"]
+
+[sub_resource type="CapsuleShape3D" id="Shape_boss"]
+radius = 2.0
+height = 4.0
+
+[node name="BossSentinel" type="CharacterBody3D"]
+collision_layer = 4
+collision_mask = 23
+floor_snap_length = 0.3
+script = ExtResource("1_boss")
+display_name = "Страж"
+boss_title = "Страж Т-7"
+max_hp = 3400.0
+armor = 0.25
+flask_charge_reward = 3.0
+module_drop_chance = 1.0
+currency_drop_chance = 1.0
+gear_drop_chance = 1.0
+rarity_bonus = 0.8
+xp_reward = 400
+gold_drop_chance = 1.0
+gold_amount = Vector2i(80, 140)
+aggro_range = 22.0
+wake_radius = 0.0
+knockback_resist = 1.0
+death_shake = 0.8
+death_effect_scale = 3.0
+death_sound = &"explosion"
+armor = 0.55
+move_speed = 2.8
+acceleration = 14.0
+turn_speed = 4.0
+damage = 30.0
+attack_range = 3.2
+attack_windup = 0.8
+attack_reach = 4.2
+attack_cooldown = 1.4
+lunge_speed = 4.0
+attack_sound = &"brute_slam"
+model = ExtResource("3_model")
+model_scale = 1.9
+run_threshold = 5.0
+blood_color = Color(1, 0.6, 0.2, 1)
+number_height = 4.5
+slam_element = &"electric"
+slam_color = Color(0.5, 0.75, 1, 1)
+nova_every = 7.0
+nova_count = 16
+nova_element = &"electric"
+nova_color = Color(0.45, 0.7, 1, 1)
+summon_scene = ExtResource("4_summon")
+summon_count = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0, 0)
+shape = SubResource("Shape_boss")
+
+[node name="HealthBar" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.6, 0)
+script = ExtResource("2_bar")
+width = 2.0
+height = 0.16

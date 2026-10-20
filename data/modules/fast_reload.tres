@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ModuleData" format=3 uid="uid://kh5fevusn2wq"]
+
+[ext_resource type="Script" uid="uid://dhq42bcmcs3rw" path="res://scripts/module_data.gd" id="1_module"]
+
+[resource]
+script = ExtResource("1_module")
+id = &"fast_reload"
+display_name = "Быстрая перезарядка"
+description = "Основной выстрел: перезарядка на 35% быстрее. Дополнительный навык: восстановление на 35% быстрее."
+color = Color(0.72, 0.8, 0.95, 1)
+short_name = "БП"
+reload_speed_bonus = 0.35

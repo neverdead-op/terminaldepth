@@ -1,0 +1,88 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/explosion.gd" id="1_explosion"]
+
+[sub_resource type="Gradient" id="Grad_sparks"]
+offsets = PackedFloat32Array(0, 0.35, 1)
+colors = PackedColorArray(6, 4, 1.5, 1, 4, 1, 0.15, 1, 0.4, 0.05, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="Tex_sparks"]
+gradient = SubResource("Grad_sparks")
+
+[sub_resource type="Curve" id="Curve_shrink"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="Tex_shrink"]
+curve = SubResource("Curve_shrink")
+
+[sub_resource type="ParticleProcessMaterial" id="Process_sparks"]
+direction = Vector3(0, 1, 0)
+spread = 180.0
+initial_velocity_min = 5.0
+initial_velocity_max = 12.0
+gravity = Vector3(0, -12, 0)
+damping_min = 3.0
+damping_max = 6.0
+scale_min = 0.6
+scale_max = 1.4
+scale_curve = SubResource("Tex_shrink")
+color_ramp = SubResource("Tex_sparks")
+
+[sub_resource type="StandardMaterial3D" id="Mat_spark"]
+shading_mode = 0
+vertex_color_use_as_albedo = true
+transparency = 1
+
+[sub_resource type="SphereMesh" id="Mesh_spark"]
+material = SubResource("Mat_spark")
+radius = 0.06
+height = 0.12
+radial_segments = 6
+rings = 3
+
+[sub_resource type="ParticleProcessMaterial" id="Process_chunks"]
+direction = Vector3(0, 1, 0)
+spread = 70.0
+initial_velocity_min = 3.0
+initial_velocity_max = 7.0
+angular_velocity_min = -360.0
+angular_velocity_max = 360.0
+gravity = Vector3(0, -18, 0)
+scale_min = 0.5
+scale_max = 1.2
+scale_curve = SubResource("Tex_shrink")
+
+[sub_resource type="StandardMaterial3D" id="Mat_chunk"]
+albedo_color = Color(0.35, 0.05, 0.04, 1)
+roughness = 0.4
+
+[sub_resource type="BoxMesh" id="Mesh_chunk"]
+material = SubResource("Mat_chunk")
+size = Vector3(0.18, 0.18, 0.18)
+
+[node name="Explosion" type="Node3D"]
+script = ExtResource("1_explosion")
+
+[node name="Sparks" type="GPUParticles3D" parent="."]
+emitting = false
+amount = 48
+lifetime = 0.6
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("Process_sparks")
+draw_pass_1 = SubResource("Mesh_spark")
+
+[node name="Chunks" type="GPUParticles3D" parent="."]
+emitting = false
+amount = 14
+lifetime = 0.8
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("Process_chunks")
+draw_pass_1 = SubResource("Mesh_chunk")
+
+[node name="Flash" type="OmniLight3D" parent="."]
+light_color = Color(1, 0.6, 0.25, 1)
+light_energy = 8.0
+omni_range = 7.0

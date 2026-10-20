@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ModuleData" format=3 uid="uid://2jl5htadawic"]
+
+[ext_resource type="Script" uid="uid://dhq42bcmcs3rw" path="res://scripts/module_data.gd" id="1_module"]
+
+[resource]
+script = ExtResource("1_module")
+id = &"multishot"
+display_name = "Мультишот"
+description = "+2 снаряда, урон каждого −30%. Дробовик: расширяет конус дроби. Резак: вместо веера ширина цельной полосы +100%, урон −30%."
+color = Color(1, 0.78, 0.25, 1)
+short_name = "×3"
+category = "Механика"
+extra_projectiles = 2
+damage_multiplier = 0.7

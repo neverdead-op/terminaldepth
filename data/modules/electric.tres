@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ModuleData" format=3 uid="uid://3y2rd4tg7340"]
+
+[ext_resource type="Script" uid="uid://dhq42bcmcs3rw" path="res://scripts/module_data.gd" id="1_module"]
+
+[resource]
+script = ExtResource("1_module")
+id = &"electric"
+display_name = "Электрический заряд"
+description = "Тип патронов (первое гнездо): электрические пули. Шокируют: шокированный враг получает на 20% больше урона."
+color = Color(0.35, 0.65, 1, 1)
+short_name = "ЭЛ"
+category = "Стихия: электричество"
+element = &"electric"
+element_ratio = 0.3

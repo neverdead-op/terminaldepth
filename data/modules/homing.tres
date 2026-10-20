@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ModuleData" format=3 uid="uid://cd6qsgg68spnt"]
+
+[ext_resource type="Script" uid="uid://dhq42bcmcs3rw" path="res://scripts/module_data.gd" id="1_module"]
+
+[resource]
+script = ExtResource("1_module")
+id = &"homing"
+display_name = "Самонаведение"
+description = "Пули доворачивают к ближайшему врагу перед собой."
+color = Color(0.4, 1, 0.9, 1)
+short_name = "СН"
+category = "Механика"
+homing = 7.0
+mine_ok = false

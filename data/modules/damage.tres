@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ModuleData" format=3 uid="uid://cvccvr2spvlyn"]
+
+[ext_resource type="Script" uid="uid://dhq42bcmcs3rw" path="res://scripts/module_data.gd" id="1_module"]
+
+[resource]
+script = ExtResource("1_module")
+id = &"damage"
+display_name = "Усиленный урон"
+description = "+30% урона."
+color = Color(0.72, 0.8, 0.95, 1)
+short_name = "УР"
+damage_bonus = 0.3

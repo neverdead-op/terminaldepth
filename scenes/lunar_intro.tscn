@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/lunar_intro.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/camera_rig.gd" id="2"]
+[ext_resource type="Script" path="res://scripts/bullet_pool.gd" id="3"]
+[ext_resource type="PackedScene" path="res://scenes/bullet.tscn" id="4"]
+
+[sub_resource type="NavigationMesh" id="Nav"]
+agent_radius = 0.5
+geometry_parsed_geometry_type = 1
+geometry_collision_mask = 1
+
+[sub_resource type="Environment" id="Env"]
+background_mode = 1
+background_color = Color(0.004, 0.006, 0.014, 1)
+ambient_light_source = 3
+ambient_light_color = Color(0.44, 0.46, 0.5, 1)
+ambient_light_energy = 0.5
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="LunarIntro" type="Node3D"]
+script = ExtResource("1")
+enemy_life_scale = 1.0
+extra_enemy_ratio = 0.0
+
+[node name="Spawn" type="Marker3D" parent="."]
+position = Vector3(0, 0.1, 8)
+
+[node name="Navigation" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("Nav")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Env")
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-38, -32, 0)
+light_color = Color(0.92, 0.94, 1, 1)
+light_energy = 1.05
+shadow_enabled = true
+
+[node name="CameraRig" type="Node3D" parent="."]
+script = ExtResource("2")
+target_path = NodePath("../Player")
+
+[node name="Camera3D" type="Camera3D" parent="CameraRig"]
+current = true
+fov = 50.0
+far = 180.0
+
+[node name="BulletPool" type="Node3D" parent="." groups=["bullet_pool"]]
+script = ExtResource("3")
+bullet_scene = ExtResource("4")

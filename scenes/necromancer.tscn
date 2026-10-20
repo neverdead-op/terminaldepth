@@ -1,0 +1,62 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/necromancer.gd" id="1_spitter"]
+[ext_resource type="Script" path="res://scripts/health_bar_3d.gd" id="2_bar"]
+
+[ext_resource type="PackedScene" path="res://assets/characters/zombie_crawler_model.tscn" id="10_zombie_gun"]
+[sub_resource type="CapsuleShape3D" id="Shape_necro"]
+radius = 0.4
+height = 1.5
+
+[node name="Necromancer" type="CharacterBody3D"]
+collision_layer = 4
+collision_mask = 23
+floor_snap_length = 0.3
+script = ExtResource("1_spitter")
+display_name = "Некромант"
+flank = 0.8
+humanoid_model = ExtResource("10_zombie_gun")
+humanoid_variants = Array[PackedScene]([ExtResource("10_zombie_gun")])
+humanoid_scale = Vector3(1.08, 1.08, 1.08)
+skin_accent = Color(0.62, 0.3, 1, 1)
+skin_plate = Color(0.45, 0.47, 0.42, 1)
+skin_cloth = Color(0.16, 0.1, 0.2, 1)
+animation_profile = "necromancer"
+anim_idle = &"Zombie_Idle"
+anim_walk = &"Necro_Walk"
+anim_run = &"Necro_Walk"
+anim_attack = &"Necro_Cast"
+anim_death = &"Death01"
+max_hp = 150.0
+projectile_element = &"acid"
+projectile_color = Color(0.62, 0.3, 1, 1)
+projectile_speed = 11.0
+keep_distance_min = 7.0
+keep_distance_max = 12.0
+flask_charge_reward = 0.3
+module_drop_chance = 0.12
+currency_drop_chance = 0.2
+gear_drop_chance = 0.18
+xp_reward = 14
+blood_color = Color(0.45, 0.12, 0.1, 1)
+number_height = 1.6
+gold_drop_chance = 0.25
+gold_amount = Vector2i(4, 10)
+move_speed = 2.0
+anim_walk_speed = 1.08
+anim_run_speed = 1.08
+acceleration = 25.0
+turn_speed = 8.0
+attack_windup = 0.55
+attack_cooldown = 2.0
+aggro_range = 18.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+shape = SubResource("Shape_necro")
+
+[node name="HealthBar" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+script = ExtResource("2_bar")
+width = 0.8
+hide_when_full = true

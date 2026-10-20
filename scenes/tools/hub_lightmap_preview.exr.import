@@ -1,0 +1,29 @@
+[remap]
+
+importer="2d_array_texture"
+type="CompressedTexture2DArray"
+uid="uid://bkiwywil012j8"
+path.bptc="res://.godot/imported/hub_lightmap_preview.exr-fb67b1fc9f9b2edd6615159a72784f10.bptc.ctexarray"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://scenes/tools/hub_lightmap_preview.exr"
+dest_files=["res://.godot/imported/hub_lightmap_preview.exr-fb67b1fc9f9b2edd6615159a72784f10.bptc.ctexarray"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/channel_pack=1
+mipmaps/generate=false
+mipmaps/limit=-1
+slices/horizontal=1
+slices/vertical=7

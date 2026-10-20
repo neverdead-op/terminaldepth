@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/weapon_data.gd" id="1_weapon"]
+[ext_resource type="PackedScene" path="res://assets/guns/SniperRifle_4.fbx" id="2_model"]
+
+[resource]
+script = ExtResource("1_weapon")
+display_name = "Марксманская винтовка"
+damage = 78.0
+fire_rate = 2.0
+automatic = false
+spread_degrees = 0.4
+bullet_speed = 75.0
+bullet_range = 45.0
+magazine_size = 10
+reload_time = 2.3
+pierce = 1
+shot_sound = &"shot_marksman"
+shot_volume_db = -12.0
+icon = &"rifle"
+recoil_shake = 0.16
+gun_kick = 0.1
+vibration_weak = 0.4
+vibration_strong = 0.3
+model = ExtResource("2_model")
+model_scale = 0.13
+model_yaw = 90.0
+model_offset = Vector3(0, -0.04, 0.03)

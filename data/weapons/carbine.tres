@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/weapon_data.gd" id="1_weapon"]
+[ext_resource type="PackedScene" path="res://assets/guns/AssaultRifle2_3.fbx" id="2_model"]
+
+[resource]
+script = ExtResource("1_weapon")
+display_name = "Карабин"
+damage = 22.0
+fire_rate = 8.5
+spread_degrees = 2.0
+bullet_speed = 56.0
+bullet_range = 34.0
+magazine_size = 30
+reload_time = 1.7
+shot_sound = &"shot_carbine"
+shot_volume_db = -12.0
+icon = &"rifle"
+secondary_skill = &""
+recoil_shake_cap = 0.26
+recoil_shake = 0.05
+gun_kick = 0.045
+vibration_weak = 0.3
+model = ExtResource("2_model")
+model_scale = 0.13
+model_yaw = 90.0
+model_offset = Vector3(0, -0.04, 0.03)

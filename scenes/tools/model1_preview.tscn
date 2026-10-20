@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3]
+[ext_resource type="Script" path="res://tools/huntress_preview.gd" id="1"]
+[ext_resource type="PackedScene" path="res://assets/characters/model1_player.tscn" id="2"]
+[node name="Model1Preview" type="Node3D"]
+script = ExtResource("1")
+preview_model = ExtResource("2")
+capture_prefix = "model1"

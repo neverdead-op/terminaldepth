@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ModuleData" format=3]
+
+[ext_resource type="Script" path="res://scripts/module_data.gd" id="1_module"]
+
+[resource]
+script = ExtResource("1_module")
+id = &"overcharge"
+display_name = "Перегрузка"
+description = "+60% урона, но −25% скорострельности."
+color = Color(1, 0.3, 0.45, 1)
+short_name = "ПГ"
+category = "Характеристика"
+damage_bonus = 0.6
+fire_rate_bonus = -0.25

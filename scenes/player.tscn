@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://b3m30605846tf"]
+
+[ext_resource type="Script" uid="uid://cosjrcvlgnw0s" path="res://scripts/player.gd" id="1_player"]
+[ext_resource type="PackedScene" path="res://assets/characters/model1_player.tscn" id="2_model"]
+[ext_resource type="Script" uid="uid://3xdxycylqvdf" path="res://scripts/player_animator.gd" id="3_animator"]
+[ext_resource type="Script" path="res://scripts/hud.gd" id="7_hud"]
+[ext_resource type="Script" path="res://scripts/player_inventory.gd" id="8_inventory"]
+
+[sub_resource type="CapsuleShape3D" id="Shape_body"]
+radius = 0.4
+height = 1.8
+
+[sub_resource type="StandardMaterial3D" id="Mat_gun"]
+albedo_color = Color(0.08, 0.08, 0.09, 1)
+metallic = 0.8
+roughness = 0.4
+
+[sub_resource type="BoxMesh" id="Mesh_gun"]
+material = SubResource("Mat_gun")
+size = Vector3(0.05, 0.1, 0.24)
+
+[node name="Player" type="CharacterBody3D" unique_id=826263085 groups=["player"]]
+collision_layer = 2
+collision_mask = 21
+script = ExtResource("1_player")
+move_speed = 3.6
+shoot_move_speed = 1.8
+head_pitch = 0.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=662826034]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("Shape_body")
+
+[node name="Model" parent="." unique_id=1782552313 instance=ExtResource("2_model")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
+
+[node name="RightHand" type="BoneAttachment3D" parent="."]
+bone_name = "hand_r"
+use_external_skeleton = true
+external_skeleton = NodePath("../Model/Armature/Skeleton3D")
+
+[node name="Gun" type="MeshInstance3D" parent="RightHand"]
+transform = Transform3D(0.999108, -0.027734686, -0.03184593, -0.024374, 0.23709889, -0.9711798, 0.034486, 0.97108954, 0.23621139, -0.002285, 0.139389, 0.04345)
+mesh = SubResource("Mesh_gun")
+
+[node name="Animator" type="AnimationTree" parent="." unique_id=1629635368]
+root_node = NodePath("../Model")
+script = ExtResource("3_animator")
+walk_switch_speed = 4.0
+run_playback_multiplier = 0.85
+firearm_walk_switch_speed = 2.6
+firearm_run_stride_sync = true
+step_height = 0.06
+step_release_height = 0.095
+
+[node name="Muzzle" type="Marker3D" parent="." unique_id=1107235620]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 1.1, -0.95)
+
+[node name="MuzzleFlash" type="OmniLight3D" parent="Muzzle" unique_id=2143173509]
+light_color = Color(1, 0.8, 0.45, 1)
+light_energy = 0.0
+
+[node name="Inventory" type="Node" parent="."]
+script = ExtResource("8_inventory")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource("7_hud")

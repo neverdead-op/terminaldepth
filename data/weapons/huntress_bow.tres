@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="WeaponData" load_steps=3 format=3]
+[ext_resource type="Script" path="res://scripts/weapon_data.gd" id="1"]
+[ext_resource type="PackedScene" path="res://assets/weapons/huntress_bow/bow_visual.tscn" id="2"]
+[resource]
+script = ExtResource("1")
+display_name = "Охотничий лук"
+damage = 95.0
+fire_rate = 1.25
+automatic = true
+spread_degrees = 0.0
+bullet_speed = 42.0
+bullet_range = 38.0
+magazine_size = 1
+projectile = &"wood_arrow"
+shot_sound = &"bow_release"
+shot_volume_db = -8.0
+muzzle_flash_energy = 0.0
+camera_kick = 0.0
+gun_kick = 0.0
+body_recoil_degrees = 0.0
+icon = &"bow"
+model = ExtResource("2")
+model_scale = 1.0
+model_yaw = 0.0
+support_hand_enabled = false

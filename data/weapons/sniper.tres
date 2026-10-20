@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/weapon_data.gd" id="1_weapon"]
+[ext_resource type="PackedScene" path="res://assets/essentials/Gun_Sniper.gltf" id="2_model"]
+
+[resource]
+script = ExtResource("1_weapon")
+display_name = "Снайперская винтовка"
+damage = 142.5
+fire_rate = 0.9
+automatic = false
+spread_degrees = 0.2
+bullet_speed = 85.0
+bullet_range = 50.0
+magazine_size = 5
+reload_time = 2.6
+shot_sound = &"shot_sniper"
+shot_volume_db = -11.0
+camera_kick = 0.14
+muzzle_flash_energy = 7.0
+icon = &"rifle"
+recoil_shake = 0.3
+gun_kick = 0.16
+vibration_weak = 0.5
+vibration_strong = 0.6
+vibration_time = 0.14
+model_scale = 0.62
+model_offset = Vector3(0, -0.06, 0.02)
+model = ExtResource("2_model")

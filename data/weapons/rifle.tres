@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3 uid="uid://c3g8ju7exbkhg"]
+
+[ext_resource type="Script" uid="uid://bgytotfj8wh5t" path="res://scripts/weapon_data.gd" id="1_weapon"]
+[ext_resource type="PackedScene" path="res://assets/weapons/stake_gun/stake_gun_visual.tscn" id="2_model"]
+
+[resource]
+script = ExtResource("1_weapon")
+display_name = "Коломёт"
+damage = 62.0
+fire_rate = 2.2
+spread_degrees = 0.8
+bullet_speed = 70.0
+bullet_range = 35.0
+magazine_size = 10
+reload_time = 2.2
+projectile = &"stake"
+shot_sound = &"shot_stake"
+shot_volume_db = 0.0
+camera_kick = 0.07
+icon = &"rifle"
+secondary_skill = &""
+recoil_shake_cap = 0.24
+model_size = Vector3(0.06, 0.12, 0.7)
+model_color = Color(0.12, 0.13, 0.1, 1)
+recoil_shake = 0.13
+gun_kick = 0.1
+vibration_weak = 0.3
+vibration_strong = 0.0
+vibration_time = 0.05
+model = ExtResource("2_model")
+model_scale = 1.0
+model_offset = Vector3(0, 0, 0)
+model_yaw = 0.0
+support_hand_offset = Vector3(-0.025, -0.025, -0.28)
+
+body_recoil_degrees = 9.0
+body_recoil_return = 7.0
+body_push = 0.14
+body_push_return = 0.25
+arm_recoil = 1.0
+gun_return_time = 0.1

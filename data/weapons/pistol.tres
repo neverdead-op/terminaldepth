@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3 uid="uid://bv3i5nyfojpon"]
+
+[ext_resource type="Script" uid="uid://bgytotfj8wh5t" path="res://scripts/weapon_data.gd" id="1_weapon"]
+[ext_resource type="PackedScene" path="res://assets/weapons/supplied_pistol/pistol_visual.tscn" id="2_model"]
+
+[resource]
+script = ExtResource("1_weapon")
+display_name = "Пистолет"
+damage = 40.0
+fire_rate = 2.8
+spread_degrees = 1.0
+bullet_speed = 50.0
+reload_time = 1.2
+shot_volume_db = -12.0
+camera_kick = 0.04
+muzzle_flash_energy = 3.0
+recoil_shake = 0.09
+gun_kick = 0.07
+vibration_weak = 0.25
+vibration_strong = 0.1
+vibration_time = 0.07
+shot_sound = &"shot_pistol"
+model = ExtResource("2_model")
+model_scale = 1.0
+model_offset = Vector3(0, 0, 0)
+model_yaw = 0.0
+grip_offset = Vector3(0.008331, -0.056277, 0.044993)
+
+body_recoil_degrees = 3.2
+gun_return_time = 0.16

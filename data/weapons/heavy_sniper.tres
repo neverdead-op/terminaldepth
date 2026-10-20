@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/weapon_data.gd" id="1_weapon"]
+[ext_resource type="PackedScene" path="res://assets/guns/SniperRifle_5.fbx" id="2_model"]
+
+[resource]
+script = ExtResource("1_weapon")
+display_name = "Крупнокалиберная винтовка"
+damage = 240.0
+fire_rate = 0.6
+automatic = false
+spread_degrees = 0.1
+bullet_speed = 95.0
+bullet_range = 55.0
+magazine_size = 4
+reload_time = 3.0
+pierce = 3
+shot_sound = &"shot_sniper"
+shot_volume_db = -11.0
+camera_kick = 0.18
+muzzle_flash_energy = 8.0
+icon = &"rifle"
+recoil_shake = 0.42
+gun_kick = 0.2
+vibration_weak = 0.7
+vibration_strong = 0.9
+vibration_time = 0.2
+model = ExtResource("2_model")
+model_scale = 0.13
+model_yaw = 90.0
+model_offset = Vector3(0, -0.04, 0.03)

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ModuleData" format=3 uid="uid://dilpwk148yhic"]
+
+[ext_resource type="Script" uid="uid://dhq42bcmcs3rw" path="res://scripts/module_data.gd" id="1_module"]
+
+[resource]
+script = ExtResource("1_module")
+id = &"explosive"
+display_name = "Взрывные патроны"
+description = "Пуля или плазменный заряд взрывается при попадании: 60% урона врагам в радиусе 2.5 м. Только основной выстрел."
+color = Color(1, 0.5, 0.15, 1)
+short_name = "ВЗ"
+category = "Особое"
+explode_radius = 2.5
+explode_ratio = 0.6
+area_mult = 1.4

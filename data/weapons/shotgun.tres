@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3 uid="uid://cpkqc6efpwwlk"]
+
+[ext_resource type="Script" uid="uid://bgytotfj8wh5t" path="res://scripts/weapon_data.gd" id="1_weapon"]
+[ext_resource type="PackedScene" path="res://assets/guns/Shotgun_ShortStock.fbx" id="2_model"]
+
+[resource]
+script = ExtResource("1_weapon")
+display_name = "Дробовик"
+damage = 13.5
+fire_rate = 1.5
+pellets = 8
+spread_degrees = 5.0
+multishot_spread_degrees = 14.0
+pellet_visual_scale = 1.6
+bullet_speed = 42.0
+bullet_range = 14.0
+magazine_size = 6
+reload_time = 2.2
+shot_sound = &"shot_shotgun"
+shot_volume_db = -15.0
+camera_kick = 0.12
+muzzle_flash_energy = 7.0
+icon = &"shotgun"
+model_size = Vector3(0.07, 0.12, 0.8)
+model_color = Color(0.22, 0.14, 0.08, 1)
+recoil_shake = 0.32
+recoil_shake_cap = 0.65
+gun_kick = 0.14
+vibration_weak = 0.5
+vibration_strong = 0.75
+vibration_time = 0.16
+model = ExtResource("2_model")
+model_scale = 0.13
+model_offset = Vector3(0, -0.04, 0.03)
+model_yaw = 90.0
+
+body_recoil_degrees = 10.0
+body_recoil_return = 7.5
+body_push = 0.16
+body_push_return = 0.26
+arm_recoil = 1.0
+gun_return_time = 0.24

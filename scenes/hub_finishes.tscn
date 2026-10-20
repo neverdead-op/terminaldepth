@@ -1,0 +1,440 @@
+[gd_scene format=3]
+
+
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1"]
+albedo_color = Color(0.38, 0.26, 0.13, 1)
+metallic = 0.65
+roughness = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2"]
+albedo_color = Color(0.12, 0.16, 0.19, 1)
+metallic = 0.45
+roughness = 0.55
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3"]
+albedo_color = Color(0.95, 0.75, 0.43, 1)
+metallic = 0.15
+roughness = 0.4
+emission_enabled = true
+emission = Color(1, 0.67, 0.32, 1)
+emission_energy_multiplier = 2.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4"]
+albedo_color = Color(0.4, 0.8, 0.86, 1)
+metallic = 0.15
+roughness = 0.4
+emission_enabled = true
+emission = Color(0.3, 0.8, 1, 1)
+emission_energy_multiplier = 1.8
+
+[sub_resource type="BoxMesh" id="BoxMesh_5"]
+material = SubResource("StandardMaterial3D_1")
+size = Vector3(0.035, 0.014, 9.8)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6"]
+material = SubResource("StandardMaterial3D_1")
+size = Vector3(0.28, 0.012, 0.065)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7"]
+material = SubResource("StandardMaterial3D_2")
+size = Vector3(0.58, 1.85, 0.12)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8"]
+material = SubResource("StandardMaterial3D_1")
+size = Vector3(0.045, 1.98, 0.07)
+
+[sub_resource type="BoxMesh" id="BoxMesh_9"]
+material = SubResource("StandardMaterial3D_1")
+size = Vector3(0.65, 0.055, 0.08)
+
+[sub_resource type="BoxMesh" id="BoxMesh_10"]
+material = SubResource("StandardMaterial3D_3")
+size = Vector3(0.14, 1.48, 0.055)
+
+[sub_resource type="BoxMesh" id="BoxMesh_11"]
+material = SubResource("StandardMaterial3D_1")
+size = Vector3(0.35, 0.055, 0.07)
+
+[sub_resource type="BoxMesh" id="BoxMesh_12"]
+material = SubResource("StandardMaterial3D_4")
+size = Vector3(0.14, 1.48, 0.055)
+
+[sub_resource type="BoxMesh" id="BoxMesh_13"]
+material = SubResource("StandardMaterial3D_1")
+size = Vector3(0.08, 0.16, 11.8)
+
+[sub_resource type="BoxMesh" id="BoxMesh_14"]
+material = SubResource("StandardMaterial3D_2")
+size = Vector3(0.12, 0.28, 1.6)
+
+[sub_resource type="BoxMesh" id="BoxMesh_15"]
+material = SubResource("StandardMaterial3D_3")
+size = Vector3(0.035, 0.1, 1.38)
+
+[sub_resource type="BoxMesh" id="BoxMesh_16"]
+material = SubResource("StandardMaterial3D_4")
+size = Vector3(0.035, 0.1, 1.38)
+
+[sub_resource type="BoxMesh" id="BoxMesh_17"]
+material = SubResource("StandardMaterial3D_1")
+size = Vector3(16.4, 0.09, 0.12)
+
+[sub_resource type="BoxMesh" id="BoxMesh_18"]
+material = SubResource("StandardMaterial3D_2")
+size = Vector3(2.9, 0.38, 0.13)
+
+[node name="HubFinishes" type="Node3D"]
+
+[node name="RunnerEdge-1.44" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -1.44, 0.041, 0)
+mesh = SubResource("BoxMesh_5")
+cast_shadow = 0
+
+[node name="RunnerEdge1.44" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 1.44, 0.041, 0)
+mesh = SubResource("BoxMesh_5")
+cast_shadow = 0
+
+[node name="Inlay-1.3_-3.8" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -1.3, 0.047, -3.8)
+mesh = SubResource("BoxMesh_6")
+cast_shadow = 0
+
+[node name="Inlay1.3_-3.8" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 1.3, 0.047, -3.8)
+mesh = SubResource("BoxMesh_6")
+cast_shadow = 0
+
+[node name="Inlay-1.3_-1.8" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -1.3, 0.047, -1.8)
+mesh = SubResource("BoxMesh_6")
+cast_shadow = 0
+
+[node name="Inlay1.3_-1.8" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 1.3, 0.047, -1.8)
+mesh = SubResource("BoxMesh_6")
+cast_shadow = 0
+
+[node name="Inlay-1.3_0.2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -1.3, 0.047, 0.2)
+mesh = SubResource("BoxMesh_6")
+cast_shadow = 0
+
+[node name="Inlay1.3_0.2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 1.3, 0.047, 0.2)
+mesh = SubResource("BoxMesh_6")
+cast_shadow = 0
+
+[node name="Inlay-1.3_2.2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -1.3, 0.047, 2.2)
+mesh = SubResource("BoxMesh_6")
+cast_shadow = 0
+
+[node name="Inlay1.3_2.2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 1.3, 0.047, 2.2)
+mesh = SubResource("BoxMesh_6")
+cast_shadow = 0
+
+[node name="Inlay-1.3_4.2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -1.3, 0.047, 4.2)
+mesh = SubResource("BoxMesh_6")
+cast_shadow = 0
+
+[node name="Inlay1.3_4.2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 1.3, 0.047, 4.2)
+mesh = SubResource("BoxMesh_6")
+cast_shadow = 0
+
+[node name="Panel0" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -6.6, 1.65, -6.19)
+mesh = SubResource("BoxMesh_7")
+cast_shadow = 0
+
+[node name="Frame0_-0.3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -6.9, 1.65, -6.1)
+mesh = SubResource("BoxMesh_8")
+cast_shadow = 0
+
+[node name="Frame0_0.3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -6.3, 1.65, -6.1)
+mesh = SubResource("BoxMesh_8")
+cast_shadow = 0
+
+[node name="Cap0_0.66" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -6.6, 0.66, -6.1)
+mesh = SubResource("BoxMesh_9")
+cast_shadow = 0
+
+[node name="Cap0_2.64" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -6.6, 2.64, -6.1)
+mesh = SubResource("BoxMesh_9")
+cast_shadow = 0
+
+[node name="Lamp0" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -6.6, 1.65, -6.09)
+mesh = SubResource("BoxMesh_10")
+cast_shadow = 0
+
+[node name="Guard0_1.02" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -6.6, 1.02, -6.04)
+mesh = SubResource("BoxMesh_11")
+cast_shadow = 0
+
+[node name="Guard0_1.65" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -6.6, 1.65, -6.04)
+mesh = SubResource("BoxMesh_11")
+cast_shadow = 0
+
+[node name="Guard0_2.28" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -6.6, 2.28, -6.04)
+mesh = SubResource("BoxMesh_11")
+cast_shadow = 0
+
+[node name="WallWash0" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -6.6, 2.1, -5.65)
+light_color = Color(1, 0.76, 0.48, 1)
+light_energy = 1.1
+omni_range = 3.8
+
+[node name="Panel1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -3.5, 1.65, -6.19)
+mesh = SubResource("BoxMesh_7")
+cast_shadow = 0
+
+[node name="Frame1_-0.3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -3.8, 1.65, -6.1)
+mesh = SubResource("BoxMesh_8")
+cast_shadow = 0
+
+[node name="Frame1_0.3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -3.2, 1.65, -6.1)
+mesh = SubResource("BoxMesh_8")
+cast_shadow = 0
+
+[node name="Cap1_0.66" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -3.5, 0.66, -6.1)
+mesh = SubResource("BoxMesh_9")
+cast_shadow = 0
+
+[node name="Cap1_2.64" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -3.5, 2.64, -6.1)
+mesh = SubResource("BoxMesh_9")
+cast_shadow = 0
+
+[node name="Lamp1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -3.5, 1.65, -6.09)
+mesh = SubResource("BoxMesh_10")
+cast_shadow = 0
+
+[node name="Guard1_1.02" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -3.5, 1.02, -6.04)
+mesh = SubResource("BoxMesh_11")
+cast_shadow = 0
+
+[node name="Guard1_1.65" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -3.5, 1.65, -6.04)
+mesh = SubResource("BoxMesh_11")
+cast_shadow = 0
+
+[node name="Guard1_2.28" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -3.5, 2.28, -6.04)
+mesh = SubResource("BoxMesh_11")
+cast_shadow = 0
+
+[node name="WallWash1" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -3.5, 2.1, -5.65)
+light_color = Color(1, 0.76, 0.48, 1)
+light_energy = 1.1
+omni_range = 3.8
+
+[node name="Panel2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 3.5, 1.65, -6.19)
+mesh = SubResource("BoxMesh_7")
+cast_shadow = 0
+
+[node name="Frame2_-0.3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 3.2, 1.65, -6.1)
+mesh = SubResource("BoxMesh_8")
+cast_shadow = 0
+
+[node name="Frame2_0.3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 3.8, 1.65, -6.1)
+mesh = SubResource("BoxMesh_8")
+cast_shadow = 0
+
+[node name="Cap2_0.66" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 3.5, 0.66, -6.1)
+mesh = SubResource("BoxMesh_9")
+cast_shadow = 0
+
+[node name="Cap2_2.64" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 3.5, 2.64, -6.1)
+mesh = SubResource("BoxMesh_9")
+cast_shadow = 0
+
+[node name="Lamp2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 3.5, 1.65, -6.09)
+mesh = SubResource("BoxMesh_12")
+cast_shadow = 0
+
+[node name="Guard2_1.02" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 3.5, 1.02, -6.04)
+mesh = SubResource("BoxMesh_11")
+cast_shadow = 0
+
+[node name="Guard2_1.65" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 3.5, 1.65, -6.04)
+mesh = SubResource("BoxMesh_11")
+cast_shadow = 0
+
+[node name="Guard2_2.28" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 3.5, 2.28, -6.04)
+mesh = SubResource("BoxMesh_11")
+cast_shadow = 0
+
+[node name="WallWash2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 3.5, 2.1, -5.65)
+light_color = Color(0.48, 0.8, 1, 1)
+light_energy = 1.1
+omni_range = 3.8
+
+[node name="Panel3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 6.6, 1.65, -6.19)
+mesh = SubResource("BoxMesh_7")
+cast_shadow = 0
+
+[node name="Frame3_-0.3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 6.3, 1.65, -6.1)
+mesh = SubResource("BoxMesh_8")
+cast_shadow = 0
+
+[node name="Frame3_0.3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 6.9, 1.65, -6.1)
+mesh = SubResource("BoxMesh_8")
+cast_shadow = 0
+
+[node name="Cap3_0.66" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 6.6, 0.66, -6.1)
+mesh = SubResource("BoxMesh_9")
+cast_shadow = 0
+
+[node name="Cap3_2.64" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 6.6, 2.64, -6.1)
+mesh = SubResource("BoxMesh_9")
+cast_shadow = 0
+
+[node name="Lamp3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 6.6, 1.65, -6.09)
+mesh = SubResource("BoxMesh_12")
+cast_shadow = 0
+
+[node name="Guard3_1.02" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 6.6, 1.02, -6.04)
+mesh = SubResource("BoxMesh_11")
+cast_shadow = 0
+
+[node name="Guard3_1.65" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 6.6, 1.65, -6.04)
+mesh = SubResource("BoxMesh_11")
+cast_shadow = 0
+
+[node name="Guard3_2.28" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 6.6, 2.28, -6.04)
+mesh = SubResource("BoxMesh_11")
+cast_shadow = 0
+
+[node name="WallWash3" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 6.6, 2.1, -5.65)
+light_color = Color(0.48, 0.8, 1, 1)
+light_energy = 1.1
+omni_range = 3.8
+
+[node name="WallSkirting-8.19" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -8.19, 0.18, 0)
+mesh = SubResource("BoxMesh_13")
+cast_shadow = 0
+
+[node name="SideHousing-8.19_-3.6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -8.19, 2.55, -3.6)
+mesh = SubResource("BoxMesh_14")
+cast_shadow = 0
+
+[node name="SideLamp-8.19_-3.6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -8.12, 2.55, -3.6)
+mesh = SubResource("BoxMesh_15")
+cast_shadow = 0
+
+[node name="SideHousing-8.19_0" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -8.19, 2.55, 0)
+mesh = SubResource("BoxMesh_14")
+cast_shadow = 0
+
+[node name="SideLamp-8.19_0" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -8.12, 2.55, 0)
+mesh = SubResource("BoxMesh_15")
+cast_shadow = 0
+
+[node name="SideHousing-8.19_3.6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -8.19, 2.55, 3.6)
+mesh = SubResource("BoxMesh_14")
+cast_shadow = 0
+
+[node name="SideLamp-8.19_3.6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, -8.12, 2.55, 3.6)
+mesh = SubResource("BoxMesh_15")
+cast_shadow = 0
+
+[node name="WallSkirting8.19" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 8.19, 0.18, 0)
+mesh = SubResource("BoxMesh_13")
+cast_shadow = 0
+
+[node name="SideHousing8.19_-3.6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 8.19, 2.55, -3.6)
+mesh = SubResource("BoxMesh_14")
+cast_shadow = 0
+
+[node name="SideLamp8.19_-3.6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 8.12, 2.55, -3.6)
+mesh = SubResource("BoxMesh_16")
+cast_shadow = 0
+
+[node name="SideHousing8.19_0" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 8.19, 2.55, 0)
+mesh = SubResource("BoxMesh_14")
+cast_shadow = 0
+
+[node name="SideLamp8.19_0" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 8.12, 2.55, 0)
+mesh = SubResource("BoxMesh_16")
+cast_shadow = 0
+
+[node name="SideHousing8.19_3.6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 8.19, 2.55, 3.6)
+mesh = SubResource("BoxMesh_14")
+cast_shadow = 0
+
+[node name="SideLamp8.19_3.6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 8.12, 2.55, 3.6)
+mesh = SubResource("BoxMesh_16")
+cast_shadow = 0
+
+[node name="BackCornice" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 0, 2.92, -6.15)
+mesh = SubResource("BoxMesh_17")
+cast_shadow = 0
+
+[node name="LiftHeader" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 0, 3.15, -5.92)
+mesh = SubResource("BoxMesh_18")
+cast_shadow = 0
+
+[node name="StationName" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -0, 0, 1, 0, 3.15, -5.82)
+text = "КЕРБЕР–7  /  УБЕЖИЩЕ"
+font_size = 42
+pixel_size = 0.0017
+modulate = Color(0.7, 0.86, 0.9, 1)
+outline_size = 3
+no_depth_test = false

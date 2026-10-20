@@ -1,0 +1,55 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/leaper.gd" id="1_leaper"]
+[ext_resource type="Script" path="res://scripts/health_bar_3d.gd" id="2_bar"]
+[ext_resource type="PackedScene" path="res://assets/characters/zombie_crawler_model.tscn" id="12_zombie"]
+[sub_resource type="CapsuleShape3D" id="Shape_leaper"]
+radius = 0.4
+height = 1.7
+
+[node name="Leaper" type="CharacterBody3D"]
+collision_layer = 4
+collision_mask = 23
+floor_snap_length = 0.3
+script = ExtResource("1_leaper")
+display_name = "Бегун"
+max_hp = 120.0
+flask_charge_reward = 0.3
+xp_reward = 9
+move_speed = 3.8
+anim_walk_speed = 2.2
+anim_run_speed = 2.2
+# Бегун не прыгает: прыжок был на анимациях мутанта.
+leap_max = 0.0
+damage = 9.0
+attack_range = 1.5
+attack_windup = 0.4
+attack_cooldown = 1.0
+aggro_range = 16.0
+flank = 0.6
+humanoid_model = ExtResource("12_zombie")
+humanoid_variants = Array[PackedScene]([ExtResource("12_zombie")])
+humanoid_scale = Vector3(0.95, 0.95, 0.95)
+skin_accent = Color(1, 0.3, 0.2, 1)
+skin_plate = Color(0.3, 0.12, 0.12, 1)
+skin_cloth = Color(0.45, 0.1, 0.1, 1)
+animation_profile = "zombie"
+anim_idle = &"Zombie_Idle"
+anim_walk = &"MX_Zombie_Run"
+anim_run = &"MX_Zombie_Run"
+anim_attack = &"Zombie_Scratch"
+anim_death = &"Death01"
+run_threshold = 4.0
+extra_anims = Array[StringName]([])
+blood_color = Color(0.6, 0.85, 0.2, 1)
+number_height = 1.5
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
+shape = SubResource("Shape_leaper")
+
+[node name="HealthBar" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9, 0)
+script = ExtResource("2_bar")
+width = 0.7
+hide_when_full = true

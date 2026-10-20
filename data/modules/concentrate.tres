@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ModuleData" format=3 uid="uid://cb37egswve4e6"]
+
+[ext_resource type="Script" uid="uid://dhq42bcmcs3rw" path="res://scripts/module_data.gd" id="1_module"]
+
+[resource]
+script = ExtResource("1_module")
+id = &"concentrate"
+display_name = "Направленный заряд"
+description = "Дополнительный навык: +50% урона, но −35% радиуса гранаты или ширины рассекающего импульса. На основной выстрел не ставится."
+color = Color(1, 0.42, 0.3, 1)
+short_name = "НЗ"
+category = "Особое"
+damage_multiplier = 1.5
+area_mult = 0.65
+weapon_ok = false

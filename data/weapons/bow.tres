@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/weapon_data.gd" id="1_weapon"]
+[ext_resource type="PackedScene" path="res://assets/medieval/Bow_Evil.fbx" id="2_model"]
+
+[resource]
+script = ExtResource("1_weapon")
+display_name = "Энергетический лук"
+damage = 127.5
+fire_rate = 1.1
+automatic = false
+spread_degrees = 0.0
+bullet_speed = 48.0
+bullet_range = 45.0
+magazine_size = 1
+reload_time = 0.55
+pierce = 2
+projectile = &"arrow"
+shot_sound = &"shot_bow"
+shot_volume_db = -10.0
+camera_kick = 0.02
+muzzle_flash_energy = 2.0
+icon = &"rifle"
+recoil_shake = 0.05
+gun_kick = 0.03
+vibration_weak = 0.2
+vibration_strong = 0.2
+model = ExtResource("2_model")
+model_scale = 0.17
+model_yaw = 0.0
+model_offset = Vector3(0, -0.04, 0.03)

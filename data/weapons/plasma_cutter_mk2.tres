@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="WeaponData" load_steps=3 format=3]
+[ext_resource type="Script" path="res://scripts/weapon_data.gd" id="1"]
+[ext_resource type="PackedScene" path="res://assets/characters/plasma_cutter_mk2_model.tscn" id="2"]
+[resource]
+script = ExtResource("1")
+display_name = "Усиленный плазменный резак"
+damage = 65.0
+fire_rate = 3.0
+spread_degrees = 0.0
+bullet_speed = 52.0
+bullet_range = 23.0
+projectile = &"bullet"
+allow_hit_stagger = false
+projectile_width = 0.85
+secondary_skill = &"plasma_pulse"
+secondary_damage_mult = 2.6
+secondary_width = 2.1
+secondary_charge = 0.28
+secondary_cooldown = 2.2
+secondary_pierce = 0
+magazine_size = 12
+reload_time = 1.6
+shot_sound = &"shot_pistol"
+shot_volume_db = -10.0
+icon = &"pistol"
+model = ExtResource("2")
+model_yaw = 0.0
+model_offset = Vector3(0, -0.04, 0.02)
+recoil_shake = 0.16
+recoil_shake_cap = 0.4
+gun_kick = 0.1
+gun_return_time = 0.19
+body_recoil_degrees = 4.4
+muzzle_flash_energy = 4.5
+camera_kick = 0.06

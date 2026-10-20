@@ -1,0 +1,34 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://scripts/threshold_look.gd" id="1_pnt5j"]
+
+[resource]
+script = ExtResource("1_pnt5j")
+cel_enabled = true
+cel_amount = 0.5
+cel_steps = 3
+cel_softness = 0.18
+flat_normals = 0.25
+rim = 0.12
+weathering = 0.5
+exposure = 0.8999999999999999
+contrast = 1.09
+saturation = 0.98
+temperature = 0.0
+split_tone = 0.46
+vignette = 0.15
+posterize = 0.0
+color_steps = 20
+bloom = 0.35
+bloom_threshold = 1.28
+moon = 0.28
+ambient = 0.11
+warm_lights = 1.65
+warm_color = Color(1, 0.59, 0.28, 1)
+courtyard_fog = 0.27
+background_cards = 0.12
+volume_density = 0.065
+cloud_scale = 0.14
+cloud_color = Color(0.32, 0.51, 0.59, 1)
+dof = 0.025
+focus_distance = 58.0

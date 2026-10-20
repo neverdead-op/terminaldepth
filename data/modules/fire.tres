@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ModuleData" format=3 uid="uid://coahhgdahlhqp"]
+
+[ext_resource type="Script" uid="uid://dhq42bcmcs3rw" path="res://scripts/module_data.gd" id="1_module"]
+
+[resource]
+script = ExtResource("1_module")
+id = &"fire"
+display_name = "Огненный заряд"
+description = "Тип патронов (первое гнездо): огненные пули. +40% урона огнём, враги горят и теряют здоровье со временем."
+color = Color(1, 0.38, 0.12, 1)
+short_name = "ОГ"
+category = "Стихия: огонь"
+element = &"fire"
+element_ratio = 0.4

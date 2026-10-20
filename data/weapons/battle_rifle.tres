@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/weapon_data.gd" id="1_weapon"]
+[ext_resource type="PackedScene" path="res://assets/guns/AssaultRifle_2.fbx" id="2_model"]
+
+[resource]
+script = ExtResource("1_weapon")
+display_name = "Боевая винтовка"
+damage = 24.0
+fire_rate = 6.5
+spread_degrees = 2.5
+bullet_speed = 58.0
+bullet_range = 36.0
+magazine_size = 25
+reload_time = 2.2
+shot_sound = &"shot_battle"
+shot_volume_db = -12.0
+icon = &"rifle"
+recoil_shake = 0.07
+gun_kick = 0.06
+vibration_weak = 0.35
+vibration_strong = 0.1
+model = ExtResource("2_model")
+model_scale = 0.13
+model_yaw = 90.0
+model_offset = Vector3(0, -0.04, 0.03)

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ModuleData" format=3 uid="uid://cob0ouoy6o000"]
+
+[ext_resource type="Script" uid="uid://dhq42bcmcs3rw" path="res://scripts/module_data.gd" id="1_module"]
+
+[resource]
+script = ExtResource("1_module")
+id = &"leech"
+display_name = "Вампиризм"
+description = "3% нанесённого урона восстанавливает здоровье."
+color = Color(0.95, 0.22, 0.38, 1)
+short_name = "ВМ"
+category = "Особое"
+leech = 0.03

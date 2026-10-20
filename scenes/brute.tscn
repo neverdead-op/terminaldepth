@@ -1,0 +1,71 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/brute.gd" id="1_brute"]
+[ext_resource type="Script" path="res://scripts/health_bar_3d.gd" id="2_bar"]
+[ext_resource type="PackedScene" path="res://scenes/crawler.tscn" id="3_crawler"]
+
+[ext_resource type="PackedScene" path="res://assets/characters/infected_boss_model.tscn" id="10_boss_model"]
+[ext_resource type="PackedScene" path="res://assets/characters/warrok_model.tscn" id="11_warrok"]
+[sub_resource type="CapsuleShape3D" id="Shape_brute"]
+radius = 0.9
+height = 2.4
+
+[node name="Brute" type="CharacterBody3D"]
+collision_layer = 4
+collision_mask = 23
+floor_snap_length = 0.3
+script = ExtResource("1_brute")
+display_name = "Носитель"
+flank = 0.1
+humanoid_model = ExtResource("10_boss_model")
+humanoid_variants = Array[PackedScene]([ExtResource("10_boss_model"), ExtResource("11_warrok")])
+humanoid_scale = Vector3(1.6, 1.45, 1.6)
+skin_accent = Color(0.85, 0.3, 1, 1)
+skin_plate = Color(0.4, 0.22, 0.38, 1)
+skin_cloth = Color(0.3, 0.27, 0.27, 1)
+animation_profile = "mutant"
+anim_idle = &"Mutant_Idle"
+anim_walk = &"Mutant_Walk"
+anim_run = &"Mutant_Run"
+anim_attack = &"Mutant_Attack"
+anim_death = &"Mutant_Death"
+max_hp = 420.0
+armor = 0.35
+flask_charge_reward = 1.0
+module_drop_chance = 0.6
+currency_drop_chance = 0.9
+gear_drop_chance = 1.0
+rarity_bonus = 0.3
+xp_reward = 45
+blood_color = Color(0.45, 0.05, 0.05, 1)
+knockback_resist = 0.85
+number_height = 2.7
+death_shake = 0.4
+gold_drop_chance = 1.0
+gold_amount = Vector2i(15, 30)
+move_speed = 2.2
+anim_walk_speed = 1.44
+anim_run_speed = 3.6
+acceleration = 15.0
+turn_speed = 4.0
+damage = 25.0
+attack_range = 2.2
+attack_windup = 0.75
+attack_reach = 3.0
+attack_cooldown = 1.4
+lunge_speed = 3.0
+attack_sound = &"brute_slam"
+aggro_range = 14.0
+death_sound = &"brute_death"
+death_effect_scale = 2.0
+death_spawn_scene = ExtResource("3_crawler")
+death_spawn_count = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+shape = SubResource("Shape_brute")
+
+[node name="HealthBar" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9, 0)
+script = ExtResource("2_bar")
+width = 1.6

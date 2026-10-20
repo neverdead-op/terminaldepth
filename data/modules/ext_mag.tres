@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ModuleData" format=3 uid="uid://qesxhjgoa50y"]
+
+[ext_resource type="Script" uid="uid://dhq42bcmcs3rw" path="res://scripts/module_data.gd" id="1_module"]
+
+[resource]
+script = ExtResource("1_module")
+id = &"ext_mag"
+display_name = "Расширенный магазин"
+description = "+50% патронов в магазине."
+color = Color(0.72, 0.8, 0.95, 1)
+short_name = "МГ"
+magazine_bonus = 0.5

@@ -1,0 +1,51 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_enemy"]
+[ext_resource type="Script" path="res://scripts/health_bar_3d.gd" id="2_bar"]
+[ext_resource type="PackedScene" path="res://assets/essentials/Enemy_QuadShell.gltf" id="3_model"]
+
+[sub_resource type="CapsuleShape3D" id="Shape_walker"]
+radius = 0.6
+height = 1.7
+
+[node name="RobotWalker" type="CharacterBody3D"]
+collision_layer = 4
+collision_mask = 23
+floor_snap_length = 0.3
+script = ExtResource("1_enemy")
+display_name = "Шагоход"
+max_hp = 210.0
+armor = 0.35
+flask_charge_reward = 0.3
+module_drop_chance = 0.06
+currency_drop_chance = 0.15
+gear_drop_chance = 0.12
+xp_reward = 14
+gold_drop_chance = 0.3
+gold_amount = Vector2i(4, 9)
+move_speed = 3.6
+acceleration = 30.0
+turn_speed = 9.0
+damage = 12.0
+attack_range = 1.8
+attack_windup = 0.5
+attack_reach = 2.5
+attack_cooldown = 1.1
+lunge_speed = 6.0
+attack_sound = &"zap"
+death_sound = &"explosion"
+model = ExtResource("3_model")
+model_scale = 0.75
+blood_color = Color(1, 0.7, 0.25, 1)
+knockback_resist = 0.4
+number_height = 1.6
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
+shape = SubResource("Shape_walker")
+
+[node name="HealthBar" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75, 0)
+script = ExtResource("2_bar")
+width = 1.0
+hide_when_full = true

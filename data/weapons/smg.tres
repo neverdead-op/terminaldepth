@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/weapon_data.gd" id="1_weapon"]
+[ext_resource type="PackedScene" path="res://assets/guns/SubmachineGun_2.fbx" id="2_model"]
+
+[resource]
+script = ExtResource("1_weapon")
+display_name = "Пистолет-пулемёт «Оса»"
+damage = 10.5
+fire_rate = 15.0
+spread_degrees = 4.5
+bullet_speed = 50.0
+bullet_range = 26.0
+magazine_size = 40
+reload_time = 1.6
+shot_sound = &"shot_smg"
+shot_volume_db = -12.0
+icon = &"rifle"
+recoil_shake = 0.035
+gun_kick = 0.03
+vibration_weak = 0.25
+model = ExtResource("2_model")
+model_scale = 0.13
+model_yaw = 90.0
+model_offset = Vector3(0, -0.04, 0.03)

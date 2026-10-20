@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ModuleData" format=3 uid="uid://csdfdcf3f7es2"]
+
+[ext_resource type="Script" uid="uid://dhq42bcmcs3rw" path="res://scripts/module_data.gd" id="1_module"]
+
+[resource]
+script = ExtResource("1_module")
+id = &"acid"
+display_name = "Кислотный заряд"
+description = "Тип патронов (первое гнездо): кислотные пули. +30% урона кислотой, растворяют броню и замедляют врага."
+color = Color(0.45, 1, 0.25, 1)
+short_name = "КС"
+category = "Стихия: кислота"
+element = &"acid"
+element_ratio = 0.3

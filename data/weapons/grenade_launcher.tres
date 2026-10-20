@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/weapon_data.gd" id="1_weapon"]
+[ext_resource type="PackedScene" path="res://assets/guns/Bullpup_2.fbx" id="2_model"]
+
+[resource]
+script = ExtResource("1_weapon")
+display_name = "Гранатомёт"
+damage = 105.0
+fire_rate = 1.2
+automatic = false
+spread_degrees = 1.0
+bullet_speed = 22.0
+bullet_range = 22.0
+magazine_size = 6
+reload_time = 2.6
+explode_radius = 3.5
+explode_ratio = 1.0
+projectile = &"grenade"
+shot_sound = &"shot_grenade"
+shot_volume_db = -12.0
+camera_kick = 0.1
+muzzle_flash_energy = 5.0
+icon = &"shotgun"
+recoil_shake = 0.25
+gun_kick = 0.14
+vibration_weak = 0.5
+vibration_strong = 0.6
+vibration_time = 0.15
+model = ExtResource("2_model")
+model_scale = 0.13
+model_yaw = 90.0
+model_offset = Vector3(0, -0.04, 0.03)

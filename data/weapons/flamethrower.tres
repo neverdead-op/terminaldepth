@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/weapon_data.gd" id="1_weapon"]
+[ext_resource type="PackedScene" path="res://assets/guns/Bullpup_1.fbx" id="2_model"]
+
+[resource]
+script = ExtResource("1_weapon")
+display_name = "Огнемёт"
+damage = 4.5
+fire_rate = 18.0
+pellets = 2
+spread_degrees = 9.0
+bullet_speed = 13.0
+bullet_range = 7.5
+magazine_size = 80
+reload_time = 2.8
+pierce = 4
+element = &"fire"
+element_ratio = 1.5
+projectile = &"flame"
+shot_sound = &"shot_flame"
+shot_volume_db = -18.0
+camera_kick = 0.0
+muzzle_flash_energy = 2.5
+icon = &"shotgun"
+recoil_shake = 0.01
+gun_kick = 0.01
+vibration_weak = 0.2
+model = ExtResource("2_model")
+model_scale = 0.13
+model_yaw = 90.0
+model_offset = Vector3(0, -0.04, 0.03)

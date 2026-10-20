@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ModuleData" format=3 uid="uid://bjlgi1a2dvcb6"]
+
+[ext_resource type="Script" uid="uid://dhq42bcmcs3rw" path="res://scripts/module_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"nova_shot"
+display_name = "Осколочная нова"
+description = "Основная цель: 80% урона. При первом попадании: 5 снарядов по кругу, по 40% исходного урона. Одна нова на выстрел, включая дробь; без цепных нов. Только основной выстрел."
+color = Color(0.52, 0.78, 1, 1)
+short_name = "Н5"
+category = "Механика"
+damage_multiplier = 0.8
+nova_projectiles = 5
+mine_ok = false

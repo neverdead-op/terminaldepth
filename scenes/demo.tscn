@@ -1,0 +1,40 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/demo_level.gd" id="1_r"]
+[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="2_r"]
+[ext_resource type="Script" path="res://scripts/camera_rig.gd" id="3_r"]
+[ext_resource type="Script" path="res://scripts/bullet_pool.gd" id="4_r"]
+[ext_resource type="PackedScene" path="res://scenes/bullet.tscn" id="5_r"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_1"]
+geometry_parsed_geometry_type = 1
+geometry_collision_mask = 1
+cell_size = 0.25
+cell_height = 0.25
+agent_height = 1.0
+agent_radius = 0.5
+agent_max_climb = 0.25
+
+[node name="Demo" type="Node3D"]
+script = ExtResource("1_r")
+zone_level = 3
+
+[node name="Navigation" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_1")
+
+[node name="Geometry" type="Node3D" parent="Navigation"]
+
+[node name="Player" parent="." instance=ExtResource("2_r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="CameraRig" type="Node3D" parent="."]
+script = ExtResource("3_r")
+target_path = NodePath("../Player")
+
+[node name="Camera3D" type="Camera3D" parent="CameraRig"]
+current = true
+fov = 50.0
+
+[node name="BulletPool" type="Node3D" parent="." groups=["bullet_pool"]]
+script = ExtResource("4_r")
+bullet_scene = ExtResource("5_r")

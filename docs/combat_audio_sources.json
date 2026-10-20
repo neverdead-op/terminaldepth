@@ -1,0 +1,154 @@
+[
+  {
+    "file": "assets\\sounds\\combat\\pistol_1.wav",
+    "source": "audio 11\\freesound_community-9mm-pistol-shot-6349.mp3",
+    "span": [
+      0.1,
+      1.15
+    ]
+  },
+  {
+    "file": "assets\\sounds\\combat\\rifle_1.wav",
+    "source": "audio 11\\sovetsky_rastov72-pkm-sound-effect-243959.mp3",
+    "span": [
+      0.19,
+      0.78
+    ]
+  },
+  {
+    "file": "assets\\sounds\\combat\\rifle_2.wav",
+    "source": "audio 11\\sovetsky_rastov72-pkm-sound-effect-243959.mp3",
+    "span": [
+      1.02,
+      1.6
+    ]
+  },
+  {
+    "file": "assets\\sounds\\combat\\rifle_3.wav",
+    "source": "audio 11\\sovetsky_rastov72-pkm-sound-effect-243959.mp3",
+    "span": [
+      2.24,
+      2.82
+    ]
+  },
+  {
+    "file": "assets\\sounds\\combat\\shotgun_1.wav",
+    "source": "audio 11\\freesound_community-shotgun-shooting-things-105837.mp3",
+    "span": [
+      0.73,
+      1.9
+    ]
+  },
+  {
+    "file": "assets\\sounds\\combat\\shotgun_2.wav",
+    "source": "audio 11\\freesound_community-shotgun-shooting-things-105837.mp3",
+    "span": [
+      3.06,
+      4.05
+    ]
+  },
+  {
+    "file": "assets\\sounds\\combat\\shotgun_3.wav",
+    "source": "audio 11\\freesound_community-shotgun-shooting-things-105837.mp3",
+    "span": [
+      6.93,
+      8.02
+    ]
+  },
+  {
+    "file": "assets\\sounds\\combat\\step_1.wav",
+    "source": "audio 11\\freeeverythingxx-running-on-concrete-268478.mp3",
+    "span": [
+      0.29,
+      0.49
+    ]
+  },
+  {
+    "file": "assets\\sounds\\combat\\step_2.wav",
+    "source": "audio 11\\freeeverythingxx-running-on-concrete-268478.mp3",
+    "span": [
+      0.85,
+      1.05
+    ]
+  },
+  {
+    "file": "assets\\sounds\\combat\\step_3.wav",
+    "source": "audio 11\\freeeverythingxx-running-on-concrete-268478.mp3",
+    "span": [
+      1.12,
+      1.32
+    ]
+  },
+  {
+    "file": "assets\\sounds\\combat\\step_4.wav",
+    "source": "audio 11\\freeeverythingxx-running-on-concrete-268478.mp3",
+    "span": [
+      1.41,
+      1.61
+    ]
+  },
+  {
+    "file": "assets\\sounds\\combat\\step_run_1.wav",
+    "source": "audio 11\\spinopel-run-fast-345728.mp3",
+    "span": [
+      0.32,
+      0.49
+    ]
+  },
+  {
+    "file": "assets\\sounds\\combat\\step_run_2.wav",
+    "source": "audio 11\\spinopel-run-fast-345728.mp3",
+    "span": [
+      1.57,
+      1.75
+    ]
+  },
+  {
+    "file": "assets\\sounds\\combat\\step_run_3.wav",
+    "source": "audio 11\\spinopel-run-fast-345728.mp3",
+    "span": [
+      3.45,
+      3.63
+    ]
+  },
+  {
+    "file": "assets\\sounds\\combat\\step_run_4.wav",
+    "source": "audio 11\\spinopel-run-fast-345728.mp3",
+    "span": [
+      5.4,
+      5.58
+    ]
+  },
+  {
+    "file": "assets\\sounds\\combat\\reload_start_1.wav",
+    "source": "audio 11\\dragon-studio-gun-reload-2-504027.mp3",
+    "span": [
+      0.14,
+      0.43
+    ]
+  },
+  {
+    "file": "assets\\sounds\\combat\\reload_end_1.wav",
+    "source": "audio 11\\dragon-studio-gun-reload-2-504027.mp3",
+    "span": [
+      1.04,
+      1.32
+    ]
+  },
+  {
+    "file": "assets\\sounds\\combat\\roll_contact_1.wav",
+    "source": "audio 11\\universfield-body-fall-259680.mp3",
+    "span": [
+      0.075,
+      0.46
+    ]
+  },
+  {
+    "file": "assets\\sounds\\combat\\plasma_cutter_1.wav",
+    "source": "audio 11\\audiopapkin-science-fiction-gunshot-297913.mp3",
+    "span": [
+      0.33,
+      1.0
+    ]
+  }
+]

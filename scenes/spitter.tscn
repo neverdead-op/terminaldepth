@@ -1,0 +1,58 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/spitter.gd" id="1_spitter"]
+[ext_resource type="Script" path="res://scripts/health_bar_3d.gd" id="2_bar"]
+
+[ext_resource type="PackedScene" path="res://assets/characters/zombie_shooter_model.tscn" id="10_zombie_gun"]
+[sub_resource type="CapsuleShape3D" id="Shape_spitter"]
+radius = 0.4
+height = 1.5
+
+[node name="Spitter" type="CharacterBody3D"]
+collision_layer = 4
+collision_mask = 23
+floor_snap_length = 0.3
+script = ExtResource("1_spitter")
+display_name = "Плевун"
+flank = 0.8
+humanoid_model = ExtResource("10_zombie_gun")
+humanoid_variants = Array[PackedScene]([ExtResource("10_zombie_gun")])
+humanoid_scale = Vector3(1, 1, 1)
+skin_accent = Color(0.6, 1, 0.15, 1)
+skin_plate = Color(0.45, 0.47, 0.42, 1)
+skin_cloth = Color(0.72, 0.72, 0.66, 1)
+animation_profile = "rifle_zombie"
+anim_idle = &"Rifle_Idle"
+anim_walk = &"Rifle_Walk"
+anim_run = &"Rifle_Run"
+anim_attack = &"Rifle_Shoot"
+anim_death = &"Rifle_Death"
+max_hp = 135.0
+flask_charge_reward = 0.3
+module_drop_chance = 0.12
+currency_drop_chance = 0.2
+gear_drop_chance = 0.18
+xp_reward = 10
+blood_color = Color(0.45, 1, 0.2, 1)
+number_height = 1.6
+gold_drop_chance = 0.25
+gold_amount = Vector2i(4, 10)
+move_speed = 3.0
+run_threshold = 1.7
+anim_walk_speed = 0.96
+anim_run_speed = 2.5
+acceleration = 25.0
+turn_speed = 8.0
+attack_windup = 0.55
+attack_cooldown = 2.0
+aggro_range = 18.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+shape = SubResource("Shape_spitter")
+
+[node name="HealthBar" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+script = ExtResource("2_bar")
+width = 0.8
+hide_when_full = true
