@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+[ext_resource type="PackedScene" path="res://assets/weapons/supplied_pistol/pistol.glb" id="1"]
+[node name="SuppliedPistol" type="Node3D"]
+[node name="Model" parent="." instance=ExtResource("1")]
+[node name="MuzzleTip" type="Marker3D" parent="."]
+position = Vector3(-0.0007409999961964786, 0.12797260284423828, -0.31150728464126587)
