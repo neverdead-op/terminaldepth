@@ -1,0 +1,188 @@
+{
+  "version": 2,
+  "source_concept": "../concept_c_hybrid.png",
+  "units": "meters",
+  "dimension_order": "width_height_depth",
+  "assets": [
+    {
+      "number": 1,
+      "id": "RB02_BANK_EDGE_4M",
+      "title": "Береговой уступ",
+      "file": "RB02_BANK_EDGE_4M.png",
+      "dimensions": "4 × 1.2 × 3 м",
+      "category": "01_landscape",
+      "priority": 1,
+      "purpose": "Край плоского пола, скрыть ступенчатый контур"
+    },
+    {
+      "number": 2,
+      "id": "RB02_CLIFF_FACE_8M",
+      "title": "Высокая скальная стена",
+      "file": "RB02_CLIFF_FACE_8M.png",
+      "dimensions": "8 × 7 × 4 м",
+      "category": "01_landscape",
+      "priority": 1,
+      "purpose": "Задний план, крупная граница берега"
+    },
+    {
+      "number": 3,
+      "id": "RB02_SEA_STACK",
+      "title": "Дальняя скала в воде",
+      "file": "RB02_SEA_STACK.png",
+      "dimensions": "3 × 6 × 3 м",
+      "category": "01_landscape",
+      "priority": 2,
+      "purpose": "Разнообразие дальних силуэтов в реке"
+    },
+    {
+      "number": 4,
+      "id": "RB02_WINDOW_WALL_4M",
+      "title": "Стена со стрельчатым окном",
+      "file": "RB02_WINDOW_WALL_4M.png",
+      "dimensions": "4 × 4 × 0.8 м",
+      "category": "02_architecture",
+      "priority": 1,
+      "purpose": "Фасад сторожки/руин у ворот"
+    },
+    {
+      "number": 5,
+      "id": "RB02_GABLE_END_4M",
+      "title": "Фронтон здания",
+      "file": "RB02_GABLE_END_4M.png",
+      "dimensions": "4 × 3 × 0.8 м",
+      "category": "02_architecture",
+      "priority": 1,
+      "purpose": "Верх фасада под крутой крышей"
+    },
+    {
+      "number": 6,
+      "id": "RB02_ROOF_SEGMENT_4M",
+      "title": "Секция сланцевой крыши",
+      "file": "RB02_ROOF_SEGMENT_4M.png",
+      "dimensions": "4 × 3 × 4 м",
+      "category": "02_architecture",
+      "priority": 1,
+      "purpose": "Сборная крыша сторожки"
+    },
+    {
+      "number": 7,
+      "id": "RB02_BUTTRESS_4M",
+      "title": "Контрфорс",
+      "file": "RB02_BUTTRESS_4M.png",
+      "dimensions": "1.2 × 4.5 × 1.8 м",
+      "category": "02_architecture",
+      "priority": 1,
+      "purpose": "Ритм фасада и прикрытие стыков стен"
+    },
+    {
+      "number": 8,
+      "id": "RB02_GATE_LEAF",
+      "title": "Створка ворот",
+      "file": "RB02_GATE_LEAF.png",
+      "dimensions": "3.2 × 5.2 × 0.25 м",
+      "category": "02_architecture",
+      "priority": 2,
+      "purpose": "Одна створка, вторая зеркалится в Godot"
+    },
+    {
+      "number": 9,
+      "id": "RB02_WALL_LANTERN",
+      "title": "Настенный фонарь",
+      "file": "RB02_WALL_LANTERN.png",
+      "dimensions": "0.6 × 1.4 × 0.8 м",
+      "category": "03_props",
+      "priority": 1,
+      "purpose": "Локальные тёплые акценты у входа"
+    },
+    {
+      "number": 10,
+      "id": "RB02_PIER_SECTION_4M",
+      "title": "Секция деревянного причала",
+      "file": "RB02_PIER_SECTION_4M.png",
+      "dimensions": "4 × 2 × 4 м",
+      "category": "04_riverside",
+      "priority": 1,
+      "purpose": "Настил причала, повторять и поворачивать"
+    },
+    {
+      "number": 11,
+      "id": "RB02_BOAT",
+      "title": "Речная лодка",
+      "file": "RB02_BOAT.png",
+      "dimensions": "1.8 × 1.2 × 4.5 м",
+      "category": "04_riverside",
+      "priority": 2,
+      "purpose": "У причала, целый силуэт лодки"
+    },
+    {
+      "number": 12,
+      "id": "RB02_CARGO_WAGON",
+      "title": "Грузовая телега",
+      "file": "RB02_CARGO_WAGON.png",
+      "dimensions": "2.2 × 2 × 3.6 м",
+      "category": "03_props",
+      "priority": 2,
+      "purpose": "Группы декора у ворот и складов"
+    },
+    {
+      "number": 13,
+      "id": "RB02_MOORING_POST",
+      "title": "Причальный столб с канатом",
+      "file": "RB02_MOORING_POST.png",
+      "dimensions": "0.7 × 1.5 × 0.7 м",
+      "category": "04_riverside",
+      "priority": 2,
+      "purpose": "Акцент края причала"
+    },
+    {
+      "number": 14,
+      "id": "RB02_HOODED_STATUE",
+      "title": "Статуя хранителя",
+      "file": "RB02_HOODED_STATUE.png",
+      "dimensions": "1.3 × 3.2 × 1.3 м",
+      "category": "03_props",
+      "priority": 1,
+      "purpose": "Ориентир моста и ворот"
+    },
+    {
+      "number": 15,
+      "id": "RB02_DEAD_TREE_HERO",
+      "title": "Силуэтное сухое дерево",
+      "file": "RB02_DEAD_TREE_HERO.png",
+      "dimensions": "5 × 7 × 4 м",
+      "category": "05_nature",
+      "priority": 1,
+      "purpose": "Выразительный фон и обрамление кадра"
+    },
+    {
+      "number": 16,
+      "id": "RB02_FALLEN_LOG",
+      "title": "Поваленное бревно",
+      "file": "RB02_FALLEN_LOG.png",
+      "dimensions": "4 × 1.1 × 1.4 м",
+      "category": "05_nature",
+      "priority": 2,
+      "purpose": "Поперечный декор у края маршрута"
+    },
+    {
+      "number": 17,
+      "id": "RB02_ROOTS_GROUND",
+      "title": "Прикорневой модуль",
+      "file": "RB02_ROOTS_GROUND.png",
+      "dimensions": "2.8 × 0.6 × 1.8 м",
+      "category": "05_nature",
+      "priority": 2,
+      "purpose": "Мягкий переход от дерева к земле"
+    },
+    {
+      "number": 18,
+      "id": "RB02_BRIDGE_SPAN",
+      "title": "Каменный пролёт моста",
+      "file": "RB02_BRIDGE_SPAN.png",
+      "dimensions": "8 × 3 × 4 м",
+      "category": "02_architecture",
+      "priority": 1,
+      "purpose": "Основа настоящего моста, парапеты — из готового набора"
+    }
+  ]
+}
