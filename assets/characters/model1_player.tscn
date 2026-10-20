@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/shooter_model.gd" id="1"]
+[node name="Model1Player" type="Node3D"]
+script = ExtResource("1")
+source_path = "res://assets/characters/model1/v1/model1.glb"
+animation_library_path = "res://assets/animations/model1_archery.tres"
+target_height = 1.8
+max_stance_width = 0.0

@@ -1,0 +1,13 @@
+{
+  "source_triangles": 245284,
+  "game_triangles": 54871,
+  "vertices": 34484,
+  "bones": 68,
+  "excluded_fragments": [
+    "RIP0.069",
+    "RIP0.082",
+    "RIP0.101",
+    "RIP0.110"
+  ],
+  "height": 1.8
+}

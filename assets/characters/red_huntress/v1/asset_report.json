@@ -1,0 +1,13 @@
+{
+  "source_figures": 6,
+  "selected_figure": 0,
+  "source_total_triangles": 1961561,
+  "selected_triangles": 363508,
+  "game_triangles": 56219,
+  "vertices": 36777,
+  "bones": 68,
+  "removed_scarf_vertices": 1370,
+  "removed_scarf_triangles": 1941,
+  "cloth_physics": false,
+  "collar_preserved": true
+}

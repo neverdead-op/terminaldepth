@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/huntress_model.gd" id="1"]
+[node name="HuntressPlayer" type="Node3D"]
+script = ExtResource("1")
+source_path = "res://assets/characters/red_huntress/v1/huntress.glb"
+animation_library_path = "res://assets/animations/huntress_archery.tres"
+target_height = 1.8

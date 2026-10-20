@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/shooter_model.gd" id="1"]
+[node name="Parasite" type="Node3D"]
+script = ExtResource("1")
+source_path = "res://animation/Parasite L Starkie.fbx"
+creature = true
+animation_library_path = "res://assets/animations/parasite.tres"
+target_height = 1.8

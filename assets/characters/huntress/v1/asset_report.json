@@ -1,0 +1,10 @@
+{
+  "triangles": 78230,
+  "mesh_parts": 228,
+  "bones": 61,
+  "height_m": 1.882,
+  "materials": 16,
+  "animation": "Huntress_Breathing_Preview",
+  "source_anatomy": "Existing project Erika Archer FBX, head and gloves only",
+  "status": "Standalone visual test; campaign untouched; locomotion retarget and coat physics pending approval"
+}
