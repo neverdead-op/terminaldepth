@@ -213,6 +213,10 @@ ItemDB, ModuleDB, PassiveDB и SaveGame — подключаемые скрип�
 
 ## Прочие действующие скрипты
 
+### Отдельный макет речного берега (riverbank)
+
+`scenes/tools/riverbank_playtest.tscn` → `tools/riverbank_playtest.gd` запускает существующего героя и 24 врага через Game.start_test, без сохранения забега. Редактируемая геометрия/навигация — `scenes/art/riverbank_blockout.tscn`; F2 обзор, F7 сброс, `-- --check` навигация и физический проход, `-- --capture` реальные кадры. `tools/build_riverbank_blockout.gd` перезаписывает только эту новую сцену: не запускать поверх ручных правок. Концепты 3D/2D/смешанный стиль, маршрут, границы и иерархия — [docs/art_direction/riverbank/README.md](docs/art_direction/riverbank/README.md). Кампания и supplied level1 не заменены.
+
 - Внешний вид персонажей/врагов: `scripts/suit.gd` (+ `assets/shaders/suit.gdshader`), `outfit.gd`, `hair.gd`, `shooter_model.gd` (Mixamo-модель), `plasma_cutter_model.gd`, `huntress_cloth_modifier.gd` (следование плаща без физики) — все в `scripts/`.
 - Подсветка и мелочи мира: `scripts/highlight.gd` (контур активных объектов), `flicker_light.gd` (мигающие лампы), `player_bar_3d.gd` (полоски над героем), `menu_tabs.gd` (вкладки окон), `dummy.gd` (манекен).
 - Наследие sci-fi этапа: `scripts/facility.gd` + `scenes/facility.tscn`, `scenes/level.tscn`, `scenes/zone.tscn`; `scripts/hud_health_bar.gd` нигде не подключён.
