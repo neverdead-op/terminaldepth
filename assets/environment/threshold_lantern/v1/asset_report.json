@@ -1,0 +1,11 @@
+{
+  "triangles": 4322,
+  "vertices": 2279,
+  "materials": 6,
+  "uv_layers": [
+    "UV_Atlas"
+  ],
+  "height_metres": 4.31,
+  "texture": "lantern_albedo_2048.png",
+  "addons_required": false
+}

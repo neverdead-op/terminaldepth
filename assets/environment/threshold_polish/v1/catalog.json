@@ -1,0 +1,26 @@
+{
+  "courtyard_stones": {
+    "triangles": 1472,
+    "dimensions": [
+      4.0,
+      4.0,
+      0.33183184266090393
+    ]
+  },
+  "gothic_buttress": {
+    "triangles": 424,
+    "dimensions": [
+      1.399999976158142,
+      1.5,
+      7.597379684448242
+    ]
+  },
+  "abyss_arcade": {
+    "triangles": 2168,
+    "dimensions": [
+      12.17480182647705,
+      0.8999999761581421,
+      9.047765731811523
+    ]
+  }
+}

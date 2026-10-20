@@ -1,0 +1,14 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/environment/victorian_kit/v1/floor_oak_light.glb" id="1_pnwd7"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_015kf"]
+data = PackedVector3Array(-2, 0, 2, 2, 0, -2, 2, 0, 2, -2, 0, 2, -2, 0, -2, 2, 0, -2)
+backface_collision = true
+
+[node name="FloorOakLight" type="StaticBody3D" unique_id=1661176025]
+
+[node name="Visual" type="Node3D" parent="." unique_id=2108859469 instance=ExtResource("1_pnwd7")]
+
+[node name="@CollisionShape3D@177" type="CollisionShape3D" parent="." unique_id=1262520975]
+shape = SubResource("ConcavePolygonShape3D_015kf")

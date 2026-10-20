@@ -1,0 +1,458 @@
+[
+  {
+    "id": "table_rect_dark",
+    "group": "furniture",
+    "label": "Стол · тёмный",
+    "size": [
+      1.8,
+      0.9,
+      1.1
+    ],
+    "triangles": 120,
+    "surfaces": 1
+  },
+  {
+    "id": "table_rect_light",
+    "group": "furniture",
+    "label": "Стол · светлый",
+    "size": [
+      1.8,
+      0.9,
+      1.1
+    ],
+    "triangles": 120,
+    "surfaces": 1
+  },
+  {
+    "id": "table_round_dark",
+    "group": "furniture",
+    "label": "Стол · круглый",
+    "size": [
+      1.8,
+      0.9,
+      1.6
+    ],
+    "triangles": 138,
+    "surfaces": 1
+  },
+  {
+    "id": "table_round_blue",
+    "group": "furniture",
+    "label": "Стол · синий",
+    "size": [
+      1.8,
+      0.9,
+      1.6
+    ],
+    "triangles": 138,
+    "surfaces": 1
+  },
+  {
+    "id": "table_long",
+    "group": "furniture",
+    "label": "Стол · длинный",
+    "size": [
+      2.7,
+      0.9,
+      1.1
+    ],
+    "triangles": 132,
+    "surfaces": 2
+  },
+  {
+    "id": "chair_dark",
+    "group": "furniture",
+    "label": "Стул · dark",
+    "size": [
+      0.55,
+      1.16,
+      0.55
+    ],
+    "triangles": 108,
+    "surfaces": 1
+  },
+  {
+    "id": "chair_light",
+    "group": "furniture",
+    "label": "Стул · light",
+    "size": [
+      0.55,
+      1.16,
+      0.55
+    ],
+    "triangles": 108,
+    "surfaces": 1
+  },
+  {
+    "id": "chair_blue",
+    "group": "furniture",
+    "label": "Стул · blue",
+    "size": [
+      0.55,
+      1.16,
+      0.55
+    ],
+    "triangles": 108,
+    "surfaces": 1
+  },
+  {
+    "id": "stool_dark",
+    "group": "furniture",
+    "label": "Табурет · dark",
+    "size": [
+      0.55,
+      0.55,
+      0.55
+    ],
+    "triangles": 72,
+    "surfaces": 1
+  },
+  {
+    "id": "stool_light",
+    "group": "furniture",
+    "label": "Табурет · light",
+    "size": [
+      0.55,
+      0.55,
+      0.55
+    ],
+    "triangles": 72,
+    "surfaces": 1
+  },
+  {
+    "id": "shelf_dark",
+    "group": "furniture",
+    "label": "Стеллаж · dark",
+    "size": [
+      1.45,
+      1.95,
+      0.55
+    ],
+    "triangles": 84,
+    "surfaces": 1
+  },
+  {
+    "id": "shelf_blue",
+    "group": "furniture",
+    "label": "Стеллаж · blue",
+    "size": [
+      1.45,
+      1.95,
+      0.55
+    ],
+    "triangles": 84,
+    "surfaces": 1
+  },
+  {
+    "id": "door_rect_oak",
+    "group": "architecture",
+    "label": "Дверь · rect oak",
+    "size": [
+      1.6,
+      2.8,
+      0.4
+    ],
+    "triangles": 84,
+    "surfaces": 3
+  },
+  {
+    "id": "door_arch_oak",
+    "group": "architecture",
+    "label": "Дверь · arch oak",
+    "size": [
+      1.6,
+      2.8,
+      0.4
+    ],
+    "triangles": 127,
+    "surfaces": 3
+  },
+  {
+    "id": "door_rect_blue",
+    "group": "architecture",
+    "label": "Дверь · rect blue",
+    "size": [
+      1.6,
+      2.8,
+      0.4
+    ],
+    "triangles": 84,
+    "surfaces": 3
+  },
+  {
+    "id": "door_arch_blue",
+    "group": "architecture",
+    "label": "Дверь · arch blue",
+    "size": [
+      1.6,
+      2.8,
+      0.4
+    ],
+    "triangles": 127,
+    "surfaces": 3
+  },
+  {
+    "id": "door_double_oak",
+    "group": "architecture",
+    "label": "Дверь · двойная",
+    "size": [
+      2.6,
+      2.8,
+      0.4
+    ],
+    "triangles": 96,
+    "surfaces": 3
+  },
+  {
+    "id": "shutters_oak",
+    "group": "architecture",
+    "label": "Ставни · oak",
+    "size": [
+      1.4,
+      1.4,
+      0.15
+    ],
+    "triangles": 72,
+    "surfaces": 2
+  },
+  {
+    "id": "shutters_blue",
+    "group": "architecture",
+    "label": "Ставни · blue",
+    "size": [
+      1.4,
+      1.4,
+      0.15
+    ],
+    "triangles": 72,
+    "surfaces": 2
+  },
+  {
+    "id": "wall_brick",
+    "group": "structure",
+    "label": "Стена · brick",
+    "size": [
+      2.1,
+      2.95,
+      0.7
+    ],
+    "triangles": 36,
+    "surfaces": 2
+  },
+  {
+    "id": "wall_stone",
+    "group": "structure",
+    "label": "Стена · stone",
+    "size": [
+      2.1,
+      2.95,
+      0.7
+    ],
+    "triangles": 36,
+    "surfaces": 2
+  },
+  {
+    "id": "wall_plaster",
+    "group": "structure",
+    "label": "Стена · plaster",
+    "size": [
+      2.1,
+      2.95,
+      0.7
+    ],
+    "triangles": 36,
+    "surfaces": 2
+  },
+  {
+    "id": "wall_broken",
+    "group": "structure",
+    "label": "Стена · повреждённая",
+    "size": [
+      2,
+      2.5,
+      0.65
+    ],
+    "triangles": 60,
+    "surfaces": 2
+  },
+  {
+    "id": "wall_low_stone",
+    "group": "structure",
+    "label": "Стена · низкая",
+    "size": [
+      2.1,
+      1.15,
+      0.7
+    ],
+    "triangles": 36,
+    "surfaces": 2
+  },
+  {
+    "id": "wall_corner",
+    "group": "structure",
+    "label": "Стена · угол",
+    "size": [
+      2,
+      2.95,
+      2
+    ],
+    "triangles": 48,
+    "surfaces": 2
+  },
+  {
+    "id": "pillar_square",
+    "group": "structure",
+    "label": "Столб · квадратный",
+    "size": [
+      0.85,
+      3.2,
+      0.85
+    ],
+    "triangles": 36,
+    "surfaces": 2
+  },
+  {
+    "id": "fence_wood",
+    "group": "structure",
+    "label": "Забор · wood",
+    "size": [
+      2,
+      1.55,
+      0.15
+    ],
+    "triangles": 156,
+    "surfaces": 1
+  },
+  {
+    "id": "fence_pale",
+    "group": "structure",
+    "label": "Забор · pale",
+    "size": [
+      2,
+      1.55,
+      0.15
+    ],
+    "triangles": 156,
+    "surfaces": 1
+  },
+  {
+    "id": "fence_blue",
+    "group": "structure",
+    "label": "Забор · blue",
+    "size": [
+      2,
+      1.55,
+      0.15
+    ],
+    "triangles": 156,
+    "surfaces": 1
+  },
+  {
+    "id": "fence_broken",
+    "group": "structure",
+    "label": "Забор · broken",
+    "size": [
+      2,
+      1.55,
+      0.15
+    ],
+    "triangles": 132,
+    "surfaces": 1
+  },
+  {
+    "id": "fence_iron",
+    "group": "structure",
+    "label": "Забор · iron",
+    "size": [
+      2,
+      2,
+      0.15
+    ],
+    "triangles": 174,
+    "surfaces": 1
+  },
+  {
+    "id": "fence_brick_iron",
+    "group": "structure",
+    "label": "Ограда · кирпич/железо",
+    "size": [
+      2.1,
+      1.9,
+      0.7
+    ],
+    "triangles": 156,
+    "surfaces": 3
+  },
+  {
+    "id": "floor_oak_dark",
+    "group": "floors",
+    "label": "Пол · тёмные доски",
+    "size": [
+      4,
+      0.05,
+      4
+    ],
+    "triangles": 2,
+    "surfaces": 1
+  },
+  {
+    "id": "floor_oak_light",
+    "group": "floors",
+    "label": "Пол · светлые доски",
+    "size": [
+      4,
+      0.05,
+      4
+    ],
+    "triangles": 2,
+    "surfaces": 1
+  },
+  {
+    "id": "floor_parquet",
+    "group": "floors",
+    "label": "Пол · паркет",
+    "size": [
+      4,
+      0.05,
+      4
+    ],
+    "triangles": 2,
+    "surfaces": 1
+  },
+  {
+    "id": "floor_flagstones",
+    "group": "floors",
+    "label": "Пол · камень с лепестками",
+    "size": [
+      4,
+      0.05,
+      4
+    ],
+    "triangles": 2,
+    "surfaces": 1
+  },
+  {
+    "id": "floor_fieldstone",
+    "group": "floors",
+    "label": "Пол · грубый камень",
+    "size": [
+      4,
+      0.05,
+      4
+    ],
+    "triangles": 2,
+    "surfaces": 1
+  },
+  {
+    "id": "market_stall",
+    "group": "furniture",
+    "label": "Торговый прилавок",
+    "size": [
+      2.65,
+      2.35,
+      1.55
+    ],
+    "triangles": 84,
+    "surfaces": 2
+  }
+]

@@ -1,0 +1,14 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/environment/victorian_kit/v1/floor_flagstones.glb" id="1_mwp5f"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ldgyo"]
+data = PackedVector3Array(-2, 0, 2, 2, 0, -2, 2, 0, 2, -2, 0, 2, -2, 0, -2, 2, 0, -2)
+backface_collision = true
+
+[node name="FloorFlagstones" type="StaticBody3D" unique_id=815224850]
+
+[node name="Visual" type="Node3D" parent="." unique_id=1100718316 instance=ExtResource("1_mwp5f")]
+
+[node name="@CollisionShape3D@179" type="CollisionShape3D" parent="." unique_id=230953489]
+shape = SubResource("ConcavePolygonShape3D_ldgyo")
