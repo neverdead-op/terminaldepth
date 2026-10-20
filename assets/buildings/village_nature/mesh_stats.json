@@ -1,0 +1,26 @@
+{
+  "gothic_lantern": {
+    "triangles": 512,
+    "surfaces": 3
+  },
+  "tree_bare": {
+    "triangles": 699,
+    "surfaces": 1
+  },
+  "tree_red": {
+    "triangles": 771,
+    "surfaces": 2
+  },
+  "barrel": {
+    "triangles": 320,
+    "surfaces": 2
+  },
+  "bench": {
+    "triangles": 144,
+    "surfaces": 2
+  },
+  "planter": {
+    "triangles": 72,
+    "surfaces": 2
+  }
+}

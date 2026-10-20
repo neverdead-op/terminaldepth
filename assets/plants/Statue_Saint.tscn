@@ -1,0 +1,93 @@
+[gd_scene load_steps=11 format=3]
+
+[sub_resource type="StandardMaterial3D" id="mat1"]
+albedo_color = Color(0.3, 0.3, 0.31, 1)
+roughness = 0.9
+metallic = 0
+
+[sub_resource type="BoxMesh" id="mesh2"]
+size = Vector3(1.1, 0.6, 1.1)
+material = SubResource("mat1")
+
+[sub_resource type="CylinderMesh" id="mesh3"]
+top_radius = 0.25
+bottom_radius = 0.45
+height = 1.7
+radial_segments = 10
+material = SubResource("mat1")
+
+[sub_resource type="SphereMesh" id="mesh4"]
+radius = 0.27
+height = 0.54
+radial_segments = 10
+rings = 6
+material = SubResource("mat1")
+
+[sub_resource type="StandardMaterial3D" id="mat2"]
+albedo_color = Color(0.04, 0.04, 0.05, 1)
+roughness = 0.7
+metallic = 0
+
+[sub_resource type="SphereMesh" id="mesh6"]
+radius = 0.2
+height = 0.4
+radial_segments = 8
+rings = 6
+material = SubResource("mat2")
+
+[sub_resource type="CylinderMesh" id="mesh7"]
+top_radius = 0.07
+bottom_radius = 0.09
+height = 0.8
+radial_segments = 6
+material = SubResource("mat1")
+
+[sub_resource type="CylinderMesh" id="mesh8"]
+top_radius = 0.07
+bottom_radius = 0.09
+height = 0.8
+radial_segments = 6
+material = SubResource("mat1")
+
+[sub_resource type="StandardMaterial3D" id="mat3"]
+albedo_color = Color(1, 0.82, 0.45, 1)
+roughness = 0.3
+metallic = 0
+emission_enabled = true
+emission = Color(1, 0.82, 0.45, 1)
+emission_energy_multiplier = 2
+
+[sub_resource type="TorusMesh" id="mesh10"]
+inner_radius = 0.3
+outer_radius = 0.33
+material = SubResource("mat3")
+
+[node name="Statue_Saint" type="Node3D"]
+
+[node name="P1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+mesh = SubResource("mesh2")
+
+[node name="P2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.45, 0)
+mesh = SubResource("mesh3")
+
+[node name="P3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.15, 0, 0, 0, 1, 0, 2.42, 0.02)
+mesh = SubResource("mesh4")
+
+[node name="P4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.1, 0, 0, 0, 0.6, 0, 2.38, -0.12)
+mesh = SubResource("mesh6")
+
+[node name="P5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.9397, -0.171, -0.2962, 0.342, 0.4698, 0.8138, 0, -0.866, 0.5, 0.22, 1.85, -0.18)
+mesh = SubResource("mesh7")
+
+[node name="P6" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.9397, 0.171, 0.2962, -0.342, 0.4698, 0.8138, 0, -0.866, 0.5, -0.22, 1.85, -0.18)
+mesh = SubResource("mesh8")
+
+[node name="P7" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.1736, -0.9848, 0, 0.9848, 0.1736, 0, 2.8, 0.1)
+mesh = SubResource("mesh10")

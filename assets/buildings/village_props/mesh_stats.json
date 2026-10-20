@@ -1,0 +1,22 @@
+{
+  "wall_straight": {
+    "triangles": 60,
+    "surfaces": 2
+  },
+  "gate_round": {
+    "triangles": 324,
+    "surfaces": 2
+  },
+  "basket": {
+    "triangles": 112,
+    "surfaces": 2
+  },
+  "crate": {
+    "triangles": 108,
+    "surfaces": 1
+  },
+  "carriage": {
+    "triangles": 872,
+    "surfaces": 4
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "triangles": 3322,
+  "surfaces": 7,
+  "size_m": [
+    6.04,
+    8.32,
+    7.55
+  ],
+  "footprint_collision_m": [
+    5.6,
+    5.3,
+    6.6
+  ],
+  "textures": [
+    "ashlar",
+    "oak",
+    "slate"
+  ],
+  "front": "+Z"
+}

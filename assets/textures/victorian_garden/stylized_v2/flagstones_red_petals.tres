@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/textures/victorian_garden/stylized_v2/flagstones_red_petals_albedo.png" id="1"]
+
+[resource]
+resource_name = "Stylized flagstones with red petals"
+albedo_texture = ExtResource("1")
+roughness = 0.9
+texture_filter = 3
+uv1_triplanar = true
+uv1_scale = Vector3(0.25, 0.25, 0.25)

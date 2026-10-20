@@ -1,0 +1,452 @@
+[gd_scene load_steps=47 format=3]
+
+[sub_resource type="StandardMaterial3D" id="mat1"]
+albedo_color = Color(0.22, 0.21, 0.2, 1)
+roughness = 0.85
+metallic = 0
+
+[sub_resource type="BoxMesh" id="mesh2"]
+size = Vector3(3.6, 0.4, 1.2)
+material = SubResource("mat1")
+
+[sub_resource type="StandardMaterial3D" id="mat2"]
+albedo_color = Color(0.08, 0.06, 0.04, 1)
+roughness = 0.7
+metallic = 0
+
+[sub_resource type="BoxMesh" id="mesh4"]
+size = Vector3(3.4, 0.05, 1)
+material = SubResource("mat2")
+
+[sub_resource type="StandardMaterial3D" id="mat3"]
+albedo_color = Color(0.08, 0.11, 0.06, 1)
+roughness = 0.7
+metallic = 0
+
+[sub_resource type="SphereMesh" id="mesh6"]
+radius = 0.2
+height = 0.4
+radial_segments = 8
+rings = 4
+material = SubResource("mat3")
+
+[sub_resource type="StandardMaterial3D" id="mat4"]
+albedo_color = Color(0.1, 0.1, 0.06, 1)
+roughness = 0.7
+metallic = 0
+
+[sub_resource type="SphereMesh" id="mesh8"]
+radius = 0.2
+height = 0.4
+radial_segments = 8
+rings = 4
+material = SubResource("mat4")
+
+[sub_resource type="SphereMesh" id="mesh9"]
+radius = 0.2
+height = 0.4
+radial_segments = 8
+rings = 4
+material = SubResource("mat4")
+
+[sub_resource type="StandardMaterial3D" id="mat5"]
+albedo_color = Color(0.06, 0.09, 0.05, 1)
+roughness = 0.7
+metallic = 0
+
+[sub_resource type="SphereMesh" id="mesh11"]
+radius = 0.2
+height = 0.4
+radial_segments = 8
+rings = 4
+material = SubResource("mat5")
+
+[sub_resource type="StandardMaterial3D" id="mat6"]
+albedo_color = Color(0.07, 0.08, 0.06, 1)
+roughness = 0.7
+metallic = 0
+
+[sub_resource type="SphereMesh" id="mesh13"]
+radius = 0.2
+height = 0.4
+radial_segments = 8
+rings = 4
+material = SubResource("mat6")
+
+[sub_resource type="SphereMesh" id="mesh14"]
+radius = 0.2
+height = 0.4
+radial_segments = 8
+rings = 4
+material = SubResource("mat4")
+
+[sub_resource type="SphereMesh" id="mesh15"]
+radius = 0.2
+height = 0.4
+radial_segments = 8
+rings = 4
+material = SubResource("mat3")
+
+[sub_resource type="SphereMesh" id="mesh16"]
+radius = 0.2
+height = 0.4
+radial_segments = 8
+rings = 4
+material = SubResource("mat4")
+
+[sub_resource type="SphereMesh" id="mesh17"]
+radius = 0.2
+height = 0.4
+radial_segments = 8
+rings = 4
+material = SubResource("mat4")
+
+[sub_resource type="SphereMesh" id="mesh18"]
+radius = 0.2
+height = 0.4
+radial_segments = 8
+rings = 4
+material = SubResource("mat4")
+
+[sub_resource type="SphereMesh" id="mesh19"]
+radius = 0.2
+height = 0.4
+radial_segments = 8
+rings = 4
+material = SubResource("mat5")
+
+[sub_resource type="SphereMesh" id="mesh20"]
+radius = 0.2
+height = 0.4
+radial_segments = 8
+rings = 4
+material = SubResource("mat5")
+
+[sub_resource type="SphereMesh" id="mesh21"]
+radius = 0.2
+height = 0.4
+radial_segments = 8
+rings = 4
+material = SubResource("mat5")
+
+[sub_resource type="SphereMesh" id="mesh22"]
+radius = 0.2
+height = 0.4
+radial_segments = 8
+rings = 4
+material = SubResource("mat4")
+
+[sub_resource type="StandardMaterial3D" id="mat7"]
+albedo_color = Color(0.08, 0.12, 0.06, 1)
+roughness = 0.7
+metallic = 0
+
+[sub_resource type="CylinderMesh" id="mesh24"]
+top_radius = 0.012
+bottom_radius = 0.015
+height = 0.5612
+radial_segments = 4
+material = SubResource("mat7")
+
+[sub_resource type="StandardMaterial3D" id="mat8"]
+albedo_color = Color(0.35, 0.7, 0.75, 1)
+roughness = 0.3
+metallic = 0
+emission_enabled = true
+emission = Color(0.35, 0.7, 0.75, 1)
+emission_energy_multiplier = 1
+
+[sub_resource type="SphereMesh" id="mesh26"]
+radius = 0.06
+height = 0.12
+radial_segments = 8
+rings = 4
+material = SubResource("mat8")
+
+[sub_resource type="CylinderMesh" id="mesh27"]
+top_radius = 0.012
+bottom_radius = 0.015
+height = 0.4764
+radial_segments = 4
+material = SubResource("mat7")
+
+[sub_resource type="SphereMesh" id="mesh28"]
+radius = 0.06
+height = 0.12
+radial_segments = 8
+rings = 4
+material = SubResource("mat8")
+
+[sub_resource type="CylinderMesh" id="mesh29"]
+top_radius = 0.012
+bottom_radius = 0.015
+height = 0.4679
+radial_segments = 4
+material = SubResource("mat7")
+
+[sub_resource type="SphereMesh" id="mesh30"]
+radius = 0.06
+height = 0.12
+radial_segments = 8
+rings = 4
+material = SubResource("mat8")
+
+[sub_resource type="CylinderMesh" id="mesh31"]
+top_radius = 0.012
+bottom_radius = 0.015
+height = 0.2795
+radial_segments = 4
+material = SubResource("mat7")
+
+[sub_resource type="StandardMaterial3D" id="mat9"]
+albedo_color = Color(0.85, 0.6, 0.3, 1)
+roughness = 0.3
+metallic = 0
+emission_enabled = true
+emission = Color(0.85, 0.6, 0.3, 1)
+emission_energy_multiplier = 1
+
+[sub_resource type="SphereMesh" id="mesh33"]
+radius = 0.06
+height = 0.12
+radial_segments = 8
+rings = 4
+material = SubResource("mat9")
+
+[sub_resource type="CylinderMesh" id="mesh34"]
+top_radius = 0.012
+bottom_radius = 0.015
+height = 0.3658
+radial_segments = 4
+material = SubResource("mat7")
+
+[sub_resource type="SphereMesh" id="mesh35"]
+radius = 0.06
+height = 0.12
+radial_segments = 8
+rings = 4
+material = SubResource("mat9")
+
+[sub_resource type="CylinderMesh" id="mesh36"]
+top_radius = 0.012
+bottom_radius = 0.015
+height = 0.3462
+radial_segments = 4
+material = SubResource("mat7")
+
+[sub_resource type="SphereMesh" id="mesh37"]
+radius = 0.06
+height = 0.12
+radial_segments = 8
+rings = 4
+material = SubResource("mat9")
+
+[sub_resource type="CylinderMesh" id="mesh38"]
+top_radius = 0.012
+bottom_radius = 0.015
+height = 0.5931
+radial_segments = 4
+material = SubResource("mat7")
+
+[sub_resource type="StandardMaterial3D" id="mat10"]
+albedo_color = Color(0.75, 0.35, 0.55, 1)
+roughness = 0.3
+metallic = 0
+emission_enabled = true
+emission = Color(0.75, 0.35, 0.55, 1)
+emission_energy_multiplier = 1
+
+[sub_resource type="SphereMesh" id="mesh40"]
+radius = 0.06
+height = 0.12
+radial_segments = 8
+rings = 4
+material = SubResource("mat10")
+
+[sub_resource type="CylinderMesh" id="mesh41"]
+top_radius = 0.012
+bottom_radius = 0.015
+height = 0.3437
+radial_segments = 4
+material = SubResource("mat7")
+
+[sub_resource type="SphereMesh" id="mesh42"]
+radius = 0.06
+height = 0.12
+radial_segments = 8
+rings = 4
+material = SubResource("mat9")
+
+[sub_resource type="CylinderMesh" id="mesh43"]
+top_radius = 0.012
+bottom_radius = 0.015
+height = 0.4651
+radial_segments = 4
+material = SubResource("mat7")
+
+[sub_resource type="SphereMesh" id="mesh44"]
+radius = 0.06
+height = 0.12
+radial_segments = 8
+rings = 4
+material = SubResource("mat9")
+
+[sub_resource type="CylinderMesh" id="mesh45"]
+top_radius = 0.012
+bottom_radius = 0.015
+height = 0.3709
+radial_segments = 4
+material = SubResource("mat7")
+
+[sub_resource type="SphereMesh" id="mesh46"]
+radius = 0.06
+height = 0.12
+radial_segments = 8
+rings = 4
+material = SubResource("mat10")
+
+[node name="Plant_Bed" type="Node3D"]
+
+[node name="P1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+mesh = SubResource("mesh2")
+
+[node name="P2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.42, 0)
+mesh = SubResource("mesh4")
+
+[node name="P3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.7756, 0, 0, 0, 1, 1.533, 0.5, -0.035)
+mesh = SubResource("mesh6")
+
+[node name="P4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.6845, 0, 0, 0, 1, 1.3196, 0.5, 0.1913)
+mesh = SubResource("mesh8")
+
+[node name="P5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.5329, 0, 0, 0, 1, -0.518, 0.5, 0.1402)
+mesh = SubResource("mesh9")
+
+[node name="P6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.5176, 0, 0, 0, 1, -0.888, 0.5, 0.2625)
+mesh = SubResource("mesh11")
+
+[node name="P7" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.5734, 0, 0, 0, 1, 1.4777, 0.5, 0.1532)
+mesh = SubResource("mesh13")
+
+[node name="P8" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.5906, 0, 0, 0, 1, -0.2898, 0.5, 0.1865)
+mesh = SubResource("mesh14")
+
+[node name="P9" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.5344, 0, 0, 0, 1, 0.5032, 0.5, 0.2171)
+mesh = SubResource("mesh15")
+
+[node name="P10" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.8303, 0, 0, 0, 1, -0.9518, 0.5, -0.2252)
+mesh = SubResource("mesh16")
+
+[node name="P11" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.7114, 0, 0, 0, 1, 0.6783, 0.5, 0.3254)
+mesh = SubResource("mesh17")
+
+[node name="P12" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.8331, 0, 0, 0, 1, 0.6668, 0.5, -0.1628)
+mesh = SubResource("mesh18")
+
+[node name="P13" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.6925, 0, 0, 0, 1, -1.1803, 0.5, 0.0103)
+mesh = SubResource("mesh19")
+
+[node name="P14" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.6223, 0, 0, 0, 1, -0.4862, 0.5, 0.2724)
+mesh = SubResource("mesh20")
+
+[node name="P15" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.7835, 0, 0, 0, 1, 0.5368, 0.5, -0.3006)
+mesh = SubResource("mesh21")
+
+[node name="P16" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.6526, 0, 0, 0, 1, -0.6663, 0.5, 0.0399)
+mesh = SubResource("mesh22")
+
+[node name="P17" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7335, 0.7306, -0.1906)
+mesh = SubResource("mesh24")
+
+[node name="P18" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7335, 1.0512, -0.1906)
+mesh = SubResource("mesh26")
+
+[node name="P19" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1764, 0.6882, -0.3645)
+mesh = SubResource("mesh27")
+
+[node name="P20" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1764, 0.9664, -0.3645)
+mesh = SubResource("mesh28")
+
+[node name="P21" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1391, 0.6839, 0.0523)
+mesh = SubResource("mesh29")
+
+[node name="P22" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1391, 0.9579, 0.0523)
+mesh = SubResource("mesh30")
+
+[node name="P23" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.39, 0.5898, -0.2768)
+mesh = SubResource("mesh31")
+
+[node name="P24" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.39, 0.7695, -0.2768)
+mesh = SubResource("mesh33")
+
+[node name="P25" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3838, 0.6329, -0.0181)
+mesh = SubResource("mesh34")
+
+[node name="P26" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3838, 0.8558, -0.0181)
+mesh = SubResource("mesh35")
+
+[node name="P27" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1347, 0.6231, -0.3718)
+mesh = SubResource("mesh36")
+
+[node name="P28" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1347, 0.8362, -0.3718)
+mesh = SubResource("mesh37")
+
+[node name="P29" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1167, 0.7466, 0.0292)
+mesh = SubResource("mesh38")
+
+[node name="P30" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1167, 1.0831, 0.0292)
+mesh = SubResource("mesh40")
+
+[node name="P31" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3308, 0.6218, -0.2551)
+mesh = SubResource("mesh41")
+
+[node name="P32" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3308, 0.8337, -0.2551)
+mesh = SubResource("mesh42")
+
+[node name="P33" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0139, 0.6825, -0.3739)
+mesh = SubResource("mesh43")
+
+[node name="P34" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0139, 0.9551, -0.3739)
+mesh = SubResource("mesh44")
+
+[node name="P35" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4208, 0.6355, 0.1457)
+mesh = SubResource("mesh45")
+
+[node name="P36" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4208, 0.8609, 0.1457)
+mesh = SubResource("mesh46")
