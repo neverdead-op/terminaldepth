@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3]
+[ext_resource type="Script" path="res://scripts/riverbank_module.gd" id="1"]
+[ext_resource type="PackedScene" path="res://assets/environment/victorian_kit/v1/pillar_square.glb" id="2"]
+[ext_resource type="PackedScene" path="res://assets/environment/riverbank/tripo/v1/RB_PILLAR_CORNER/RB_PILLAR_CORNER.glb" id="Tripo"]
+[node name="PillarCorner" type="Node3D"]
+script = ExtResource("1")
+reference_model = ExtResource("2")
+model_scene = ExtResource("Tripo")
+target_size = Vector3(1, 2.2, 1)
+collider_size = Vector3(0.9, 2.1, 0.9)
+collider_center = Vector3(0, 1.05, 0)

@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3]
+[ext_resource type="Script" path="res://scripts/riverbank_module.gd" id="1"]
+[ext_resource type="PackedScene" path="res://assets/environment/threshold_set/v1/arch_gateway.glb" id="2"]
+[ext_resource type="PackedScene" path="res://assets/environment/riverbank/tripo/v1/RB_ARCH_GATEWAY/RB_ARCH_GATEWAY.glb" id="Tripo"]
+[sub_resource type="BoxShape3D" id="Pillar"]
+size = Vector3(1.6, 8, 2)
+[sub_resource type="BoxShape3D" id="Lintel"]
+size = Vector3(6.8, 1, 2)
+[node name="ArchGateway" type="Node3D"]
+script = ExtResource("1")
+reference_model = ExtResource("2")
+model_scene = ExtResource("Tripo")
+target_size = Vector3(10, 8, 2)
+solid = false
+
+[node name="PassageCollision" type="StaticBody3D" parent="."]
+collision_layer = 1
+collision_mask = 0
+[node name="Left" type="CollisionShape3D" parent="PassageCollision"]
+position = Vector3(-4.2, 4, 0)
+shape = SubResource("Pillar")
+[node name="Right" type="CollisionShape3D" parent="PassageCollision"]
+position = Vector3(4.2, 4, 0)
+shape = SubResource("Pillar")
+[node name="Top" type="CollisionShape3D" parent="PassageCollision"]
+position = Vector3(0, 7.5, 0)
+shape = SubResource("Lintel")

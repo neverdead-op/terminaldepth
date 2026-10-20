@@ -1,0 +1,146 @@
+[
+  {
+    "id": "RB_ROCK_BANK_A",
+    "source_obj": "art_source/riverbank/tripo_v1/модели/груда камней/RIP0 (2).obj",
+    "source_sha256": "1dbe687d516f8ae86ce93ca43c48d66f488372bc5805b87408b1fbd749306e96",
+    "triangles": 1429,
+    "vertices": 1113,
+    "skipped_invalid_triangles": 0,
+    "source_nonfinite_vertices": 1,
+    "rotation_y_90": false,
+    "prepared_bbox": [
+      1.0,
+      0.5980224609375,
+      0.72149658203125
+    ],
+    "texture_size": 2048,
+    "source_texture_content_rect": [
+      0,
+      2048,
+      2048,
+      4096
+    ],
+    "module": "rock_bank_a",
+    "runtime_glb": "res://assets/environment/riverbank/tripo/v1/RB_ROCK_BANK_A/RB_ROCK_BANK_A.glb"
+  },
+  {
+    "id": "RB_ROCK_SMALL_B",
+    "source_obj": "art_source/riverbank/tripo_v1/модели/груда камней поменьше/RIP0 (2).obj",
+    "source_sha256": "e3fdf8fbe7e8d34e4db69908cdcb485be508c3722f61019919c8ef3838653518",
+    "triangles": 1462,
+    "vertices": 1082,
+    "skipped_invalid_triangles": 0,
+    "source_nonfinite_vertices": 1,
+    "rotation_y_90": true,
+    "prepared_bbox": [
+      1.0,
+      0.437957763671875,
+      0.8720703125
+    ],
+    "texture_size": 2048,
+    "source_texture_content_rect": [
+      0,
+      2048,
+      2048,
+      4096
+    ],
+    "module": "rock_small_b",
+    "runtime_glb": "res://assets/environment/riverbank/tripo/v1/RB_ROCK_SMALL_B/RB_ROCK_SMALL_B.glb"
+  },
+  {
+    "id": "RB_WALL_STRAIGHT_4M",
+    "source_obj": "art_source/riverbank/tripo_v1/модели/стена/RIP0 (3).obj",
+    "source_sha256": "62285cd20ed450b2675e28ca7bee57498a07c0a49d4e21df336a5419d934473f",
+    "triangles": 1426,
+    "vertices": 1355,
+    "skipped_invalid_triangles": 0,
+    "source_nonfinite_vertices": 1,
+    "rotation_y_90": true,
+    "prepared_bbox": [
+      1.0,
+      0.298980712890625,
+      0.1699066162109375
+    ],
+    "texture_size": 2048,
+    "source_texture_content_rect": [
+      0,
+      2048,
+      2048,
+      4096
+    ],
+    "module": "wall_straight_4m",
+    "runtime_glb": "res://assets/environment/riverbank/tripo/v1/RB_WALL_STRAIGHT_4M/RB_WALL_STRAIGHT_4M.glb"
+  },
+  {
+    "id": "RB_WALL_BROKEN_4M",
+    "source_obj": "art_source/riverbank/tripo_v1/модели/поврежденная стена/RIP0 (2).obj",
+    "source_sha256": "aaceebdc9be49740b12265ed78e4ad12ffd90fdcbfd12334f52e11c3743b2ffe",
+    "triangles": 1413,
+    "vertices": 1282,
+    "skipped_invalid_triangles": 0,
+    "source_nonfinite_vertices": 1,
+    "rotation_y_90": true,
+    "prepared_bbox": [
+      1.0,
+      0.291107177734375,
+      0.1685943603515625
+    ],
+    "texture_size": 2048,
+    "source_texture_content_rect": [
+      0,
+      2048,
+      2048,
+      4096
+    ],
+    "module": "wall_broken_4m",
+    "runtime_glb": "res://assets/environment/riverbank/tripo/v1/RB_WALL_BROKEN_4M/RB_WALL_BROKEN_4M.glb"
+  },
+  {
+    "id": "RB_PILLAR_CORNER",
+    "source_obj": "art_source/riverbank/tripo_v1/модели/столб от стены/RIP0 (2).obj",
+    "source_sha256": "627b2c17a27b2ca0c36f1f1018eb6391acd12a00deecd5e35628a3bcc13ed569",
+    "triangles": 1404,
+    "vertices": 1176,
+    "skipped_invalid_triangles": 0,
+    "source_nonfinite_vertices": 1,
+    "rotation_y_90": false,
+    "prepared_bbox": [
+      0.4595947265625,
+      1.0,
+      0.489349365234375
+    ],
+    "texture_size": 2048,
+    "source_texture_content_rect": [
+      0,
+      2048,
+      2048,
+      4096
+    ],
+    "module": "pillar_corner",
+    "runtime_glb": "res://assets/environment/riverbank/tripo/v1/RB_PILLAR_CORNER/RB_PILLAR_CORNER.glb"
+  },
+  {
+    "id": "RB_ARCH_GATEWAY",
+    "source_obj": "art_source/riverbank/tripo_v1/модели/арка/RIP0 (2).obj",
+    "source_sha256": "45bba5b7ebe9b27720f6f366a495250b533e76d53e3930056d56c815842e85aa",
+    "triangles": 1406,
+    "vertices": 1191,
+    "skipped_invalid_triangles": 0,
+    "source_nonfinite_vertices": 1,
+    "rotation_y_90": true,
+    "prepared_bbox": [
+      1.0,
+      0.79736328125,
+      0.264434814453125
+    ],
+    "texture_size": 2048,
+    "source_texture_content_rect": [
+      0,
+      2048,
+      2048,
+      4096
+    ],
+    "module": "arch_gateway",
+    "runtime_glb": "res://assets/environment/riverbank/tripo/v1/RB_ARCH_GATEWAY/RB_ARCH_GATEWAY.glb"
+  }
+]

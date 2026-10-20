@@ -1,0 +1,64 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/art/riverbank_environment.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://assets/environment/riverbank/modules/rock_bank_a.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://assets/environment/riverbank/modules/rock_small_b.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://assets/environment/riverbank/modules/wall_straight_4m.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://assets/environment/riverbank/modules/wall_broken_4m.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://assets/environment/riverbank/modules/pillar_corner.tscn" id="6"]
+[ext_resource type="PackedScene" path="res://assets/environment/riverbank/modules/arch_gateway.tscn" id="7"]
+[ext_resource type="Script" path="res://tools/riverbank_kit_gallery.gd" id="9"]
+
+[sub_resource type="StandardMaterial3D" id="GalleryGround"]
+albedo_color = Color(0.18, 0.2, 0.26, 1)
+roughness = 1.0
+
+[sub_resource type="PlaneMesh" id="Floor"]
+material = SubResource("GalleryGround")
+size = Vector2(42, 30)
+
+[sub_resource type="SystemFont" id="Font"]
+font_names = PackedStringArray("Arial")
+
+[node name="RiverbankKitGallery" type="Node3D"]
+script = ExtResource("9")
+
+[node name="Environment" parent="." instance=ExtResource("1")]
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+position = Vector3(0, -0.02, -2)
+mesh = SubResource("Floor")
+
+[node name="RockBankA" parent="." instance=ExtResource("2")]
+position = Vector3(-13, 0, 4)
+
+[node name="RockSmallB" parent="." instance=ExtResource("3")]
+position = Vector3(-7, 0, 4)
+
+[node name="WallStraight4m" parent="." instance=ExtResource("4")]
+position = Vector3(-1, 0, 4)
+
+[node name="WallBroken4m" parent="." instance=ExtResource("5")]
+position = Vector3(6, 0, 4)
+
+[node name="PillarCorner" parent="." instance=ExtResource("6")]
+position = Vector3(12, 0, 4)
+
+[node name="ArchGateway" parent="." instance=ExtResource("7")]
+position = Vector3(0, 0, -9)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+position = Vector3(18, 32, 30)
+rotation_degrees = Vector3(-42, 28, 0)
+projection = 1
+size = 39.0
+current = true
+
+[node name="Instructions" type="CanvasLayer" parent="."]
+
+[node name="Text" type="Label" parent="Instructions"]
+offset_left = 18.0
+offset_top = 18.0
+theme_override_fonts/font = SubResource("Font")
+theme_override_font_sizes/font_size = 20
+text = "КОНСТРУКТОР БЕРЕГА — МОДЕЛИ АВТОРА ИЗ TRIPO\nСлева направо: скала A, камень B, стена, разрушенная стена, столб. Сзади — арка.\nМодели подключаются в модулях через Model Scene.\nИгровой уровень: scenes/tools/riverbank_playtest.tscn (F6)"

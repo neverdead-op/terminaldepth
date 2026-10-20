@@ -1,0 +1,13 @@
+[gd_scene load_steps=5 format=3]
+[ext_resource type="Script" path="res://scripts/riverbank_module.gd" id="1"]
+[ext_resource type="PackedScene" path="res://assets/nature/Rock_Medium_3.gltf" id="2"]
+[ext_resource type="Material" path="res://assets/environment/riverbank/materials/rock_slate.tres" id="3"]
+[ext_resource type="PackedScene" path="res://assets/environment/riverbank/tripo/v1/RB_ROCK_SMALL_B/RB_ROCK_SMALL_B.glb" id="Tripo"]
+[node name="RockSmallB" type="Node3D"]
+script = ExtResource("1")
+reference_model = ExtResource("2")
+model_scene = ExtResource("Tripo")
+target_size = Vector3(2.4, 1.1, 1.8)
+collider_size = Vector3(2, 0.9, 1.4)
+collider_center = Vector3(0, 0.45, 0)
+surface_material = ExtResource("3")
