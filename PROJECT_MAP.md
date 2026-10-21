@@ -193,6 +193,7 @@ ItemDB, ModuleDB, PassiveDB и SaveGame — подключаемые скрип�
 - `scripts/threshold_composition.gd`, `threshold_look.gd`, `threshold_look_controller.gd`, `threshold_fluffy_fog.gd`, `threshold_chain.gd` (в `scripts/`) — отдельная композиция, профиль вида, слои тумана, цепи.
 - `scenes/art/threshold_composition.tscn`, `scenes/tools/threshold_preview.tscn`, `data/visual/threshold_saved.tres`, `addons/threshold_style/style_panel.gd` — мастерская стиля в редакторе/игре; запись профиля явная.
 - `scripts/postfx_studio.gd`, `postfx_profile.gd`, `postfx_volume.gd`, `assets/shaders/postfx_grade.gdshader` — свет/постобработка Riverbank, F4/L3, нативные Environment/CameraAttributes и локальные зоны. Та же панель редактора, без замены мастерской Threshold. [Управление, сохранение, границы относительно UE и проверки](docs/POSTFX_STUDIO.md).
+- `scripts/riverbank_ground_contact.gd`, `assets/shaders/riverbank_ground_contact.gdshader` — GroundContact только в Riverbank: пятнистый переход у оснований модулей, без замены исходных материалов. `village_floor_sampling.gdshaderinc` — общий прежний расчёт покрытий для пола и overlay. [Настройки, резерв экспозиции 0.92 и проверки](docs/RIVERBANK_GROUND_CONTACT.md).
 - `scripts/level1_material_preview.gd`, `assets/environment`, `art_source` — новая карта, игровые модели и редактируемые источники.
 
 **Зависимости:** @tool/EditorPlugin, Environment/камеры, шейдеры, внешние PNG моделей, сборщики.

@@ -77,6 +77,14 @@ func rebuild() -> void:
 					filtered.texture_filter = BaseMaterial3D.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS_ANISOTROPIC
 					_filtered_materials[key] = filtered
 				mesh.set_surface_override_material(surface, _filtered_materials[key])
+	# Перестройка отдельного модуля в редакторе сохраняет переход у основания.
+	var ancestor := get_parent()
+	while ancestor!=null:
+		var contact := ancestor.get_node_or_null("GroundContact")
+		if contact!=null:
+			contact.apply_to_module.call_deferred(self)
+			break
+		ancestor=ancestor.get_parent()
 	if solid:
 		var body := StaticBody3D.new()
 		body.name = "Body"

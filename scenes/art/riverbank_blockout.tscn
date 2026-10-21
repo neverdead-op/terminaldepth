@@ -23,6 +23,7 @@
 [ext_resource type="Script" path="res://scripts/camera_rig.gd" id="25_p0ddm"]
 [ext_resource type="Script" path="res://scripts/bullet_pool.gd" id="26_lun6x"]
 [ext_resource type="PackedScene" path="res://scenes/bullet.tscn" id="27_gvmvw"]
+[ext_resource type="Script" path="res://scripts/riverbank_ground_contact.gd" id="Ground_Contact"]
 [ext_resource type="Script" path="res://scripts/postfx_studio.gd" id="PostFX_Studio"]
 [ext_resource type="PackedScene" path="res://scenes/art/riverbank_dressing.tscn" id="RB_Dressing"]
 
@@ -2752,3 +2753,6 @@ bullet_scene = ExtResource("27_gvmvw")
 [node name="PostFXStudio" type="Node" parent="." unique_id=731535241]
 process_mode = 3
 script = ExtResource("PostFX_Studio")
+
+[node name="GroundContact" type="Node" parent="."]
+script = ExtResource("Ground_Contact")

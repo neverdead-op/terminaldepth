@@ -45,7 +45,7 @@ func make_panel() -> Control:
 	result.schema_override = Profile.schema(profile)
 	result.title_override = "СВЕТ И POST FX · RIVERBANK"
 	result.note_override = "Изменения видны сразу. HUD не обрабатывается. Запись профиля — только кнопкой. Тяжёлые GI/SSR/DOF включайте осознанно."
-	result.art_profiles = []
+	result.art_profiles = [["Вернуть свет до переходов","res://data/visual/riverbank_before_ground_contact_20261021.tres"]]
 	result.preset_names = ["Genesis · база","Нейтральный"]
 	result.target = self
 	return result
