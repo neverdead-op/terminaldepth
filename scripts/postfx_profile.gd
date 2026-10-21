@@ -4,22 +4,22 @@ extends Resource
 @export var environment: Environment = Environment.new()
 @export var camera: CameraAttributesPractical = CameraAttributesPractical.new()
 @export_group("Свет")
-@export var sun_color := Color(.96,.91,.82)
-@export_range(0,4,.01) var sun_energy := 1.05
-@export_range(-90,0,.1) var sun_elevation := -49.0
-@export_range(-180,180,.1) var sun_azimuth := -35.0
-@export_range(0,3,.01) var lantern_multiplier := 1.0
-@export var lantern_color := Color(1,.61,.28)
+@export var sun_color := Color(.84,.91,1.0)
+@export_range(0,4,.01) var sun_energy := .88
+@export_range(-90,0,.1) var sun_elevation := -46.0
+@export_range(-180,180,.1) var sun_azimuth := -42.0
+@export_range(0,3,.01) var lantern_multiplier := 1.35
+@export var lantern_color := Color(1,.57,.24)
 @export_group("Цветокоррекция")
 @export_range(-1,1,.01) var temperature := -.04
 @export_range(-1,1,.01) var tint := 0.0
-@export var shadows := Color(.96,1.0,1.04)
-@export var highlights := Color(1.03,1.01,.97)
+@export var shadows := Color(.97,1.01,1.04)
+@export var highlights := Color(1.04,1.015,.97)
 @export var lift := Color(0,0,0)
 @export var gamma := Color(1,1,1)
 @export var gain := Color(1,1,1)
 @export_group("Линза")
-@export_range(0,.6,.01) var vignette := .08
+@export_range(0,.6,.01) var vignette := .1
 @export_range(.1,1,.01) var vignette_softness := .55
 @export_range(0,1,.01) var sharpen := .08
 @export_range(0,.02,.0001) var chromatic_aberration := 0.0
@@ -47,19 +47,26 @@ static func defaults() -> Resource:
 	result.environment = load("res://data/visual/riverbank_environment.tres").duplicate(true)
 	var e: Environment = result.environment
 	e.tonemap_mode = Environment.TONE_MAPPER_ACES
-	e.ambient_light_color = Color(.52,.61,.68)
-	e.ambient_light_energy = .34
+	e.ambient_light_color = Color(.48,.61,.74)
+	e.ambient_light_energy = .52
+	e.tonemap_exposure = 1.05
 	e.glow_enabled = true
-	e.glow_intensity = .22
-	e.glow_hdr_threshold = 1.4
+	e.glow_intensity = .26
+	e.glow_hdr_threshold = 1.5
 	e.ssao_enabled = true
 	e.ssao_radius = 1.1
-	e.ssao_intensity = 1.0
-	e.ssao_power = 1.2
+	e.ssao_intensity = .85
+	e.ssao_power = 1.1
 	e.ssil_enabled = false
 	e.adjustment_enabled = true
-	e.adjustment_contrast = 1.05
-	e.adjustment_saturation = 1.02
+	e.adjustment_contrast = 1.04
+	e.adjustment_saturation = .96
+	# Лёгкая холодная воздушная перспектива, без дорогого объёмного тумана.
+	e.fog_enabled = true
+	e.fog_light_color = Color(.19,.29,.36)
+	e.fog_light_energy = .65
+	e.fog_density = .003
+	e.fog_sky_affect = 0.0
 	return result
 
 static func schema(profile: Resource) -> Array:

@@ -87,5 +87,9 @@ func run() -> void:
 	player.position = Vector3(34.5,.1,-48)
 	zone.get_node("CameraRig").position = player.position
 	await shot("postfx_garden")
+	for view: Array in [["postfx_gate",Vector3(0,.1,-57)],["postfx_harbor",Vector3(-54,.1,-5)]]:
+		player.position=view[1]
+		zone.get_node("CameraRig").position=player.position
+		await shot(view[0])
 	print("POSTFX_STUDIO_OK: ",panel.controls.size()," live controls; env/camera/grade; roundtrip; pause restore; A/B; box falloff; volume blend; no campaign saves")
 	get_tree().quit()
