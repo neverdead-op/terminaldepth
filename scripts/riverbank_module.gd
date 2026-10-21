@@ -32,6 +32,8 @@ extends Node3D
 		surface_material = value
 		_queue_rebuild()
 var _rebuild_queued := false
+## Копии материалов для фильтрации Riverbank без изменения импортированных оригиналов.
+static var _filtered_materials: Dictionary = {}
 
 func _ready() -> void:
 	rebuild()
@@ -65,6 +67,16 @@ func rebuild() -> void:
 	for mesh: MeshInstance3D in source.find_children("*", "MeshInstance3D", true, false):
 		# Новая Tripo-модель сохраняет собственные материалы и рисованную текстуру.
 		if model_scene == null and surface_material != null: mesh.material_override = surface_material
+		if model_scene != null and mesh.mesh != null:
+			for surface in range(mesh.mesh.get_surface_count()):
+				var original := mesh.get_active_material(surface)
+				if not original is BaseMaterial3D: continue
+				var key := original.get_instance_id()
+				if not _filtered_materials.has(key):
+					var filtered := original.duplicate() as BaseMaterial3D
+					filtered.texture_filter = BaseMaterial3D.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS_ANISOTROPIC
+					_filtered_materials[key] = filtered
+				mesh.set_surface_override_material(surface, _filtered_materials[key])
 	if solid:
 		var body := StaticBody3D.new()
 		body.name = "Body"

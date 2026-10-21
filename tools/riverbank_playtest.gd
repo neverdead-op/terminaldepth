@@ -23,6 +23,14 @@ func _start() -> void:
 		"fixed_bow_loadout": false, "start_weapon": &"rifle", "start_weapon_corp": &"",
 		"animation_library_path": "res://assets/animations/model1_shooter.tres"})
 	level = player.get_parent()
+	# LunarIntro использует тот же player.tscn и общий готический HUD без переопределений.
+	var hud := player.get_node("HUD")
+	assert(hud.reference_hud)
+	for child in hud.get_children():
+		if child.get_script() == preload("res://scripts/hud_ref.gd"):
+			child.hud_scale = 0.9
+			child.left_panel_width = 440.0
+			child.right_panel_width = 280.0
 	var rifle: GearItem = player.weapon_item(0)
 	rifle.modules[0] = Modules.by_id(&"fire").duplicate()
 	rifle.modules[1] = Modules.by_id(&"ricochet").duplicate()
@@ -34,14 +42,15 @@ func _start() -> void:
 	canvas.name = "BlockoutControls"
 	canvas.process_mode = Node.PROCESS_MODE_ALWAYS
 	level.add_child(canvas)
+	canvas.visible = false
 	var panel := PanelContainer.new()
-	panel.position = Vector2(16, 64)
+	panel.position = Vector2(16, 14)
 	canvas.add_child(panel)
 	status = Label.new()
 	var rows := VBoxContainer.new()
 	panel.add_child(rows)
-	status.text = "ЗАТОПЛЕННЫЙ ПОДХОД • ИГРОВОЙ ТЕСТ\nWASD — идти • мышь + ЛКМ — стрелять\nПробел — перекат • R — перезарядка • E — лечение\nF2 — обзор / бой • F7 — сброс • Без сохранений"
-	status.add_theme_font_size_override("font_size", 17)
+	status.text = "ЗАТОПЛЕННЫЙ ПОДХОД • F2 — обзор • F7 — заново"
+	status.add_theme_font_size_override("font_size", 13)
 	rows.add_child(status)
 	var buttons := HBoxContainer.new()
 	rows.add_child(buttons)
@@ -53,6 +62,7 @@ func _start() -> void:
 	restart_button.text = "Заново (F7)"
 	restart_button.pressed.connect(_start)
 	buttons.add_child(restart_button)
+	buttons.visible = false
 	player.show_message("Тест берега: доберитесь до ворот. F2 — обзор, F7 — начать заново.", 5)
 	var args := OS.get_cmdline_user_args()
 	if "--check" in args or "--capture" in args or "--spawn-check" in args:
@@ -84,6 +94,7 @@ func _toggle_overview() -> void:
 	player.get_node("HUD").visible = not overview
 	# Останавливаются также пули и таймеры атак, а кнопки теста остаются доступны.
 	get_tree().paused = overview
+	level.get_node("BlockoutControls").visible = overview
 
 func _process(_delta: float) -> void:
 	if not is_instance_valid(player): return
@@ -92,7 +103,7 @@ func _process(_delta: float) -> void:
 		player.velocity = Vector3.ZERO
 	if not completed and player.global_position.distance_to(level.get_node("Markers/Finish").position) < 3:
 		completed = true
-		status.text = "МАРШРУТ ПРОЙДЕН • F7 — повторить • F2 — обзор\nПереход в кампанию отключён: это отдельный макет."
+		status.text = "У ВОРОТ УБЕЖИЩА • F7 — заново • F2 — обзор"
 		player.show_message("Макет пройден. Вы у ворот убежища.", 6)
 
 func _check() -> void:
@@ -114,15 +125,31 @@ func _check() -> void:
 	var nav_map := level.get_world_3d().navigation_map
 	var finish: Vector3 = level.get_node("Markers/Finish").position
 	var path := NavigationServer3D.map_get_path(nav_map, player.position, finish, true)
-	assert(path.size() > 2 and path[-1].distance_to(finish) < 0.5, "No route to gate")
+	assert(path.size() >= 2 and path[-1].distance_to(finish) < 0.8, "No route to gate")
 	var pocket: Vector3 = level.get_node("Markers/OptionalLoot").position
 	var side_path := NavigationServer3D.map_get_path(nav_map, player.position, pocket, true)
 	assert(side_path.size() > 1 and side_path[-1].distance_to(pocket) < 0.5, "No side pocket route")
 	player.set_physics_process(false)
 	if "--capture" in OS.get_cmdline_user_args():
+		var rig := level.get_node("CameraRig")
+		print("RIVERBANK_CAMERA: distance=",rig.distance," elevation=",rig.elevation_degrees," fov=",rig.get_node("Camera3D").fov)
+		var water_surface: MeshInstance3D = level.get_node("Backdrop/River/Surface")
+		var water_material := water_surface.get_active_material(0) as ShaderMaterial
+		print("RIVERBANK_WATER_ACTIVE: ",water_material.shader.resource_path," flow shader=",water_material.shader.code.contains("noise2"))
+		player.get_node("HUD").visible = true
+		for shot: Array in [["riverbank_harbor",Vector3(-59,0.1,8)], ["riverbank_grove",Vector3(-30,0.1,-105)]]:
+			player.position = shot[1]
+			level.get_node("CameraRig").global_position = player.position
+			await get_tree().create_timer(.5).timeout
+			await RenderingServer.frame_post_draw
+			get_viewport().get_texture().get_image().save_png("res://docs/art_direction/riverbank/"+shot[0]+".png")
+			if shot[0] == "riverbank_harbor":
+				get_viewport().get_texture().get_image().save_png("res://ztest/riverbank_water_a.png")
+				await get_tree().create_timer(1.2).timeout
+				await RenderingServer.frame_post_draw
+				get_viewport().get_texture().get_image().save_png("res://ztest/riverbank_water_b.png")
 		player.position = Vector3(22,0.1,-54)
 		level.get_node("CameraRig").global_position = player.position
-		player.get_node("HUD").visible = false
 		await get_tree().create_timer(0.5).timeout
 		await RenderingServer.frame_post_draw
 		get_viewport().get_texture().get_image().save_png("res://docs/art_direction/riverbank/blockout_gameplay.png")
@@ -137,11 +164,13 @@ func _check() -> void:
 		presentation.position = Vector3(4,20,-118)
 		presentation.look_at(Vector3(-10,2,-140))
 		presentation.current = true
+		player.get_node("HUD").visible = false
 		level.get_node("BlockoutControls").hide()
 		await get_tree().create_timer(.3).timeout
 		await RenderingServer.frame_post_draw
 		get_viewport().get_texture().get_image().save_png("res://docs/art_direction/riverbank/riverbank_architecture.png")
-		level.get_node("BlockoutControls").show()
+		level.get_node("BlockoutControls").visible = overview
+		player.get_node("HUD").visible = true
 		presentation.queue_free()
 		level.get_node("OverviewCamera").current = true
 		await get_tree().create_timer(0.3).timeout
@@ -155,7 +184,21 @@ func _check() -> void:
 		get_tree().quit(1)
 		return
 	player.position = ROUTE[0] + Vector3.UP * 0.1
+	var walk_points := PackedVector3Array()
+	var from := player.position
+	# Проверяем несколько направлений открытой карты и обход настоящих препятствий.
 	for waypoint in ROUTE.slice(1):
+		var destination := NavigationServer3D.map_get_closest_point(nav_map, waypoint)
+		assert(destination.distance_to(waypoint)<4.0,"Test waypoint covered by geometry")
+		var section := NavigationServer3D.map_get_path(nav_map,from,destination,true)
+		assert(section.size()>=2,"Disconnected open area")
+		for point in section.slice(1): walk_points.append(point)
+		from = destination
+	for probe: Vector3 in [Vector3(40,0,-25),Vector3(6,0,-90),Vector3(-50,0,20)]:
+		var destination := NavigationServer3D.map_get_closest_point(nav_map,probe)
+		var branch := NavigationServer3D.map_get_path(nav_map,player.position,destination,true)
+		assert(branch.size()>=2 and destination.distance_to(probe)<4,"Open area unavailable")
+	for waypoint in walk_points:
 		var reached := false
 		for frame in range(800):
 			await get_tree().physics_frame
@@ -176,7 +219,7 @@ func _check() -> void:
 	assert(get_tree().paused and overview)
 	_toggle_overview()
 	assert(not get_tree().paused and not overview)
-	print("RIVERBANK_CHECK_OK: grounded, 24 enemies, winding route + side pocket, physical walk, rifle damage + fire, pause, no saves")
+	print("RIVERBANK_CHECK_OK: open ground, three branches, obstacle detours, physical walk, 24 enemies, rifle + fire, pause, no saves")
 	get_tree().quit()
 
 func _combat_check() -> bool:

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://col4w2c1q3rmy"
-path.s3tc="res://.godot/imported/flagstones_albedo.png-de371c260cbcdac092d98f8b103942d4.s3tc.ctex"
+path.bptc="res://.godot/imported/flagstones_albedo.png-de371c260cbcdac092d98f8b103942d4.bptc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,12 +12,12 @@ metadata={
 [deps]
 
 source_file="res://assets/environment/riverbank/materials/flagstones_albedo.png"
-dest_files=["res://.godot/imported/flagstones_albedo.png-de371c260cbcdac092d98f8b103942d4.s3tc.ctex"]
+dest_files=["res://.godot/imported/flagstones_albedo.png-de371c260cbcdac092d98f8b103942d4.bptc.ctex"]
 
 [params]
 
 compress/mode=2
-compress/high_quality=false
+compress/high_quality=true
 compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
