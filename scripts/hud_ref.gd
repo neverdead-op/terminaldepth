@@ -202,7 +202,10 @@ func _draw_skills() -> void:
 				UiIcons.draw_module(self, &"electric", center, 15 * _scale, Style.BLUE)
 				cooldown = skills.nova_timer
 			5:
-				continue
+				if skills == null: continue
+				key = Loc.action_key("skill_fireball")
+				UiIcons.draw_module(self, &"fire", center, 17 * _scale, Color(1.0, 0.45, 0.12))
+				cooldown = skills.fireball_timer
 		if not enabled or cooldown > 0:
 			draw_rect(_r(cell), Color(0, 0, 0, 0.65))
 		if cooldown > 0: _label("%.1f" % cooldown, cell.position + Vector2(10, 28), 15)

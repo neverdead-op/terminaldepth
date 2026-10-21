@@ -111,6 +111,7 @@ ItemDB, ModuleDB, PassiveDB и SaveGame — подключаемые скрип�
 
 **Основные файлы:**
 - `scripts/player_skills.gd` — гранаты, мины, nova, заряженный выстрел, области стихийного урона; узел создаётся игроком.
+- Встроенный огненный шар: `scripts/fireball_projectile.gd`, атлас 6×4 и billboard-шейдер в `assets/vfx/fireball/`. T / LT, переназначение через InputSetup; шестая ячейка HUD показывает восстановление. Не зависит от оружия, в хабе отключён. Проверка: `ztest/test_fireball.tscn`, `-- --capture` пишет `ztest/fireball_capture.png`.
 - `scripts/passive_db.gd` — NODES/EDGES, ключи бонусов.
 - `scripts/player.gd` — allocate/refund, passive_stats, `_recalculate_stats`, `_recalculate_defense`, уровень/опыт; `_gear` — общие бонусы.
 - `scripts/skills_screen.gd`, `passive_tree_screen.gd`, `character_screen.gd` (в `scripts/`) — экраны способностей/дерева/характеристик.

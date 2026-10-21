@@ -7,6 +7,14 @@ extends Node
 ## Урон растёт с уровнем персонажа. Все цифры — в Inspector.
 
 const EXPLOSION := preload("res://scenes/explosion.tscn")
+const FIREBALL := preload("res://scripts/fireball_projectile.gd")
+
+@export_group("Огненный шар")
+@export var fireball_damage := 70.0
+@export var fireball_cooldown := 1.2
+@export var fireball_speed := 18.0
+@export var fireball_range := 24.0
+var fireball_timer := 0.0
 
 @export_group("Граната")
 @export var grenade_charges := 3
@@ -107,6 +115,7 @@ func _grenade_modules() -> Array:
 
 
 func _process(delta: float) -> void:
+	fireball_timer = maxf(0.0, fireball_timer - delta)
 	pulse_cooldown = maxf(0, pulse_cooldown - delta)
 	if _pulse_charge_left > 0:
 		if player.is_dead() or player.is_dodging() or player.weapon_item(player.current_weapon_index()) != _pulse_item:
@@ -142,11 +151,33 @@ func _unhandled_input(event: InputEvent) -> void:
 		else: throw_grenade()
 	elif event.is_action_pressed("skill_nova"):
 		nova()
+	elif event.is_action_pressed("skill_fireball"):
+		cast_fireball()
 	# Мины сохранены в коде для поздних актов; получение и ввод в первом акте отключены.
 
 
 func _level_mult() -> float:
 	return 1.0 + 0.25 * (player.level - 1)
+
+
+## Встроенный навык: не требует предмета, модулей или патронов.
+func cast_fireball() -> bool:
+	if player.is_dead() or get_tree().paused or Game.in_hub() or player.is_dodging() or player.is_reloading() or player._recovery_left > 0 or fireball_timer > 0.0:
+		return false
+	var projectile := FIREBALL.new()
+	var aim: Vector3 = player._aim_dir
+	aim.y = 0.0
+	projectile.direction = aim.normalized() if aim.length_squared() > 0.01 else -player.global_basis.z
+	projectile.source = player
+	projectile.damage = fireball_damage * _level_mult()
+	projectile.speed = fireball_speed
+	projectile.remaining = fireball_range
+	player.get_parent().add_child(projectile)
+	# Старт от героя: первый отрезок тоже проверяет стены и двери.
+	projectile.global_position = player.global_position + Vector3.UP * 1.0
+	fireball_timer = fireball_cooldown
+	Sfx.play(&"dodge", projectile.global_position, -8.0)
+	return true
 
 
 func has_grenade() -> bool:

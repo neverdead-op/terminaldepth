@@ -8,6 +8,7 @@ const CONFIG_PATH := "user://controls.cfg"
 
 ## Что можно переназначить в меню: [действие, название].
 const REBINDABLE := [
+	["skill_fireball", "Огненный шар"],
 	["shoot", "Стрельба"], ["dodge", "Перекат / спринт"], ["reload", "Перезарядка"],
 	["pickup", "Поднять вещь"], ["heal", "Аптечка"], ["interact", "Взаимодействовать"],
 	["weapon_next", "Следующее оружие"], ["town_portal", "Портал на базу"], ["inventory", "Инвентарь"],
@@ -48,6 +49,7 @@ static func setup() -> void:
 	_add("skill_grenade", [_key(KEY_G), _joy(JOY_BUTTON_RIGHT_SHOULDER)])
 	_add("skill_nova", [_key(KEY_V), _joy(JOY_BUTTON_LEFT_SHOULDER)])
 	_add("skill_mine", [_key(KEY_B), _axis(JOY_AXIS_TRIGGER_LEFT, 1.0)])
+	_add("skill_fireball", [_key(KEY_T), _axis(JOY_AXIS_TRIGGER_LEFT, 1.0)])
 	# ПКМ — действие: поднять вещь, открыть сундук, поговорить (гранаты пока убраны).
 	_add("interact", [_key(KEY_F), _mouse(MOUSE_BUTTON_RIGHT), _joy(JOY_BUTTON_B)])
 	# Поднять вещь с пола (золото подбирается само). На геймпаде — та же X, что и перезарядка.

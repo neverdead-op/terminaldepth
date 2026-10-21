@@ -4,6 +4,7 @@ extends RefCounted
 ## в английский шаблон в том же порядке. Новую строку в игре — добавить сюда.
 
 const TEXT := {
+	"Огненный шар": "Fireball",
 	"Защита: броня": "Defense: armour",
 	"Защита: броня + энергощит": "Defense: armour + energy shield",
 	"Защита: энергощит": "Defense: energy shield",

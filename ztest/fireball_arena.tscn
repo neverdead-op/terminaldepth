@@ -1,0 +1,13 @@
+[gd_scene format=3]
+
+[node name="FireballArena" type="Node3D"]
+
+[node name="Spawn" type="Marker3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+position = Vector3(0, 10, 9)
+rotation_degrees = Vector3(-48, 0, 0)
+current = true
+
+[node name="Light" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-60, -30, 0)
