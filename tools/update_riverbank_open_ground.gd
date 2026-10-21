@@ -144,14 +144,19 @@ func build_ground_material() -> ShaderMaterial:
 			variants[Vector2i(x,z)] = variant
 	var prefix := "res://assets/environment/riverbank/textures/ground/stylized_v2/T_RB_Ground_"
 	var textures: Array[Texture2D] = []
-	for kind in ["Flagstone","Meadow","Soil","Flagstone","Moss","Soil"]:
-		textures.append(load(prefix+kind+("_A_Bright_BaseColor.png" if kind=="Moss" else "_A_BaseColor.png")))
+	for kind in ["Flagstone","Meadow","Soil","Flagstone","BrokenSlate","Soil"]:
+		textures.append(load(prefix+kind+"_A_BaseColor.png"))
 	# Общая система деревни строит только материал и веса; точный береговой меш сохраняем.
 	var preview := BlendedFloor.build(variants,textures,PackedFloat32Array([4,6,6,4,6,6]),
-		PackedFloat32Array([.05,.05,.08,.05,.02,.08]),PackedFloat32Array([.02,.02,.01,.02,.01,.01]),4,.12)
+		PackedFloat32Array([.05,.05,.08,.05,.02,.08]),PackedFloat32Array([.02,.02,.01,.02,.01,.01]),3,.32)
 	var material := preview.material_override as ShaderMaterial
-	material.set_shader_parameter("height_blend",.06)
-	material.set_shader_parameter("edge_softness",.28)
+	material.set_shader_parameter("height_blend",.45)
+	material.set_shader_parameter("edge_softness",.14)
+	material.set_shader_parameter("use_height_maps",true)
+	material.set_shader_parameter("height0",load(prefix+"Flagstone_A_Height.png"))
+	material.set_shader_parameter("height4",load(prefix+"BrokenSlate_A_Height.png"))
+	material.set_shader_parameter("soil_fringe",.32)
+	material.set_shader_parameter("stochastic_slate",true)
 	var output := "res://assets/environment/riverbank/materials/ground_open.tres"
 	assert(ResourceSaver.save(material,output)==OK)
 	var clean := ""

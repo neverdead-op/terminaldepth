@@ -26,6 +26,12 @@ uniform float edge_noise : hint_range(0.0, 1.5) = 0.7;
 uniform float height_blend : hint_range(0.0, 1.0) = 0.35;
 // Ширина мягкой зоны после рваного края.
 uniform float edge_softness : hint_range(0.01, 0.5) = 0.12;
+// Необязательные маски рельефа Riverbank. Старые материалы используют прежний расчёт.
+uniform bool use_height_maps = false;
+uniform sampler2D height0 : filter_linear_mipmap_anisotropic, repeat_enable;
+uniform sampler2D height4 : filter_linear_mipmap_anisotropic, repeat_enable;
+uniform float soil_fringe : hint_range(0.0, 1.0) = 0.0;
+uniform bool stochastic_slate = false;
 
 varying vec3 world_position;
 
@@ -46,6 +52,37 @@ float fbm(vec2 p) {
 
 float lum(vec3 c) {
 	return dot(c, vec3(0.2126, 0.7152, 0.0722));
+}
+
+// Сдвинутые выборки на общей треугольной сетке: нет жёстких границ случайных квадратов.
+// Цвет и маска рельефа получают одинаковые UV; степень весов сохраняет читаемость камней.
+vec4 slate_sample(vec2 uv) {
+	vec2 grid = uv * 0.9;
+	vec2 cell = floor(grid);
+	vec2 f = fract(grid);
+	vec2 vertices[3];
+	vec3 weights;
+	if (f.x + f.y < 1.0) {
+		vertices[0] = cell;
+		vertices[1] = cell + vec2(1.0, 0.0);
+		vertices[2] = cell + vec2(0.0, 1.0);
+		weights = vec3(1.0-f.x-f.y, f.x, f.y);
+	} else {
+		vertices[0] = cell + vec2(1.0);
+		vertices[1] = cell + vec2(0.0, 1.0);
+		vertices[2] = cell + vec2(1.0, 0.0);
+		weights = vec3(f.x+f.y-1.0, 1.0-f.x, 1.0-f.y);
+	}
+	vec2 dx = dFdx(uv);
+	vec2 dy = dFdy(uv);
+	vec4 samples[3];
+	for (int j=0; j<3; j++) {
+		vec2 shift = vec2(hash(vertices[j]+17.3),hash(vertices[j]+41.9))*19.7;
+		samples[j] = vec4(textureGrad(layer4,uv+shift,dx,dy).rgb,textureGrad(height4,uv+shift,dx,dy).r);
+		weights[j] = pow(max(weights[j],0.0),12.0)*pow(0.2+samples[j].a*0.8,2.0);
+	}
+	weights /= max(dot(weights,vec3(1.0)),0.000000000001);
+	return samples[0]*weights.x+samples[1]*weights.y+samples[2]*weights.z;
 }
 
 vec3 sample_layer(int i, vec2 xz) {
@@ -75,10 +112,21 @@ void fragment() {
 		colors[i] = vec3(0.0);
 		score[i] = -10.0;
 		if (w[i] < 0.002) continue;
-		colors[i] = sample_layer(i, xz);
+		vec4 slate = vec4(0.0);
+		if (i == 4 && stochastic_slate) {
+			slate = slate_sample(xz / tiles[i]);
+			colors[i] = slate.rgb * mix(0.92,1.08,value_noise(xz*0.12));
+		} else colors[i] = sample_layer(i, xz);
 		// Свой шум у каждого покрытия: края пятнистые, а не по линейке.
 		float n = fbm(xz * 0.45 + float(i) * 13.7) - 0.5;
-		score[i] = w[i] + n * edge_noise * w[i] * (1.0 - w[i]) * 4.0 + lum(colors[i]) * height_blend;
+		float h = lum(colors[i]);
+		if (use_height_maps) {
+			h = 0.5;
+			if (i == 0 || i == 3) h = texture(height0, xz / tiles[i]).r;
+			if (i == 4) h = stochastic_slate ? slate.a : texture(height4, xz / tiles[i]).r;
+			h = (h - 0.5) * w[i] * (1.0 - w[i]) * 4.0;
+		}
+		score[i] = w[i] + n * edge_noise * w[i] * (1.0 - w[i]) * 4.0 + h * height_blend;
 		best = max(best, score[i]);
 	}
 	vec3 color = vec3(0.0);
@@ -101,6 +149,10 @@ void fragment() {
 		wet_sum += wet[i] * k;
 		relief_sum += relief[i] * k;
 	}
+	// Узкая земляная подложка у края дернины связывает траву и камень по цвету.
+	float grass_mix = weights[1] / total;
+	float fringe = 4.0 * grass_mix * (1.0 - grass_mix) * soil_fringe;
+	if (fringe > 0.001) color = mix(color, sample_layer(2, xz), fringe);
 	// Мягкий рельеф швов по яркости итогового рисунка.
 	float h = smoothstep(0.025, 0.13, lum(color));
 	vec3 world_up_view = (VIEW_MATRIX * vec4(0.0, 1.0, 0.0, 0.0)).xyz;
