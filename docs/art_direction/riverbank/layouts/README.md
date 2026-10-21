@@ -14,7 +14,7 @@
 
 ## Покрытия и мелкие детали
 
-Рисованные текстуры в `assets/environment/riverbank/textures/ground/stylized_v2/`: крупные плиты, спокойный грунт, насыщенный мох B и одобренное зелёное Meadow-покрытие. Общий `village_floor_blend.gdshader` сохранён: размытие 4 клетки, edge_softness=0.28, edge_noise=0.12, height_blend=0.06. Старый бледный Moss A сохранён как вариант, активен Moss B. [Промпты ImageGen](./TEXTURE_PROMPTS.md).
+Рисованные текстуры в `assets/environment/riverbank/textures/ground/stylized_v2/`: крупные плиты, спокойный грунт, прежний мох A с экспозицией +0.4 EV и одобренное зелёное Meadow-покрытие. Общий `village_floor_blend.gdshader` сохранён: размытие 4 клетки, edge_softness=0.28, edge_noise=0.12, height_blend=0.06. Активен Moss A Bright: тот же рисунок A, только экспозиция +0.4 EV без перегенерации. Moss B сохранён как отвергнутый вариант. Коррекция воспроизводится tools/adjust_riverbank_moss.py. [Промпты ImageGen](./TEXTURE_PROMPTS.md).
 
 571 экземпляр имеющихся модулей: руины, ограды, фонари, камни, корни, повозки, бочки и причал. Включены 28 дополнительных валунов в недоступных полях. Земля вне игровых дворов и в закрытых карманах стала зелёной; проходы и коллизии сохраняются.
 

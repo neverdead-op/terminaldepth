@@ -6,7 +6,7 @@
 2. `T_RB_Ground_Soil_A_BaseColor.png`
 3. `T_RB_Ground_Moss_A_BaseColor.png` — первоначальный бледный вариант, сохранён.
 4. `T_RB_Ground_Meadow_A_BaseColor.png` — одобренное травяное поле.
-5. `T_RB_Ground_Moss_B_BaseColor.png` — активный насыщенный вариант мха, отредактирован по Moss A встроенным ImageGen.
+5. `T_RB_Ground_Moss_B_BaseColor.png` — отвергнутый насыщенный вариант, сохранён для истории. Активен T_RB_Ground_Moss_A_Bright_BaseColor.png: оригинальный Moss A, только экспозиция +0.4 EV.
 
 Крупные спокойные формы вместо прежней мелкой фактуры. Старые текстуры сохранены в родительской папке для истории и не используются текущим материалом. [Дополнительные промпты Meadow A и Moss B](MEADOW_PROMPTS.md).
 

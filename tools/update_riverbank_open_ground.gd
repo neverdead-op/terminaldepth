@@ -145,7 +145,7 @@ func build_ground_material() -> ShaderMaterial:
 	var prefix := "res://assets/environment/riverbank/textures/ground/stylized_v2/T_RB_Ground_"
 	var textures: Array[Texture2D] = []
 	for kind in ["Flagstone","Meadow","Soil","Flagstone","Moss","Soil"]:
-		textures.append(load(prefix+kind+("_B_BaseColor.png" if kind=="Moss" else "_A_BaseColor.png")))
+		textures.append(load(prefix+kind+("_A_Bright_BaseColor.png" if kind=="Moss" else "_A_BaseColor.png")))
 	# Общая система деревни строит только материал и веса; точный береговой меш сохраняем.
 	var preview := BlendedFloor.build(variants,textures,PackedFloat32Array([4,6,6,4,6,6]),
 		PackedFloat32Array([.05,.05,.08,.05,.02,.08]),PackedFloat32Array([.02,.02,.01,.02,.01,.01]),4,.12)

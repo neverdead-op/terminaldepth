@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" path="res://assets/environment/riverbank/textures/ground/stylized_v2/T_RB_Ground_Flagstone_A_BaseColor.png" id="2_gi82a"]
 [ext_resource type="Texture2D" path="res://assets/environment/riverbank/textures/ground/stylized_v2/T_RB_Ground_Soil_A_BaseColor.png" id="3_3yb2t"]
 [ext_resource type="Texture2D" path="res://assets/environment/riverbank/textures/ground/stylized_v2/T_RB_Ground_Meadow_A_BaseColor.png" id="3_xumev"]
-[ext_resource type="Texture2D" path="res://assets/environment/riverbank/textures/ground/stylized_v2/T_RB_Ground_Moss_B_BaseColor.png" id="5_3yb2t"]
+[ext_resource type="Texture2D" path="res://assets/environment/riverbank/textures/ground/stylized_v2/T_RB_Ground_Moss_A_Bright_BaseColor.png" id="5_3yb2t"]
 
 [sub_resource type="Image" id="Image_xumev"]
 data = {
