@@ -131,13 +131,20 @@ func _check() -> void:
 	assert(side_path.size() > 1 and side_path[-1].distance_to(pocket) < 0.5, "No side pocket route")
 	player.set_physics_process(false)
 	if "--capture" in OS.get_cmdline_user_args():
+		var grass := level.get_node("Geometry/GroundCover/GrassTufts/_GrassTufts")
+		var tuft_count := 0
+		for patch: MultiMeshInstance3D in grass.get_children():
+			tuft_count += patch.multimesh.instance_count
+			assert(patch.multimesh.get_instance_transform(0).origin.length()>1)
+		assert(tuft_count>2000)
+		print("RIVERBANK_GRASS_RENDER: ",tuft_count," tufts in ",grass.get_child_count()," patches, transforms restored")
 		var rig := level.get_node("CameraRig")
 		print("RIVERBANK_CAMERA: distance=",rig.distance," elevation=",rig.elevation_degrees," fov=",rig.get_node("Camera3D").fov)
 		var water_surface: MeshInstance3D = level.get_node("Backdrop/River/Surface")
 		var water_material := water_surface.get_active_material(0) as ShaderMaterial
 		print("RIVERBANK_WATER_ACTIVE: ",water_material.shader.resource_path," flow shader=",water_material.shader.code.contains("noise2"))
 		player.get_node("HUD").visible = true
-		for shot: Array in [["riverbank_harbor",Vector3(-59,0.1,8)], ["riverbank_grove",Vector3(-30,0.1,-105)]]:
+		for shot: Array in [["riverbank_harbor",Vector3(-54,0.1,-5)], ["riverbank_grove",Layout.PACKS[2]+Vector3.UP*.1], ["riverbank_meadow",Vector3(-30,.1,-54)]]:
 			player.position = shot[1]
 			level.get_node("CameraRig").global_position = player.position
 			await get_tree().create_timer(.5).timeout
@@ -148,12 +155,12 @@ func _check() -> void:
 				await get_tree().create_timer(1.2).timeout
 				await RenderingServer.frame_post_draw
 				get_viewport().get_texture().get_image().save_png("res://ztest/riverbank_water_b.png")
-		player.position = Vector3(22,0.1,-54)
+		player.position = Layout.PACKS[0]+Vector3.UP*.1
 		level.get_node("CameraRig").global_position = player.position
 		await get_tree().create_timer(0.5).timeout
 		await RenderingServer.frame_post_draw
 		get_viewport().get_texture().get_image().save_png("res://docs/art_direction/riverbank/blockout_gameplay.png")
-		player.position = Vector3(-10,0.1,-132)
+		player.position = Layout.FINISH+Vector3(0,.1,6)
 		level.get_node("CameraRig").global_position = player.position
 		await get_tree().create_timer(.3).timeout
 		await RenderingServer.frame_post_draw
@@ -161,8 +168,8 @@ func _check() -> void:
 		var presentation := Camera3D.new()
 		level.add_child(presentation)
 		presentation.fov = 50
-		presentation.position = Vector3(4,20,-118)
-		presentation.look_at(Vector3(-10,2,-140))
+		presentation.position = Vector3(14,20,-40)
+		presentation.look_at(Vector3(0,2,-66))
 		presentation.current = true
 		player.get_node("HUD").visible = false
 		level.get_node("BlockoutControls").hide()
@@ -194,7 +201,7 @@ func _check() -> void:
 		assert(section.size()>=2,"Disconnected open area")
 		for point in section.slice(1): walk_points.append(point)
 		from = destination
-	for probe: Vector3 in [Vector3(40,0,-25),Vector3(6,0,-90),Vector3(-50,0,20)]:
+	for probe: Vector3 in [Layout.DOCK,Layout.POCKET,Layout.PACKS[2]]:
 		var destination := NavigationServer3D.map_get_closest_point(nav_map,probe)
 		var branch := NavigationServer3D.map_get_path(nav_map,player.position,destination,true)
 		assert(branch.size()>=2 and destination.distance_to(probe)<4,"Open area unavailable")

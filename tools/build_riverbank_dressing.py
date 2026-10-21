@@ -82,7 +82,7 @@ def court(x,z,variant):
     lamp(x-10,1.4,z-4.8)
 
 
-def main():
+def build_open_shore_legacy():
     for name in ['Shoreline','Cliffs','SeaStacks','Architecture','Dock','Nature','Landmarks','Lanterns']:
         group(name)
     # Один непрерывный естественный берег вместо двух сторон узкой дорожки.
@@ -165,6 +165,103 @@ def main():
     header+='\n[node name="RiverbankDressing" type="Node3D"]\n\n'
     OUT.write_text(header+'\n'.join(nodes),encoding='utf-8')
     print('OPEN_DRESSING_OK',sum(counts.values()),dict(counts))
+
+
+def main():
+    import random
+    rng = random.Random(17051)
+    plan = json.loads((ROOT/'docs/art_direction/riverbank/layouts/A_loop.json').read_text())
+    rects = [((r[0]-20)*3,(r[1]-25)*3,r[2]*3,r[3]*3) for r in plan['r']]
+    def inside(x,z,margin=0):
+        return all(any(a<=px<a+w and b<=pz<b+h for a,b,w,h in rects)
+                   for px,pz in [(x,z),(x-margin,z),(x+margin,z),(x,z-margin),(x,z+margin)])
+    for name in ['Shoreline','Cliffs','SeaStacks','Architecture','Dock','Nature','Landmarks','Lanterns','Scatter']:
+        group(name)
+    # Видимые ограждения точно следуют контуру плана; входы между дворами открыты.
+    edge_index = 0
+    for z in range(-75,6,3):
+        for x in range(-60,54,3):
+            cx,cz = x+1.5,z+1.5
+            if not inside(cx,cz): continue
+            for dx,dz in [(0,-1),(0,1),(-1,0),(1,0)]:
+                if inside(cx+dx*3,cz+dz*3): continue
+                ex,ez = cx+dx*1.65,cz+dz*1.65
+                yaw = 90 if dx else 0
+                edge_index += 1
+                prop('wall_broken_4m' if edge_index%3 else 'wall_straight_4m',
+                     (ex,-.15,ez),yaw,(3.25,1.65,.9),parent='Shoreline')
+                if edge_index%5==0:
+                    prop('rock_bank_a',(ex+dx*1.2,-.2,ez+dz*1.2),edge_index*37,
+                         (3.8,2.1,3.0),parent='Cliffs')
+                if edge_index%9==0 and dz<0:
+                    prop('dead_tree_hero',(ex+dx*1.5,0,ez+dz*2),edge_index*61,
+                         (3.4,5,3.2),parent='Nature')
+                if edge_index%13==0: lamp(ex,1.2,ez,yaw)
+    # Разные силуэты и функции дворов; крупная архитектура обрамляет площадки.
+    building(-11,-68)
+    building(11,-68,True)
+    prop('arch_gateway',(0,0,-68),0,(10,8,2.5),parent='Landmarks')
+    for x in [-5.5,5.5]: prop('hooded_statue',(x,0,-64),0,(1.2,3,1.2),parent='Landmarks')
+    # Грузовой двор: вагон и склад вдоль внешнего края, петля обхода вокруг груза.
+    building(-53,-20,True)
+    prop('cargo_wagon',(-45,0,-17),20,(4.5,2.4,2.5),solid=True)
+    prop('wall_broken_4m',(-33,0,-10.5),0,(5,1.4,1),solid=True)
+    for i in range(8):
+        prop('barrel',(-47+(i%3)*1.25,0,-11+(i//3)*1.3),i*31,parent='Scatter')
+    # Разрушенный клуатр: обломки стен и статуи, свободная ось прохода.
+    building(-48,-58,False,True)
+    for x,z in [(-44,-48),(-26,-58)]:
+        prop('hooded_statue',(x,0,z),20,(1.3,3.2,1.3),solid=True)
+        prop('wall_broken_4m',(x+2,0,z-1),25,(3.5,1.3,.9))
+    # Сад справа: травяные карманы, ствол и низкие ограды вместо второго склада.
+    for x,z in [(25,-56),(44,-48),(28,-40)]:
+        prop('dead_tree_hero',(x,0,z),x*7,(3.4,5.2,3.2),parent='Nature',solid=True)
+        prop('roots_ground',(x,-.04,z+1),x*7,(3.5,.4,2.6),parent='Nature')
+    prop('fallen_log',(44,0,-23),-30,(4,.9,1.5),parent='Nature',solid=True)
+    prop('wall_broken_4m',(23,0,-20),90,(5,1.5,1),solid=True)
+    prop('hooded_statue',(40,0,-42),0,(1.5,3,1.5),solid=True)
+    prop('cargo_wagon',(42,0,-14),-35,(4,2.1,2.4),solid=True)
+    building(51,-23,False,True)
+    # Боковой причал и внутренние руины — два исследовательских ответвления.
+    for x in [-57,-53]: prop('pier_section_4m',(x,-.35,-5),0,(4.2,.4,6),parent='Dock')
+    prop('boat',(-61,-.4,-6),0,(3,1.7,6),parent='Dock')
+    for x in [-55,-49]: prop('mooring_post',(x,0,-.5),0,parent='Dock')
+    lamp(-54,1.5,-8)
+    for x in [-9,8]:
+        prop('wall_broken_4m',(x,0,-28),90,(5,2,.9),parent='Landmarks')
+        prop('hooded_statue',(x,0,-30),0,(1,2.3,1),parent='Landmarks')
+    # Центральный непроходимый массив скрывает дальние дворы и раскрывает их постепенно.
+    for x,z in [(-12,-44),(-2,-45),(8,-46),(-17,-37)]:
+        prop('cliff_face_8m',(x,-.3,z),x*5,(9,5,7),parent='Cliffs')
+        prop('dead_tree_hero',(x,0,z),x*19,(4,6,3),parent='Nature')
+    # Небольшие группы: осыпи, обломки корней, брёвна, камни у основания оград.
+    for attempt in range(450):
+        x,z = rng.uniform(-57,48),rng.uniform(-70,2)
+        if not inside(x,z,1): continue
+        if inside(x,z,3.5) and rng.random()>.13: continue
+        if any(math.hypot(x-cx,z-cz)<5.5 for cx,cz in [(-6,-4.5),(-36,-16.5),(33,-19.5),(34.5,-48),(0,-63)]): continue
+        prop('rock_small_b',(x,-.03,z),rng.randrange(360),
+             (rng.uniform(.3,.8),rng.uniform(.18,.45),rng.uniform(.3,.7)),parent='Scatter')
+        if attempt%4==0: prop('roots_ground',(x+.3,-.05,z+.2),attempt*19,(1.3,.15,.8),parent='Scatter')
+    for z in range(-75,10,7):
+        x = -68+math.sin(z*.047)*2
+        prop('bank_edge_4m',(x,-1,z),90,(7,1.4,4),parent='Shoreline')
+        if z%2: prop('sea_stack',(x-8,-1,z),z*11,(3,4,3),parent='SeaStacks')
+    # Недоступные поля и карманы: крупные валуны, не новые препятствия на маршруте.
+    field_rocks = []
+    for attempt in range(600):
+        x,z = rng.uniform(-62,56),rng.uniform(-80,14)
+        if any(inside(px,pz) for px,pz in [(x,z),(x-4,z),(x+4,z),(x,z-4),(x,z+4)]): continue
+        if any(math.hypot(x-rx,z-rz)<10 for rx,rz in field_rocks): continue
+        field_rocks.append((x,z))
+        prop('rock_small_b',(x,-.2,z),rng.randrange(360),
+             (rng.uniform(5,8),rng.uniform(2.5,4.2),rng.uniform(4,6)),parent='Cliffs')
+        if len(field_rocks)>=28: break
+    header='[gd_scene format=3]\n\n'
+    for kind,key in resources.items(): header+=f'[ext_resource type="PackedScene" path="{MODULE+kind}.tscn" id="{key}"]\n'
+    header+='\n[node name="RiverbankDressing" type="Node3D"]\n\n'
+    OUT.write_text(header+'\n'.join(nodes),encoding='utf-8')
+    print('LOOP_DRESSING_OK',sum(counts.values()),dict(counts))
 
 
 if __name__=='__main__': main()
