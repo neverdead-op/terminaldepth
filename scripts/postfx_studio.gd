@@ -135,7 +135,7 @@ func toggle_window() -> void:
 	if window!=null and window.visible:
 		close_window();return
 	if window==null:
-		window = Window.new();window.title = "Свет и постобработка · F8 — закрыть";window.size = Vector2i(940,760)
+		window = Window.new();window.title = "Свет и постобработка · F4 — закрыть";window.size = Vector2i(940,760)
 		window.close_requested.connect(close_window);add_child(window)
 		window.window_input.connect(func(event: InputEvent):
 			if event.is_action_pressed("postfx_studio") or event.is_action_pressed("menu_back"): close_window())

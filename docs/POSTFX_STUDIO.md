@@ -1,6 +1,6 @@
 # Свет и постобработка Riverbank
 
-Открой `scenes/art/riverbank_blockout.tscn` и нижнюю вкладку **Стиль сцены**. В игровом тесте `play_riverbank.cmd`: **F8 / L3** открывает окно и приостанавливает бой, повторное нажатие или Esc закрывает его с восстановлением прежней паузы. F8 теста supplied level1 по-прежнему управляет его камерой.
+Открой `scenes/art/riverbank_blockout.tscn` и нижнюю вкладку **Стиль сцены**. В игровом тесте `play_riverbank.cmd`: **F4 / L3** открывает окно и приостанавливает бой, повторное нажатие или Esc закрывает его с восстановлением прежней паузы. F8 теста supplied level1 по-прежнему управляет его камерой.
 
 128 настроек сгруппированы в девять вкладок; поиск фильтрует поля внутри вкладок. Начинай со «Свет», «Тон», «Цвет». «Genesis · база» даёт холодный окружающий свет, нейтральный направленный и тёплые фонари, ACES, умеренный AO/glow. Селшейдинга нет. «До обработки (A/B)» возвращает исходное окружение. Экранная коррекция применяется к миру перед HUD.
 
@@ -30,6 +30,6 @@ Overrides пустой — смешивается весь профиль. Дл�
 
 `scripts/postfx_studio.gd` подключён дочерним PostFXStudio только к Riverbank. `postfx_profile.gd` — профиль и отражение нативных параметров; `postfx_volume.gd` — зоны. `assets/shaders/postfx_grade.gdshader` — коррекция мира. Редактор использует существующие `addons/threshold_style/plugin.gd` и `style_panel.gd`, прежняя мастерская Threshold сохранена. Цветокоррекция видна и в четырёх 3D-видах редактора.
 
-`scenes/tools/test_postfx_studio.tscn`: реальные изменения Environment/шейдера, сохранение в отдельный временный ресурс и возврат, ввод F8, пауза, A/B, спад зоны, перекрытие зон с маской Overrides. Без реальных сохранений игры. D3D12 запуск сохраняет кадры `docs/art_direction/riverbank/postfx_*.png`. `test_style_workshop.tscn` проверяет прежние 32 настройки Threshold.
+`scenes/tools/test_postfx_studio.tscn`: реальные изменения Environment/шейдера, сохранение в отдельный временный ресурс и возврат, ввод физической F4, пауза, A/B, спад зоны, перекрытие зон с маской Overrides. Без реальных сохранений игры. D3D12 запуск сохраняет кадры `docs/art_direction/riverbank/postfx_*.png`. `test_style_workshop.tscn` проверяет прежние 32 настройки Threshold.
 
 Источники: [Post Process Effects UE](https://dev.epicgames.com/documentation/en-us/unreal-engine/post-process-effects-in-unreal-engine), [APostProcessVolume](https://dev.epicgames.com/documentation/en-us/unreal-engine/API/Runtime/Engine/APostProcessVolume), [Godot Environment](https://docs.godotengine.org/en/stable/classes/class_environment.html), [CameraAttributesPractical](https://docs.godotengine.org/en/stable/classes/class_cameraattributespractical.html). Визуальные ориентиры: [Brent Critchfield — Worldbuilding for Darksiders Genesis](https://brentcritchfield.artstation.com/projects/baoPPG), [Airship Syndicate Art Blast](https://magazine.artstation.com/2019/12/airship-syndicate-darksiders-genesis-art-blast/).

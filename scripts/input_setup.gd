@@ -21,7 +21,7 @@ static var _loaded := false
 
 static func setup() -> void:
 	# Окно света только в сценах с PostFXStudio; L3 на геймпаде.
-	_add("postfx_studio", [_key(KEY_F8), _joy(JOY_BUTTON_LEFT_STICK)])
+	_add("postfx_studio", [_key(KEY_F4), _joy(JOY_BUTTON_LEFT_STICK)])
 	_add("move_left", [_key(KEY_A), _key(KEY_LEFT), _axis(JOY_AXIS_LEFT_X, -1.0)])
 	_add("move_right", [_key(KEY_D), _key(KEY_RIGHT), _axis(JOY_AXIS_LEFT_X, 1.0)])
 	_add("move_up", [_key(KEY_W), _key(KEY_UP), _axis(JOY_AXIS_LEFT_Y, -1.0)])

@@ -32,7 +32,7 @@ func _scene_changed(scene: Node) -> void:
 	var actions := HFlowContainer.new();panel.add_child(actions)
 	var open := Button.new();open.text = "Открыть Riverbank";actions.add_child(open)
 	open.pressed.connect(func(): get_editor_interface().open_scene_from_path("res://scenes/art/riverbank_blockout.tscn"))
-	var run := Button.new();run.text = "Запустить Riverbank · F8 / L3 — свет";actions.add_child(run)
+	var run := Button.new();run.text = "Запустить Riverbank · F4 / L3 — свет";actions.add_child(run)
 	run.pressed.connect(func(): get_editor_interface().play_custom_scene("res://scenes/tools/riverbank_playtest.tscn"))
 	if studio==null:
 		var legacy_open := Button.new();legacy_open.text="Открыть композицию Threshold";actions.add_child(legacy_open)

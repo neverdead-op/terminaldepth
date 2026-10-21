@@ -31,7 +31,10 @@ func run() -> void:
 	zone.add_child(detail);detail.position = Vector3(-17,10,-38);detail.look_at(Vector3(-22,0,-48));detail.fov=45;detail.make_current()
 	await shot("terrain_transition_detail")
 	detail.queue_free();zone.get_node("CameraRig/Camera3D").make_current()
-	var open_event := InputEventAction.new();open_event.action="postfx_studio";open_event.pressed=true
+	var open_event := InputEventKey.new();open_event.physical_keycode=KEY_F4;open_event.pressed=true
+	assert(open_event.is_action_pressed("postfx_studio"))
+	var stop_event := InputEventKey.new();stop_event.physical_keycode=KEY_F8;stop_event.pressed=true
+	assert(not stop_event.is_action_pressed("postfx_studio"))
 	Input.parse_input_event(open_event)
 	await get_tree().process_frame
 	assert(studio.window.visible and get_tree().paused)
