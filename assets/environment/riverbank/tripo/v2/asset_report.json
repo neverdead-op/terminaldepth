@@ -1,0 +1,625 @@
+{
+  "assets": [
+    {
+      "id": "RB02_BANK_EDGE_4M",
+      "source_obj": "art_source/riverbank/tripo_v2/original/Береговой уступ/RIP0 (3).obj",
+      "source_sha256": "cef770301e71ba895c876e343413efb199a66e6323d5ac439988663c1322acc9",
+      "triangles": 2400,
+      "vertices": 1816,
+      "skipped_invalid_triangles": 0,
+      "source_nonfinite_vertices": 1,
+      "rotation_y_90": true,
+      "prepared_bbox": [
+        1.0,
+        0.1935882568359375,
+        0.63348388671875
+      ],
+      "texture_size": 2048,
+      "source_texture_content_rect": [
+        0,
+        2048,
+        2048,
+        4096
+      ],
+      "module": "bank_edge_4m",
+      "runtime_glb": "res://assets/environment/riverbank/tripo/v2/RB02_BANK_EDGE_4M/SM_RB_BANK_EDGE_4M_A.glb",
+      "title": "Береговой уступ",
+      "target_size": [
+        4.0,
+        1.2,
+        3.0
+      ],
+      "source_folder": "Береговой уступ"
+    },
+    {
+      "id": "RB02_CLIFF_FACE_8M",
+      "source_obj": "art_source/riverbank/tripo_v2/original/Высокая скальная стена/RIP0 (2).obj",
+      "source_sha256": "06d77625af49bd3691724702afbb4b760a43975bb5c689addd713a8e3074e8f8",
+      "triangles": 2390,
+      "vertices": 1763,
+      "skipped_invalid_triangles": 0,
+      "source_nonfinite_vertices": 1,
+      "rotation_y_90": true,
+      "prepared_bbox": [
+        0.8150634765625,
+        1.0,
+        0.7314453125
+      ],
+      "texture_size": 2048,
+      "source_texture_content_rect": [
+        0,
+        2048,
+        2048,
+        4096
+      ],
+      "module": "cliff_face_8m",
+      "runtime_glb": "res://assets/environment/riverbank/tripo/v2/RB02_CLIFF_FACE_8M/SM_RB_CLIFF_FACE_8M_A.glb",
+      "title": "Высокая скальная стена",
+      "target_size": [
+        8.0,
+        7.0,
+        4.0
+      ],
+      "source_folder": "Высокая скальная стена"
+    },
+    {
+      "id": "RB02_SEA_STACK",
+      "source_obj": "art_source/riverbank/tripo_v2/original/Дальняя скала в воде/RIP0 (3).obj",
+      "source_sha256": "807d8ccd6a7f295b7d9a0645bd7be6667b5fa85c85258e46449b13924a930473",
+      "triangles": 2394,
+      "vertices": 1783,
+      "skipped_invalid_triangles": 0,
+      "source_nonfinite_vertices": 1,
+      "rotation_y_90": false,
+      "prepared_bbox": [
+        0.66351318359375,
+        0.66162109375,
+        1.0
+      ],
+      "texture_size": 2048,
+      "source_texture_content_rect": [
+        0,
+        2048,
+        2048,
+        4096
+      ],
+      "module": "sea_stack",
+      "runtime_glb": "res://assets/environment/riverbank/tripo/v2/RB02_SEA_STACK/SM_RB_SEA_STACK_A.glb",
+      "title": "Дальняя скала в воде",
+      "target_size": [
+        3.0,
+        6.0,
+        3.0
+      ],
+      "source_folder": "Дальняя скала в воде"
+    },
+    {
+      "id": "RB02_WINDOW_WALL_4M",
+      "source_obj": "art_source/riverbank/tripo_v2/original/Стена со стрельчатым окном/RIP0 (2).obj",
+      "source_sha256": "f7ca613d99a0cea2ec51d977237468b78e1ffd4e4f02788ee070cf4f7396408d",
+      "triangles": 3747,
+      "vertices": 2878,
+      "skipped_invalid_triangles": 0,
+      "source_nonfinite_vertices": 1,
+      "rotation_y_90": true,
+      "prepared_bbox": [
+        1.0,
+        0.86444091796875,
+        0.253326416015625
+      ],
+      "texture_size": 2048,
+      "source_texture_content_rect": [
+        0,
+        2048,
+        2048,
+        4096
+      ],
+      "module": "window_wall_4m",
+      "runtime_glb": "res://assets/environment/riverbank/tripo/v2/RB02_WINDOW_WALL_4M/SM_RB_WINDOW_WALL_4M_A.glb",
+      "title": "Стена со стрельчатым окном",
+      "target_size": [
+        4.0,
+        4.0,
+        0.8
+      ],
+      "source_folder": "Стена со стрельчатым окном"
+    },
+    {
+      "id": "RB02_GABLE_END_4M",
+      "source_obj": "art_source/riverbank/tripo_v2/original/Фронтон здания/RIP0 (3).obj",
+      "source_sha256": "ba8a19d714d618d36115d0dc48a04a99d9af4b22a159f477d1f93e8afb83cb03",
+      "triangles": 3860,
+      "vertices": 2797,
+      "skipped_invalid_triangles": 0,
+      "source_nonfinite_vertices": 1,
+      "rotation_y_90": true,
+      "prepared_bbox": [
+        1.0,
+        0.799072265625,
+        0.1894073486328125
+      ],
+      "texture_size": 2048,
+      "source_texture_content_rect": [
+        0,
+        2048,
+        2048,
+        4096
+      ],
+      "module": "gable_end_4m",
+      "runtime_glb": "res://assets/environment/riverbank/tripo/v2/RB02_GABLE_END_4M/SM_RB_GABLE_END_4M_A.glb",
+      "title": "Фронтон здания",
+      "target_size": [
+        4.0,
+        3.0,
+        0.8
+      ],
+      "source_folder": "Фронтон здания"
+    },
+    {
+      "id": "RB02_ROOF_SEGMENT_4M",
+      "source_obj": "art_source/riverbank/tripo_v2/original/Секция сланцевой крыши/RIP0 (2).obj",
+      "source_sha256": "56ab3ce942b59c74c8c6c45656f97603383e53cd95d45f4351d84d4243a06f1e",
+      "triangles": 3655,
+      "vertices": 3133,
+      "skipped_invalid_triangles": 0,
+      "source_nonfinite_vertices": 1,
+      "rotation_y_90": false,
+      "prepared_bbox": [
+        0.93829345703125,
+        0.6036376953125,
+        1.0
+      ],
+      "texture_size": 2048,
+      "source_texture_content_rect": [
+        0,
+        2048,
+        2048,
+        4096
+      ],
+      "module": "roof_segment_4m",
+      "runtime_glb": "res://assets/environment/riverbank/tripo/v2/RB02_ROOF_SEGMENT_4M/SM_RB_ROOF_SEGMENT_4M_A.glb",
+      "title": "Секция сланцевой крыши",
+      "target_size": [
+        4.0,
+        3.0,
+        4.0
+      ],
+      "source_folder": "Секция сланцевой крыши"
+    },
+    {
+      "id": "RB02_BUTTRESS_4M",
+      "source_obj": "art_source/riverbank/tripo_v2/original/../corrections/buttress_4m/RIP0.obj",
+      "source_sha256": "40ec82518956ac96c85e86e176c2f4334e5caeb0d7aeb4fea579e23ec6fe5d36",
+      "triangles": 3669,
+      "vertices": 2543,
+      "skipped_invalid_triangles": 0,
+      "source_nonfinite_vertices": 1,
+      "rotation_y_90": true,
+      "prepared_bbox": [
+        0.313446044921875,
+        1.0,
+        0.282806396484375
+      ],
+      "texture_size": 2048,
+      "source_texture_content_rect": [
+        0,
+        2048,
+        2048,
+        4096
+      ],
+      "module": "buttress_4m",
+      "runtime_glb": "res://assets/environment/riverbank/tripo/v2/RB02_BUTTRESS_4M/SM_RB_BUTTRESS_4M_A.glb",
+      "title": "Контрфорс",
+      "target_size": [
+        1.2,
+        4.5,
+        1.8
+      ],
+      "source_folder": "../corrections/buttress_4m"
+    },
+    {
+      "id": "RB02_GATE_LEAF",
+      "source_obj": "art_source/riverbank/tripo_v2/original/Створка ворот — одна половина/RIP0 (2).obj",
+      "source_sha256": "b6664104597892a93da7dcb0635b13ca59b244517ad3cebc08c8cb8b7ac6640d",
+      "triangles": 3552,
+      "vertices": 2996,
+      "skipped_invalid_triangles": 0,
+      "source_nonfinite_vertices": 1,
+      "rotation_y_90": true,
+      "prepared_bbox": [
+        0.60662841796875,
+        1.0,
+        0.0762786865234375
+      ],
+      "texture_size": 2048,
+      "source_texture_content_rect": [
+        0,
+        2048,
+        2048,
+        4096
+      ],
+      "module": "gate_leaf",
+      "runtime_glb": "res://assets/environment/riverbank/tripo/v2/RB02_GATE_LEAF/SM_RB_GATE_LEAF_A.glb",
+      "title": "Створка ворот",
+      "target_size": [
+        3.2,
+        5.2,
+        0.25
+      ],
+      "source_folder": "Створка ворот — одна половина"
+    },
+    {
+      "id": "RB02_GATE_LEAF_VARIANT_B",
+      "source_obj": "art_source/riverbank/tripo_v2/original/Створка ворот — одна половина/RIP0 (3).obj",
+      "source_sha256": "b233e9995bcc4381b8ebf970784b5546383c7645e7864a98156ed6eaff0277ee",
+      "triangles": 3503,
+      "vertices": 2912,
+      "skipped_invalid_triangles": 0,
+      "source_nonfinite_vertices": 1,
+      "rotation_y_90": true,
+      "prepared_bbox": [
+        0.63507080078125,
+        1.0,
+        0.07218170166015625
+      ],
+      "texture_size": 2048,
+      "source_texture_content_rect": [
+        0,
+        2048,
+        2048,
+        4096
+      ],
+      "module": "gate_leaf_variant_b",
+      "runtime_glb": "res://assets/environment/riverbank/tripo/v2/RB02_GATE_LEAF_VARIANT_B/SM_RB_GATE_LEAF_B.glb",
+      "title": "Створка ворот",
+      "target_size": [
+        3.2,
+        5.2,
+        0.25
+      ],
+      "source_folder": "Створка ворот — одна половина"
+    },
+    {
+      "id": "RB02_WALL_LANTERN",
+      "source_obj": "art_source/riverbank/tripo_v2/original/Настенный фонарь/RIP0 (2).obj",
+      "source_sha256": "376446531eafa47182b6ac692189f88d0bb17ff9c86fcb768e5085ead7b6742a",
+      "triangles": 3654,
+      "vertices": 2974,
+      "skipped_invalid_triangles": 0,
+      "source_nonfinite_vertices": 1,
+      "rotation_y_90": false,
+      "prepared_bbox": [
+        0.386322021484375,
+        1.0,
+        0.74188232421875
+      ],
+      "texture_size": 2048,
+      "source_texture_content_rect": [
+        0,
+        2048,
+        2048,
+        4096
+      ],
+      "module": "wall_lantern",
+      "runtime_glb": "res://assets/environment/riverbank/tripo/v2/RB02_WALL_LANTERN/SM_RB_WALL_LANTERN_A.glb",
+      "title": "Настенный фонарь",
+      "target_size": [
+        0.6,
+        1.4,
+        0.8
+      ],
+      "source_folder": "Настенный фонарь"
+    },
+    {
+      "id": "RB02_PIER_SECTION_4M",
+      "source_obj": "art_source/riverbank/tripo_v2/original/Секция деревянного причала/RIP0 (2).obj",
+      "source_sha256": "67b7181ac5d2e27aba4c433a9858e2d5de3db2b0a3f444dd8aff5d8ffb35fb9d",
+      "triangles": 3575,
+      "vertices": 3455,
+      "skipped_invalid_triangles": 0,
+      "source_nonfinite_vertices": 1,
+      "rotation_y_90": false,
+      "prepared_bbox": [
+        0.97088623046875,
+        0.45501708984375,
+        1.0
+      ],
+      "texture_size": 2048,
+      "source_texture_content_rect": [
+        0,
+        2048,
+        2048,
+        4096
+      ],
+      "module": "pier_section_4m",
+      "runtime_glb": "res://assets/environment/riverbank/tripo/v2/RB02_PIER_SECTION_4M/SM_RB_PIER_SECTION_4M_A.glb",
+      "title": "Секция деревянного причала",
+      "target_size": [
+        4.0,
+        2.0,
+        4.0
+      ],
+      "source_folder": "Секция деревянного причала"
+    },
+    {
+      "id": "RB02_BOAT",
+      "source_obj": "art_source/riverbank/tripo_v2/original/Речная лодка/RIP0 (2).obj",
+      "source_sha256": "0275644c7e6abbbb1f5405a34376ee606b31e6532ea4754cc5e29765536d635d",
+      "triangles": 3566,
+      "vertices": 3059,
+      "skipped_invalid_triangles": 0,
+      "source_nonfinite_vertices": 1,
+      "rotation_y_90": true,
+      "prepared_bbox": [
+        0.415313720703125,
+        0.326812744140625,
+        1.0
+      ],
+      "texture_size": 2048,
+      "source_texture_content_rect": [
+        0,
+        2048,
+        2048,
+        4096
+      ],
+      "module": "boat",
+      "runtime_glb": "res://assets/environment/riverbank/tripo/v2/RB02_BOAT/SM_RB_BOAT_A.glb",
+      "title": "Речная лодка",
+      "target_size": [
+        1.8,
+        1.2,
+        4.5
+      ],
+      "source_folder": "Речная лодка"
+    },
+    {
+      "id": "RB02_CARGO_WAGON",
+      "source_obj": "art_source/riverbank/tripo_v2/original/Грузовая телега/RIP0 (2).obj",
+      "source_sha256": "1a1ea31949cead1df7d2942bb9c0914d90586f45587362f37922324236c25dcb",
+      "triangles": 3762,
+      "vertices": 3650,
+      "skipped_invalid_triangles": 0,
+      "source_nonfinite_vertices": 1,
+      "rotation_y_90": true,
+      "prepared_bbox": [
+        0.49993896484375,
+        0.3203125,
+        1.0
+      ],
+      "texture_size": 2048,
+      "source_texture_content_rect": [
+        0,
+        2048,
+        2048,
+        4096
+      ],
+      "module": "cargo_wagon",
+      "runtime_glb": "res://assets/environment/riverbank/tripo/v2/RB02_CARGO_WAGON/SM_RB_CARGO_WAGON_A.glb",
+      "title": "Грузовая телега",
+      "target_size": [
+        2.2,
+        2.0,
+        3.6
+      ],
+      "source_folder": "Грузовая телега"
+    },
+    {
+      "id": "RB02_MOORING_POST",
+      "source_obj": "art_source/riverbank/tripo_v2/original/Причальный столб с канатом/RIP0 (2).obj",
+      "source_sha256": "d4329d7d843ebf2e25bdb617bd349fb6173dd1ea0e8ff271f0deb50bdf460acb",
+      "triangles": 3938,
+      "vertices": 2744,
+      "skipped_invalid_triangles": 0,
+      "source_nonfinite_vertices": 1,
+      "rotation_y_90": false,
+      "prepared_bbox": [
+        0.4598388671875,
+        1.0,
+        0.456787109375
+      ],
+      "texture_size": 2048,
+      "source_texture_content_rect": [
+        0,
+        2048,
+        2048,
+        4096
+      ],
+      "module": "mooring_post",
+      "runtime_glb": "res://assets/environment/riverbank/tripo/v2/RB02_MOORING_POST/SM_RB_MOORING_POST_A.glb",
+      "title": "Причальный столб с канатом",
+      "target_size": [
+        0.7,
+        1.5,
+        0.7
+      ],
+      "source_folder": "Причальный столб с канатом"
+    },
+    {
+      "id": "RB02_HOODED_STATUE",
+      "source_obj": "art_source/riverbank/tripo_v2/original/Статуя хранителя/RIP0 (2).obj",
+      "source_sha256": "5976f06531108e40bb122e6f9d4ad2a6291751ca62b6e514aa7ae88db77e2b1a",
+      "triangles": 3832,
+      "vertices": 2849,
+      "skipped_invalid_triangles": 0,
+      "source_nonfinite_vertices": 1,
+      "rotation_y_90": false,
+      "prepared_bbox": [
+        0.34674072265625,
+        1.0,
+        0.345367431640625
+      ],
+      "texture_size": 2048,
+      "source_texture_content_rect": [
+        0,
+        2048,
+        2048,
+        4096
+      ],
+      "module": "hooded_statue",
+      "runtime_glb": "res://assets/environment/riverbank/tripo/v2/RB02_HOODED_STATUE/SM_RB_HOODED_STATUE_A.glb",
+      "title": "Статуя хранителя",
+      "target_size": [
+        1.3,
+        3.2,
+        1.3
+      ],
+      "source_folder": "Статуя хранителя"
+    },
+    {
+      "id": "RB02_DEAD_TREE_HERO",
+      "source_obj": "art_source/riverbank/tripo_v2/original/Силуэтное сухое дерево/RIP0 (2).obj",
+      "source_sha256": "a943f6caaf8bd94e9e7c3c1c1b4f3d95b8bd3864672259bbbb62cc67dbf46bbb",
+      "triangles": 3840,
+      "vertices": 3082,
+      "skipped_invalid_triangles": 0,
+      "source_nonfinite_vertices": 1,
+      "rotation_y_90": false,
+      "prepared_bbox": [
+        0.6038818359375,
+        0.77044677734375,
+        1.0
+      ],
+      "texture_size": 2048,
+      "source_texture_content_rect": [
+        0,
+        2048,
+        2048,
+        4096
+      ],
+      "module": "dead_tree_hero",
+      "runtime_glb": "res://assets/environment/riverbank/tripo/v2/RB02_DEAD_TREE_HERO/SM_RB_DEAD_TREE_HERO_A.glb",
+      "title": "Силуэтное сухое дерево",
+      "target_size": [
+        5.0,
+        7.0,
+        4.0
+      ],
+      "source_folder": "Силуэтное сухое дерево"
+    },
+    {
+      "id": "RB02_FALLEN_LOG",
+      "source_obj": "art_source/riverbank/tripo_v2/original/Поваленное бревно/RIP0 (2).obj",
+      "source_sha256": "82b3562092aaf8f32076c3568957dca4c4bc85d2cdb28fb5933ab81d83a9024b",
+      "triangles": 3946,
+      "vertices": 2809,
+      "skipped_invalid_triangles": 0,
+      "source_nonfinite_vertices": 1,
+      "rotation_y_90": true,
+      "prepared_bbox": [
+        1.0,
+        0.356353759765625,
+        0.29779052734375
+      ],
+      "texture_size": 2048,
+      "source_texture_content_rect": [
+        0,
+        2048,
+        2048,
+        4096
+      ],
+      "module": "fallen_log",
+      "runtime_glb": "res://assets/environment/riverbank/tripo/v2/RB02_FALLEN_LOG/SM_RB_FALLEN_LOG_A.glb",
+      "title": "Поваленное бревно",
+      "target_size": [
+        4.0,
+        1.1,
+        1.4
+      ],
+      "source_folder": "Поваленное бревно"
+    },
+    {
+      "id": "RB02_ROOTS_GROUND",
+      "source_obj": "art_source/riverbank/tripo_v2/original/Прикорневой модуль/RIP0 (2).obj",
+      "source_sha256": "fcbc3cec60157c5c44b06eced06e57a424c5f759dafe8aebd6ea1480ccc57480",
+      "triangles": 3743,
+      "vertices": 2747,
+      "skipped_invalid_triangles": 0,
+      "source_nonfinite_vertices": 1,
+      "rotation_y_90": true,
+      "prepared_bbox": [
+        1.0,
+        0.358154296875,
+        0.80206298828125
+      ],
+      "texture_size": 2048,
+      "source_texture_content_rect": [
+        0,
+        2048,
+        2048,
+        4096
+      ],
+      "module": "roots_ground",
+      "runtime_glb": "res://assets/environment/riverbank/tripo/v2/RB02_ROOTS_GROUND/SM_RB_ROOTS_GROUND_A.glb",
+      "title": "Прикорневой модуль",
+      "target_size": [
+        2.8,
+        0.6,
+        1.8
+      ],
+      "source_folder": "Прикорневой модуль"
+    },
+    {
+      "id": "RB02_BRIDGE_SPAN",
+      "source_obj": "art_source/riverbank/tripo_v2/original/Каменный пролёт моста/RIP0 (2).obj",
+      "source_sha256": "57a5874329e09418f08afae1bb6cb7ae1510222cac2ab9244c88c9b29ac62dfa",
+      "triangles": 3644,
+      "vertices": 2559,
+      "skipped_invalid_triangles": 0,
+      "source_nonfinite_vertices": 1,
+      "rotation_y_90": true,
+      "prepared_bbox": [
+        1.0,
+        0.31201171875,
+        0.390899658203125
+      ],
+      "texture_size": 2048,
+      "source_texture_content_rect": [
+        0,
+        2048,
+        2048,
+        4096
+      ],
+      "module": "bridge_span",
+      "runtime_glb": "res://assets/environment/riverbank/tripo/v2/RB02_BRIDGE_SPAN/SM_RB_BRIDGE_SPAN_A.glb",
+      "title": "Каменный пролёт моста",
+      "target_size": [
+        8.0,
+        3.0,
+        4.0
+      ],
+      "source_folder": "Каменный пролёт моста"
+    },
+    {
+      "id": "RB02_ROOF_SEGMENT_4M_VARIANT_B",
+      "source_obj": "art_source/riverbank/tripo_v2/original/../additional_roof/RIP0 (2).obj",
+      "source_sha256": "1b524c6588f6a61cda2815ad511a3a28804ee6693f357b8e772a00db3c21204e",
+      "triangles": 3564,
+      "vertices": 2793,
+      "skipped_invalid_triangles": 0,
+      "source_nonfinite_vertices": 1,
+      "rotation_y_90": false,
+      "prepared_bbox": [
+        0.92462158203125,
+        0.53173828125,
+        1.0
+      ],
+      "texture_size": 2048,
+      "source_texture_content_rect": [
+        0,
+        2048,
+        2048,
+        4096
+      ],
+      "module": "roof_segment_4m_variant_b",
+      "runtime_glb": "res://assets/environment/riverbank/tripo/v2/RB02_ROOF_SEGMENT_4M_VARIANT_B/SM_RB_ROOF_SEGMENT_4M_B.glb",
+      "title": "Дополнительная крыша",
+      "target_size": [
+        4.0,
+        3.0,
+        4.0
+      ],
+      "source_folder": "../additional_roof"
+    }
+  ],
+  "excluded": []
+}

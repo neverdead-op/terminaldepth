@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3]
+[ext_resource type="Script" path="res://scripts/riverbank_module.gd" id="1"]
+[ext_resource type="PackedScene" path="res://assets/environment/riverbank/tripo/v2/RB02_ROOTS_GROUND/SM_RB_ROOTS_GROUND_A.glb" id="2"]
+[node name="RB_roots_ground" type="Node3D"]
+script = ExtResource("1")
+model_scene = ExtResource("2")
+target_size = Vector3(2.8, 0.6, 1.8)
+solid = false

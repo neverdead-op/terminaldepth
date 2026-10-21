@@ -131,10 +131,25 @@ func _check() -> void:
 		await get_tree().create_timer(.3).timeout
 		await RenderingServer.frame_post_draw
 		get_viewport().get_texture().get_image().save_png("res://docs/art_direction/riverbank/riverbank_gate.png")
+		var presentation := Camera3D.new()
+		level.add_child(presentation)
+		presentation.fov = 50
+		presentation.position = Vector3(4,20,-118)
+		presentation.look_at(Vector3(-10,2,-140))
+		presentation.current = true
+		level.get_node("BlockoutControls").hide()
+		await get_tree().create_timer(.3).timeout
+		await RenderingServer.frame_post_draw
+		get_viewport().get_texture().get_image().save_png("res://docs/art_direction/riverbank/riverbank_architecture.png")
+		level.get_node("BlockoutControls").show()
+		presentation.queue_free()
 		level.get_node("OverviewCamera").current = true
 		await get_tree().create_timer(0.3).timeout
 		await RenderingServer.frame_post_draw
 		get_viewport().get_texture().get_image().save_png("res://docs/art_direction/riverbank/blockout_overview.png")
+		if "--art-capture-only" in OS.get_cmdline_user_args():
+			get_tree().quit()
+			return
 	# Проверяем настоящий выстрел из пула, урон и огненный модуль в новой карте.
 	if not await _combat_check():
 		get_tree().quit(1)

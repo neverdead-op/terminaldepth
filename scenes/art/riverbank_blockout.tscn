@@ -28,6 +28,8 @@
 [ext_resource type="Script" path="res://scripts/bullet_pool.gd" id="26_lun6x"]
 [ext_resource type="PackedScene" path="res://scenes/bullet.tscn" id="27_gvmvw"]
 
+[ext_resource type="PackedScene" path="res://scenes/art/riverbank_dressing.tscn" id="RB_Dressing"]
+
 [sub_resource type="ArrayMesh" id="ArrayMesh_2lhqg"]
 _surfaces = [{
 "aabb": AABB(-50, 0, -150, 98, 1e-05, 168),
@@ -2637,6 +2639,7 @@ mesh = SubResource("BoxMesh_r1i7e")
 shape = SubResource("BoxShape3D_38y21")
 
 [node name="RockBankA" type="Node3D" parent="Geometry/Boundaries" unique_id=1136587235 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.071151696, 0, -1.0175153, 0, 1.02, 0, 1.0175153, 0, 0.071151696, -27.25, -0.35, 11)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -2668,6 +2671,7 @@ mesh = SubResource("BoxMesh_0bn65")
 shape = SubResource("BoxShape3D_o0lhg")
 
 [node name="RockBankA2" type="Node3D" parent="Geometry/Boundaries" unique_id=1367185493 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.89124125, 0, -0.1252558, 0, 0.9, 0, 0.1252558, 0, -0.89124125, -27.25, -0.35, 15)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -2699,6 +2703,7 @@ mesh = SubResource("BoxMesh_xgihx")
 shape = SubResource("BoxShape3D_31t6x")
 
 [node name="RockSmallB" type="Node3D" parent="Geometry/Boundaries" unique_id=1106765991 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(-0.21206985, 0, 0.9977106, 0, 1.02, 0, -0.9977106, 0, -0.21206985, -25.25, -0.35, 17)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -2761,6 +2766,7 @@ mesh = SubResource("BoxMesh_onr44")
 shape = SubResource("BoxShape3D_bwhav")
 
 [node name="RockBankA4" type="Node3D" parent="Geometry/Boundaries" unique_id=1885726993 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.3488605, 0, -0.95848644, 0, 1.02, 0, 0.95848644, 0, 0.3488605, -14.75, -0.35, 17)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -2792,6 +2798,7 @@ mesh = SubResource("BoxMesh_bqwly")
 shape = SubResource("BoxShape3D_kq7w7")
 
 [node name="RockSmallB2" type="Node3D" parent="Geometry/Boundaries" unique_id=1876008092 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(-0.82219094, 0, -0.36606285, 0, 0.9, 0, 0.36606285, 0, -0.82219094, -12.75, -0.35, 9)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -2823,6 +2830,7 @@ mesh = SubResource("BoxMesh_tq14e")
 shape = SubResource("BoxShape3D_cihky")
 
 [node name="RockBankA5" type="Node3D" parent="Geometry/Boundaries" unique_id=667097489 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.478861, 0, 0.9006065, 0, 1.02, 0, -0.9006065, 0, -0.478861, -12.75, -0.35, 13)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -2885,6 +2893,7 @@ mesh = SubResource("BoxMesh_oss3s")
 shape = SubResource("BoxShape3D_cs8so")
 
 [node name="RockSmallB3" type="Node3D" parent="Geometry/Boundaries" unique_id=1143932337 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(0.59954077, 0, -0.82519746, 0, 1.02, 0, 0.82519746, 0, 0.59954077, -12.75, -0.35, 7)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -2916,6 +2925,7 @@ mesh = SubResource("BoxMesh_cple0")
 shape = SubResource("BoxShape3D_y801y")
 
 [node name="RockBankA7" type="Node3D" parent="Geometry/Boundaries" unique_id=692281661 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.68944, 0, -0.5785088, 0, 0.9, 0, 0.5785088, 0, -0.68944, -12.75, -0.35, 5)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -2947,6 +2957,7 @@ mesh = SubResource("BoxMesh_vhkay")
 shape = SubResource("BoxShape3D_fhuwy")
 
 [node name="RockBankA8" type="Node3D" parent="Geometry/Boundaries" unique_id=1151054018 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.7085514, 0, 0.7337267, 0, 1.02, 0, -0.7337267, 0, -0.7085514, -12.75, -0.35, 3)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -3009,6 +3020,7 @@ mesh = SubResource("BoxMesh_41aa4")
 shape = SubResource("BoxShape3D_0hqum")
 
 [node name="RockBankA9" type="Node3D" parent="Geometry/Boundaries" unique_id=60498953 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.803771, 0, -0.62797457, 0, 1.02, 0, 0.62797457, 0, 0.803771, -12.75, -0.35, -1)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -3040,6 +3052,7 @@ mesh = SubResource("BoxMesh_iuehj")
 shape = SubResource("BoxShape3D_0p121")
 
 [node name="RockBankA10" type="Node3D" parent="Geometry/Boundaries" unique_id=1664528887 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.5032736, 0, -0.7461338, 0, 0.9, 0, 0.7461338, 0, -0.5032736, -12.75, -0.35, -5)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -3071,6 +3084,7 @@ mesh = SubResource("BoxMesh_077nk")
 shape = SubResource("BoxShape3D_pe1r7")
 
 [node name="RockSmallB5" type="Node3D" parent="Geometry/Boundaries" unique_id=881192274 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(-0.8833459, 0, 0.51000005, 0, 1.02, 0, -0.51000005, 0, -0.8833459, -14.75, -0.35, -9)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -3133,6 +3147,7 @@ mesh = SubResource("BoxMesh_tm8ha")
 shape = SubResource("BoxShape3D_1b68f")
 
 [node name="RockBankA12" type="Node3D" parent="Geometry/Boundaries" unique_id=860831706 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.9457275, 0, -0.38209876, 0, 1.02, 0, 0.38209876, 0, 0.9457275, -29.25, -0.35, -3)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -3164,6 +3179,7 @@ mesh = SubResource("BoxMesh_5u2mg")
 shape = SubResource("BoxShape3D_408xs")
 
 [node name="RockSmallB6" type="Node3D" parent="Geometry/Boundaries" unique_id=360362752 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(-0.27811536, 0, -0.85595083, 0, 0.9, 0, 0.85595083, 0, -0.27811536, -18.75, -0.35, -11)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -3195,6 +3211,7 @@ mesh = SubResource("BoxMesh_n2525")
 shape = SubResource("BoxShape3D_0cl16")
 
 [node name="RockBankA13" type="Node3D" parent="Geometry/Boundaries" unique_id=428650275 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.9897016, 0, 0.2467603, 0, 1.02, 0, -0.2467603, 0, -0.9897016, -29, -0.35, -2.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -3257,6 +3274,7 @@ mesh = SubResource("BoxMesh_co57e")
 shape = SubResource("BoxShape3D_buyo3")
 
 [node name="RockSmallB7" type="Node3D" parent="Geometry/Boundaries" unique_id=395065275 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(1.0144123, 0, -0.106619224, 0, 1.02, 0, 0.106619224, 0, 1.0144123, -31, -0.35, -2.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -3288,6 +3306,7 @@ mesh = SubResource("BoxMesh_2x7gc")
 shape = SubResource("BoxShape3D_o504a")
 
 [node name="RockBankA15" type="Node3D" parent="Geometry/Boundaries" unique_id=2003762333 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.031409785, 0, -0.89945173, 0, 0.9, 0, 0.89945173, 0, -0.031409785, -25, -0.35, -17.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -3319,6 +3338,7 @@ mesh = SubResource("BoxMesh_dods1")
 shape = SubResource("BoxShape3D_qxuui")
 
 [node name="RockBankA16" type="Node3D" parent="Geometry/Boundaries" unique_id=1869567556 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-1.0193787, 0, -0.035597373, 0, 1.02, 0, 0.035597373, 0, -1.0193787, -33, -0.35, -4.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -3381,6 +3401,7 @@ mesh = SubResource("BoxMesh_nyefj")
 shape = SubResource("BoxShape3D_xck0s")
 
 [node name="RockBankA17" type="Node3D" parent="Geometry/Boundaries" unique_id=955173733 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(1.0045038, 0, 0.17712113, 0, 1.02, 0, -0.17712113, 0, 1.0045038, -27, -0.35, -19.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -3412,6 +3433,7 @@ mesh = SubResource("BoxMesh_jkvhm")
 shape = SubResource("BoxShape3D_pj8j4")
 
 [node name="RockBankA18" type="Node3D" parent="Geometry/Boundaries" unique_id=250826224 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.21772975, 0, -0.87326616, 0, 0.9, 0, 0.87326616, 0, 0.21772975, -37, -0.35, -8.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -3443,6 +3465,7 @@ mesh = SubResource("BoxMesh_46ash")
 shape = SubResource("BoxShape3D_sqfxs")
 
 [node name="RockSmallB9" type="Node3D" parent="Geometry/Boundaries" unique_id=1604925487 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(-0.97007763, 0, -0.31519732, 0, 1.02, 0, 0.31519732, 0, -0.97007763, -43.25, -0.35, -13)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -3505,6 +3528,7 @@ mesh = SubResource("BoxMesh_tpcur")
 shape = SubResource("BoxShape3D_xon7f")
 
 [node name="RockBankA20" type="Node3D" parent="Geometry/Boundaries" unique_id=1872869356 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.9167699, 0, 0.44713858, 0, 1.02, 0, -0.44713858, 0, 0.9167699, -43.25, -0.35, -35)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -3536,6 +3560,7 @@ mesh = SubResource("BoxMesh_xhcc7")
 shape = SubResource("BoxShape3D_snpdj")
 
 [node name="RockSmallB10" type="Node3D" parent="Geometry/Boundaries" unique_id=737611301 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(0.4499999, 0, -0.7794229, 0, 0.9, 0, 0.7794229, 0, 0.4499999, -39, -0.35, -37.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -3567,6 +3592,7 @@ mesh = SubResource("BoxMesh_sbcto")
 shape = SubResource("BoxShape3D_p7sg8")
 
 [node name="RockBankA21" type="Node3D" parent="Geometry/Boundaries" unique_id=556686630 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.8456183, 0, -0.5703768, 0, 1.02, 0, 0.5703768, 0, -0.8456183, -37, -0.35, -39.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -3629,6 +3655,7 @@ mesh = SubResource("BoxMesh_7d864")
 shape = SubResource("BoxShape3D_ep2c1")
 
 [node name="RockSmallB11" type="Node3D" parent="Geometry/Boundaries" unique_id=2107932155 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(0.7580077, 0, 0.68251324, 0, 1.02, 0, -0.68251324, 0, 0.7580077, -26.75, -0.35, -29)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -3660,6 +3687,7 @@ mesh = SubResource("BoxMesh_230js")
 shape = SubResource("BoxShape3D_bt4nf")
 
 [node name="RockBankA23" type="Node3D" parent="Geometry/Boundaries" unique_id=80405847 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.6474056, 0, -0.62519264, 0, 0.9, 0, 0.62519264, 0, 0.6474056, -27, -0.35, -28.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -3691,6 +3719,7 @@ mesh = SubResource("BoxMesh_pj48w")
 shape = SubResource("BoxShape3D_ru8la")
 
 [node name="RockBankA24" type="Node3D" parent="Geometry/Boundaries" unique_id=596058301 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.6556432, 0, -0.78136545, 0, 1.02, 0, 0.78136545, 0, -0.6556432, -31, -0.35, -43.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -3753,6 +3782,7 @@ mesh = SubResource("BoxMesh_ixou3")
 shape = SubResource("BoxShape3D_vgh57")
 
 [node name="RockBankA25" type="Node3D" parent="Geometry/Boundaries" unique_id=105261722 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.5405176, 0, 0.865009, 0, 1.02, 0, -0.865009, 0, 0.5405176, -31.25, -0.35, -43)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -3784,6 +3814,7 @@ mesh = SubResource("BoxMesh_x8qh0")
 shape = SubResource("BoxShape3D_sejee")
 
 [node name="RockBankA26" type="Node3D" parent="Geometry/Boundaries" unique_id=2135890772 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.7946528, 0, -0.42252433, 0, 0.9, 0, 0.42252433, 0, 0.7946528, -18.75, -0.35, -35)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -3815,6 +3846,7 @@ mesh = SubResource("BoxMesh_gv0qc")
 shape = SubResource("BoxShape3D_y6r3q")
 
 [node name="RockSmallB13" type="Node3D" parent="Geometry/Boundaries" unique_id=271437500 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(-0.41487136, 0, -0.93181634, 0, 1.02, 0, 0.93181634, 0, -0.41487136, -25, -0.35, -47.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -3877,6 +3909,7 @@ mesh = SubResource("BoxMesh_2n3c4")
 shape = SubResource("BoxShape3D_18ahe")
 
 [node name="RockBankA28" type="Node3D" parent="Geometry/Boundaries" unique_id=2114025860 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.28115013, 0, 0.9804869, 0, 1.02, 0, -0.9804869, 0, 0.28115013, -27, -0.35, -47.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -3908,6 +3941,7 @@ mesh = SubResource("BoxMesh_lpf48")
 shape = SubResource("BoxShape3D_xbmsm")
 
 [node name="RockSmallB14" type="Node3D" parent="Geometry/Boundaries" unique_id=2107909791 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(0.88033277, 0, -0.18712057, 0, 0.9, 0, 0.18712057, 0, 0.88033277, -25.25, -0.35, -47)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -3939,6 +3973,7 @@ mesh = SubResource("BoxMesh_waxko")
 shape = SubResource("BoxShape3D_efygo")
 
 [node name="RockBankA29" type="Node3D" parent="Geometry/Boundaries" unique_id=1903267017 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.14195672, 0, -1.0100734, 0, 1.02, 0, 1.0100734, 0, -0.14195672, -19, -0.35, -51.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -4001,6 +4036,7 @@ mesh = SubResource("BoxMesh_c0shs")
 shape = SubResource("BoxShape3D_vmyhe")
 
 [node name="RockSmallB15" type="Node3D" parent="Geometry/Boundaries" unique_id=198915316 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(-4.4585615e-08, 0, 1.02, 0, 1.02, 0, -1.02, 0, -4.4585615e-08, -17, -0.35, -51.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -4032,6 +4068,7 @@ mesh = SubResource("BoxMesh_gr3hg")
 shape = SubResource("BoxShape3D_lhw1r")
 
 [node name="RockBankA31" type="Node3D" parent="Geometry/Boundaries" unique_id=457461506 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.89780766, 0, 0.06278082, 0, 0.9, 0, -0.06278082, 0, 0.89780766, -13, -0.35, -51.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -4063,6 +4100,7 @@ mesh = SubResource("BoxMesh_wwtpu")
 shape = SubResource("BoxShape3D_oupfr")
 
 [node name="RockBankA32" type="Node3D" parent="Geometry/Boundaries" unique_id=2078398505 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.14195673, 0, -1.0100734, 0, 1.02, 0, 1.0100734, 0, 0.14195673, -11, -0.35, -51.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -4125,6 +4163,7 @@ mesh = SubResource("BoxMesh_yb1ws")
 shape = SubResource("BoxShape3D_c1jey")
 
 [node name="RockBankA33" type="Node3D" parent="Geometry/Boundaries" unique_id=467106840 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.2811501, 0, 0.9804869, 0, 1.02, 0, -0.9804869, 0, -0.2811501, -7, -0.35, -51.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -4156,6 +4195,7 @@ mesh = SubResource("BoxMesh_m0gor")
 shape = SubResource("BoxShape3D_mtimv")
 
 [node name="RockBankA34" type="Node3D" parent="Geometry/Boundaries" unique_id=1861772639 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.84572333, 0, 0.3078181, 0, 0.9, 0, -0.3078181, 0, 0.84572333, -5, -0.35, -51.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -4187,6 +4227,7 @@ mesh = SubResource("BoxMesh_0dc1q")
 shape = SubResource("BoxShape3D_g30aw")
 
 [node name="RockSmallB17" type="Node3D" parent="Geometry/Boundaries" unique_id=1040468455 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(0.4148714, 0, -0.93181634, 0, 1.02, 0, 0.93181634, 0, 0.4148714, -3, -0.35, -51.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -4249,6 +4290,7 @@ mesh = SubResource("BoxMesh_by4hx")
 shape = SubResource("BoxShape3D_v8kq4")
 
 [node name="RockBankA36" type="Node3D" parent="Geometry/Boundaries" unique_id=1136887611 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.5405177, 0, 0.86500895, 0, 1.02, 0, -0.86500895, 0, -0.5405177, 1, -0.35, -51.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -4280,6 +4322,7 @@ mesh = SubResource("BoxMesh_t4igt")
 shape = SubResource("BoxShape3D_sfki6")
 
 [node name="RockSmallB18" type="Node3D" parent="Geometry/Boundaries" unique_id=1973424790 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(0.72811526, 0, 0.5290067, 0, 0.9, 0, -0.5290067, 0, 0.72811526, 3, -0.35, -51.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -4311,6 +4354,7 @@ mesh = SubResource("BoxMesh_ox0uq")
 shape = SubResource("BoxShape3D_atwcq")
 
 [node name="RockBankA37" type="Node3D" parent="Geometry/Boundaries" unique_id=1180714186 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.6556432, 0, -0.7813654, 0, 1.02, 0, 0.7813654, 0, 0.6556432, 5, -0.35, -36.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -4373,6 +4417,7 @@ mesh = SubResource("BoxMesh_8f4pd")
 shape = SubResource("BoxShape3D_vc8px")
 
 [node name="RockSmallB19" type="Node3D" parent="Geometry/Boundaries" unique_id=889941261 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(-0.7580077, 0, 0.68251324, 0, 1.02, 0, -0.68251324, 0, -0.7580077, 13.25, -0.35, -41)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -4404,6 +4449,7 @@ mesh = SubResource("BoxMesh_0agq8")
 shape = SubResource("BoxShape3D_74cw5")
 
 [node name="RockBankA39" type="Node3D" parent="Geometry/Boundaries" unique_id=1256329396 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.5540953, 0, 0.7092096, 0, 0.9, 0, -0.7092096, 0, 0.5540953, 7, -0.35, -53.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -4435,6 +4481,7 @@ mesh = SubResource("BoxMesh_536sy")
 shape = SubResource("BoxShape3D_rfc5j")
 
 [node name="RockBankA40" type="Node3D" parent="Geometry/Boundaries" unique_id=650349934 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.8456182, 0, -0.570377, 0, 1.02, 0, 0.570377, 0, 0.8456182, 13, -0.35, -40.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -4497,6 +4544,7 @@ mesh = SubResource("BoxMesh_a227u")
 shape = SubResource("BoxShape3D_m43d1")
 
 [node name="RockBankA41" type="Node3D" parent="Geometry/Boundaries" unique_id=566101853 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.9167699, 0, 0.44713855, 0, 1.02, 0, -0.44713855, 0, -0.9167699, 9, -0.35, -55.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -4528,6 +4576,7 @@ mesh = SubResource("BoxMesh_vcr3c")
 shape = SubResource("BoxShape3D_2ynbt")
 
 [node name="RockBankA42" type="Node3D" parent="Geometry/Boundaries" unique_id=563179968 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.33714595, 0, 0.83446544, 0, 0.9, 0, -0.83446544, 0, 0.33714595, 15, -0.35, -42.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -4559,6 +4608,7 @@ mesh = SubResource("BoxMesh_rgqhk")
 shape = SubResource("BoxShape3D_vfm5j")
 
 [node name="RockSmallB21" type="Node3D" parent="Geometry/Boundaries" unique_id=473341067 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(0.97007763, 0, -0.3151973, 0, 1.02, 0, 0.3151973, 0, 0.97007763, 17, -0.35, -44.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -4621,6 +4671,7 @@ mesh = SubResource("BoxMesh_g2j45")
 shape = SubResource("BoxShape3D_p45d1")
 
 [node name="RockBankA44" type="Node3D" parent="Geometry/Boundaries" unique_id=574715769 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-1.0045038, 0, 0.17712127, 0, 1.02, 0, -0.17712127, 0, -1.0045038, 19, -0.35, -46.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -4652,6 +4703,7 @@ mesh = SubResource("BoxMesh_qsgld")
 shape = SubResource("BoxShape3D_jvxir")
 
 [node name="RockSmallB22" type="Node3D" parent="Geometry/Boundaries" unique_id=1518292406 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(0.094075575, 0, 0.8950697, 0, 0.9, 0, -0.8950697, 0, 0.094075575, 21, -0.35, -48.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -4683,6 +4735,7 @@ mesh = SubResource("BoxMesh_2hurr")
 shape = SubResource("BoxShape3D_nk0lk")
 
 [node name="RockBankA45" type="Node3D" parent="Geometry/Boundaries" unique_id=1510185332 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(1.0193787, 0, -0.035597593, 0, 1.02, 0, 0.035597593, 0, 1.0193787, 23, -0.35, -48.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -4745,6 +4798,7 @@ mesh = SubResource("BoxMesh_gn4xk")
 shape = SubResource("BoxShape3D_sidh7")
 
 [node name="RockSmallB23" type="Node3D" parent="Geometry/Boundaries" unique_id=1777474239 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(-1.0144123, 0, -0.106619, 0, 1.02, 0, 0.106619, 0, -1.0144123, 29.25, -0.35, -75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -4776,6 +4830,7 @@ mesh = SubResource("BoxMesh_iug7u")
 shape = SubResource("BoxShape3D_1kq3s")
 
 [node name="RockBankA47" type="Node3D" parent="Geometry/Boundaries" unique_id=1468853961 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.15628336, 0, 0.8863269, 0, 0.9, 0, -0.8863269, 0, -0.15628336, 23, -0.35, -83.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -4807,6 +4862,7 @@ mesh = SubResource("BoxMesh_a0met")
 shape = SubResource("BoxShape3D_k6rm8")
 
 [node name="RockBankA48" type="Node3D" parent="Geometry/Boundaries" unique_id=1079271346 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.9897016, 0, 0.24676034, 0, 1.02, 0, -0.24676034, 0, 0.9897016, 25, -0.35, -83.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -4869,6 +4925,7 @@ mesh = SubResource("BoxMesh_shfed")
 shape = SubResource("BoxShape3D_ib2xb")
 
 [node name="RockBankA49" type="Node3D" parent="Geometry/Boundaries" unique_id=174373998 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.94572747, 0, -0.38209876, 0, 1.02, 0, 0.38209876, 0, -0.94572747, 21, -0.35, -85.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -4900,6 +4957,7 @@ mesh = SubResource("BoxMesh_21d8t")
 shape = SubResource("BoxShape3D_oyqo3")
 
 [node name="RockBankA50" type="Node3D" parent="Geometry/Boundaries" unique_id=659395817 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.394534, 0, 0.8089146, 0, 0.9, 0, -0.8089146, 0, -0.394534, 21.25, -0.35, -85)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -4931,6 +4989,7 @@ mesh = SubResource("BoxMesh_4e8j8")
 shape = SubResource("BoxShape3D_h5be3")
 
 [node name="RockSmallB25" type="Node3D" parent="Geometry/Boundaries" unique_id=2146950831 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(0.8833459, 0, 0.51, 0, 1.02, 0, -0.51, 0, 0.8833459, 10.75, -0.35, -75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -4993,6 +5052,7 @@ mesh = SubResource("BoxMesh_eh0yb")
 shape = SubResource("BoxShape3D_j5sgt")
 
 [node name="RockBankA52" type="Node3D" parent="Geometry/Boundaries" unique_id=639814680 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.803771, 0, -0.62797457, 0, 1.02, 0, 0.62797457, 0, -0.803771, 17.25, -0.35, -87)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -5024,6 +5084,7 @@ mesh = SubResource("BoxMesh_c40u5")
 shape = SubResource("BoxShape3D_ucu4k")
 
 [node name="RockSmallB26" type="Node3D" parent="Geometry/Boundaries" unique_id=369297891 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(-0.6022176, 0, 0.66883034, 0, 0.9, 0, -0.66883034, 0, -0.6022176, 6.75, -0.35, -79)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -5055,6 +5116,7 @@ mesh = SubResource("BoxMesh_dewvq")
 shape = SubResource("BoxShape3D_rth81")
 
 [node name="RockBankA53" type="Node3D" parent="Geometry/Boundaries" unique_id=1127817738 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.7085515, 0, 0.73372656, 0, 1.02, 0, -0.73372656, 0, 0.7085515, 7, -0.35, -78.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -5117,6 +5179,7 @@ mesh = SubResource("BoxMesh_11t2n")
 shape = SubResource("BoxShape3D_dviik")
 
 [node name="RockSmallB27" type="Node3D" parent="Geometry/Boundaries" unique_id=1129328066 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(-0.5995411, 0, -0.82519716, 0, 1.02, 0, 0.82519716, 0, -0.5995411, 5, -0.35, -78.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -5148,6 +5211,7 @@ mesh = SubResource("BoxMesh_cm085")
 shape = SubResource("BoxShape3D_qvq6g")
 
 [node name="RockBankA55" type="Node3D" parent="Geometry/Boundaries" unique_id=2069798257 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.7632432, 0, 0.47692737, 0, 0.9, 0, -0.47692737, 0, -0.7632432, 0.75, -0.35, -83)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -5179,6 +5243,7 @@ mesh = SubResource("BoxMesh_ppxby")
 shape = SubResource("BoxShape3D_sylqm")
 
 [node name="RockBankA56" type="Node3D" parent="Geometry/Boundaries" unique_id=158984131 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.47886103, 0, 0.9006065, 0, 1.02, 0, -0.9006065, 0, 0.47886103, 13.25, -0.35, -91)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -5241,6 +5306,7 @@ mesh = SubResource("BoxMesh_0byxs")
 shape = SubResource("BoxShape3D_mw53s")
 
 [node name="RockBankA57" type="Node3D" parent="Geometry/Boundaries" unique_id=1601209092 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.34886047, 0, -0.9584865, 0, 1.02, 0, 0.9584865, 0, -0.34886047, 7, -0.35, -95.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -5272,6 +5338,7 @@ mesh = SubResource("BoxMesh_a27qs")
 shape = SubResource("BoxShape3D_3pcun")
 
 [node name="RockBankA58" type="Node3D" parent="Geometry/Boundaries" unique_id=1142859993 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.8651355, 0, 0.24807362, 0, 0.9, 0, -0.24807362, 0, -0.8651355, 3, -0.35, -97.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -5303,6 +5370,7 @@ mesh = SubResource("BoxMesh_36e41")
 shape = SubResource("BoxShape3D_kjyb7")
 
 [node name="RockSmallB29" type="Node3D" parent="Geometry/Boundaries" unique_id=389663208 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(0.21206988, 0, 0.9977106, 0, 1.02, 0, -0.9977106, 0, 0.21206988, 7.25, -0.35, -95)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -5365,6 +5433,7 @@ mesh = SubResource("BoxMesh_m1hfb")
 shape = SubResource("BoxShape3D_hdwmf")
 
 [node name="RockBankA60" type="Node3D" parent="Geometry/Boundaries" unique_id=839486903 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.071151674, 0, -1.0175153, 0, 1.02, 0, 1.0175153, 0, -0.071151674, -3, -0.35, -82.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -5396,6 +5465,7 @@ mesh = SubResource("BoxMesh_luetp")
 shape = SubResource("BoxShape3D_ivhis")
 
 [node name="RockSmallB30" type="Node3D" parent="Geometry/Boundaries" unique_id=1134361484 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(-0.9, 0, -7.86805e-08, 0, 0.9, 0, 7.86805e-08, 0, -0.9, -5, -0.35, -82.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -5427,6 +5497,7 @@ mesh = SubResource("BoxMesh_n5qc4")
 shape = SubResource("BoxShape3D_51b6j")
 
 [node name="RockBankA61" type="Node3D" parent="Geometry/Boundaries" unique_id=847907215 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.07115161, 0, 1.0175153, 0, 1.02, 0, -1.0175153, 0, -0.07115161, -7, -0.35, -82.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -5489,6 +5560,7 @@ mesh = SubResource("BoxMesh_t0eet")
 shape = SubResource("BoxShape3D_36py5")
 
 [node name="RockSmallB31" type="Node3D" parent="Geometry/Boundaries" unique_id=834145820 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(0.2120697, 0, -0.9977106, 0, 1.02, 0, 0.9977106, 0, 0.2120697, -11, -0.35, -82.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -5520,6 +5592,7 @@ mesh = SubResource("BoxMesh_y0283")
 shape = SubResource("BoxShape3D_fti8e")
 
 [node name="RockBankA63" type="Node3D" parent="Geometry/Boundaries" unique_id=110207167 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.8651355, 0, -0.24807356, 0, 0.9, 0, 0.24807356, 0, -0.8651355, -13, -0.35, -82.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -5551,6 +5624,7 @@ mesh = SubResource("BoxMesh_w8kpa")
 shape = SubResource("BoxShape3D_kkaqe")
 
 [node name="RockBankA64" type="Node3D" parent="Geometry/Boundaries" unique_id=1192558548 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.34886053, 0, 0.95848644, 0, 1.02, 0, -0.95848644, 0, -0.34886053, -15, -0.35, -82.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -5613,6 +5687,7 @@ mesh = SubResource("BoxMesh_owjl8")
 shape = SubResource("BoxShape3D_oq0as")
 
 [node name="RockBankA65" type="Node3D" parent="Geometry/Boundaries" unique_id=1951652933 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.4788611, 0, -0.9006065, 0, 1.02, 0, 0.9006065, 0, 0.4788611, -21, -0.35, -82.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -5644,6 +5719,7 @@ mesh = SubResource("BoxMesh_7ys7e")
 shape = SubResource("BoxShape3D_vh4b4")
 
 [node name="RockBankA66" type="Node3D" parent="Geometry/Boundaries" unique_id=1379129311 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.76324326, 0, -0.47692734, 0, 0.9, 0, 0.47692734, 0, -0.76324326, -29.25, -0.35, -87)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -5675,6 +5751,7 @@ mesh = SubResource("BoxMesh_wcwa3")
 shape = SubResource("BoxShape3D_e55nj")
 
 [node name="RockSmallB33" type="Node3D" parent="Geometry/Boundaries" unique_id=1220165660 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(-0.5995409, 0, 0.82519734, 0, 1.02, 0, -0.82519734, 0, -0.5995409, -27.25, -0.35, -85)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -5737,6 +5814,7 @@ mesh = SubResource("BoxMesh_ey7oy")
 shape = SubResource("BoxShape3D_37dnf")
 
 [node name="RockBankA68" type="Node3D" parent="Geometry/Boundaries" unique_id=336258251 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.70855147, 0, -0.7337266, 0, 1.02, 0, 0.7337266, 0, 0.70855147, -16.75, -0.35, -97)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -5768,6 +5846,7 @@ mesh = SubResource("BoxMesh_5pk56")
 shape = SubResource("BoxShape3D_c3jd1")
 
 [node name="RockSmallB34" type="Node3D" parent="Geometry/Boundaries" unique_id=821467839 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(-0.6022176, 0, -0.6688303, 0, 0.9, 0, 0.6688303, 0, -0.6022176, -31.25, -0.35, -95)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -5799,6 +5878,7 @@ mesh = SubResource("BoxMesh_1nfo4")
 shape = SubResource("BoxShape3D_dl74f")
 
 [node name="RockBankA69" type="Node3D" parent="Geometry/Boundaries" unique_id=374344080 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.80377096, 0, 0.6279747, 0, 1.02, 0, -0.6279747, 0, -0.80377096, -29, -0.35, -88.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -5861,6 +5941,7 @@ mesh = SubResource("BoxMesh_0fdn3")
 shape = SubResource("BoxShape3D_a00ub")
 
 [node name="RockSmallB35" type="Node3D" parent="Geometry/Boundaries" unique_id=887420198 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(0.88334584, 0, -0.51000017, 0, 1.02, 0, 0.51000017, 0, 0.88334584, -33.25, -0.35, -99)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -5892,6 +5973,7 @@ mesh = SubResource("BoxMesh_xp7vr")
 shape = SubResource("BoxShape3D_dgcw6")
 
 [node name="RockBankA71" type="Node3D" parent="Geometry/Boundaries" unique_id=143332515 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.39453387, 0, -0.80891466, 0, 0.9, 0, 0.80891466, 0, -0.39453387, -31, -0.35, -94.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -5923,6 +6005,7 @@ mesh = SubResource("BoxMesh_hl4gr")
 shape = SubResource("BoxShape3D_8q4qe")
 
 [node name="RockBankA72" type="Node3D" parent="Geometry/Boundaries" unique_id=803311462 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.94572747, 0, 0.38209882, 0, 1.02, 0, -0.38209882, 0, -0.94572747, -20.75, -0.35, -105)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -5985,6 +6068,7 @@ mesh = SubResource("BoxMesh_865x0")
 shape = SubResource("BoxShape3D_0x0f7")
 
 [node name="RockBankA73" type="Node3D" parent="Geometry/Boundaries" unique_id=1582421623 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.9897017, 0, -0.2467602, 0, 1.02, 0, 0.2467602, 0, 0.9897017, -35, -0.35, -102.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -6016,6 +6100,7 @@ mesh = SubResource("BoxMesh_x3u4l")
 shape = SubResource("BoxShape3D_ec5va")
 
 [node name="RockBankA74" type="Node3D" parent="Geometry/Boundaries" unique_id=1068968530 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.15628332, 0, -0.88632697, 0, 0.9, 0, 0.88632697, 0, -0.15628332, -37.25, -0.35, -127)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -6047,6 +6132,7 @@ mesh = SubResource("BoxMesh_i1lud")
 shape = SubResource("BoxShape3D_pugmb")
 
 [node name="RockSmallB37" type="Node3D" parent="Geometry/Boundaries" unique_id=1443254607 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(-1.0144123, 0, 0.10661906, 0, 1.02, 0, -0.10661906, 0, -1.0144123, -35.25, -0.35, -129)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -6109,6 +6195,7 @@ mesh = SubResource("BoxMesh_pc1i8")
 shape = SubResource("BoxShape3D_iho4m")
 
 [node name="RockBankA76" type="Node3D" parent="Geometry/Boundaries" unique_id=1061118452 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(1.0193787, 0, 0.035597485, 0, 1.02, 0, -0.035597485, 0, 1.0193787, -29, -0.35, -133.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -6140,6 +6227,7 @@ mesh = SubResource("BoxMesh_whtrw")
 shape = SubResource("BoxShape3D_mki7a")
 
 [node name="RockSmallB38" type="Node3D" parent="Geometry/Boundaries" unique_id=1208340729 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(0.09407552, 0, -0.8950697, 0, 0.9, 0, 0.8950697, 0, 0.09407552, -27, -0.35, -135.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -6171,6 +6259,7 @@ mesh = SubResource("BoxMesh_p8gbv")
 shape = SubResource("BoxShape3D_icesr")
 
 [node name="RockBankA77" type="Node3D" parent="Geometry/Boundaries" unique_id=1233926291 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-1.0045038, 0, -0.17712118, 0, 1.02, 0, 0.17712118, 0, -1.0045038, -18.75, -0.35, -123)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -6233,6 +6322,7 @@ mesh = SubResource("BoxMesh_qttbm")
 shape = SubResource("BoxShape3D_8wjag")
 
 [node name="RockSmallB39" type="Node3D" parent="Geometry/Boundaries" unique_id=91758743 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(0.97007763, 0, 0.31519735, 0, 1.02, 0, -0.31519735, 0, 0.97007763, -23, -0.35, -137.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -6264,6 +6354,7 @@ mesh = SubResource("BoxMesh_fy7ro")
 shape = SubResource("BoxShape3D_jfgfu")
 
 [node name="RockBankA79" type="Node3D" parent="Geometry/Boundaries" unique_id=2017814176 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.33714572, 0, -0.8344655, 0, 0.9, 0, 0.8344655, 0, 0.33714572, -17, -0.35, -124.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -6295,6 +6386,7 @@ mesh = SubResource("BoxMesh_w4uxk")
 shape = SubResource("BoxShape3D_u0jo8")
 
 [node name="RockBankA80" type="Node3D" parent="Geometry/Boundaries" unique_id=1796471492 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.91677, 0, -0.4471385, 0, 1.02, 0, 0.4471385, 0, -0.91677, -23.25, -0.35, -137)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -6357,6 +6449,7 @@ mesh = SubResource("BoxMesh_kxp31")
 shape = SubResource("BoxShape3D_ddgce")
 
 [node name="RockBankA81" type="Node3D" parent="Geometry/Boundaries" unique_id=1432739992 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.84561837, 0, 0.57037675, 0, 1.02, 0, -0.57037675, 0, 0.84561837, -17, -0.35, -141.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -6388,6 +6481,7 @@ mesh = SubResource("BoxMesh_np5xr")
 shape = SubResource("BoxShape3D_blqcr")
 
 [node name="RockBankA82" type="Node3D" parent="Geometry/Boundaries" unique_id=589940040 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.5540953, 0, -0.7092096, 0, 0.9, 0, 0.7092096, 0, 0.5540953, -11, -0.35, -128.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -6419,6 +6513,7 @@ mesh = SubResource("BoxMesh_0s3yh")
 shape = SubResource("BoxShape3D_vsr85")
 
 [node name="RockSmallB41" type="Node3D" parent="Geometry/Boundaries" unique_id=1047001154 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(-0.7580077, 0, -0.68251324, 0, 1.02, 0, 0.68251324, 0, -0.7580077, -19, -0.35, -141.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -6481,6 +6576,7 @@ mesh = SubResource("BoxMesh_w8d8y")
 shape = SubResource("BoxShape3D_54est")
 
 [node name="RockBankA84" type="Node3D" parent="Geometry/Boundaries" unique_id=1419973211 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.6556434, 0, 0.78136533, 0, 1.02, 0, -0.78136533, 0, 0.6556434, -7, -0.35, -130.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -6512,6 +6608,7 @@ mesh = SubResource("BoxMesh_2ufd2")
 shape = SubResource("BoxShape3D_f12qt")
 
 [node name="RockSmallB42" type="Node3D" parent="Geometry/Boundaries" unique_id=2108263863 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(0.7281152, 0, -0.5290068, 0, 0.9, 0, 0.5290068, 0, 0.7281152, -2.75, -0.35, -137)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -6543,6 +6640,7 @@ mesh = SubResource("BoxMesh_moxoa")
 shape = SubResource("BoxShape3D_beo5w")
 
 [node name="RockBankA85" type="Node3D" parent="Geometry/Boundaries" unique_id=521785617 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.54051775, 0, -0.86500895, 0, 1.02, 0, 0.86500895, 0, -0.54051775, -2.75, -0.35, -135)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -6605,6 +6703,7 @@ mesh = SubResource("BoxMesh_8mwx0")
 shape = SubResource("BoxShape3D_kxn4b")
 
 [node name="RockSmallB43" type="Node3D" parent="Geometry/Boundaries" unique_id=490844640 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(0.41487134, 0, 0.9318164, 0, 1.02, 0, -0.9318164, 0, 0.41487134, -17.25, -0.35, -145)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -6636,6 +6735,7 @@ mesh = SubResource("BoxMesh_ns755")
 shape = SubResource("BoxShape3D_0rxni")
 
 [node name="RockBankA87" type="Node3D" parent="Geometry/Boundaries" unique_id=284078929 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.8457233, 0, -0.30781832, 0, 0.9, 0, 0.30781832, 0, 0.8457233, -17.25, -0.35, -147)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -6667,6 +6767,7 @@ mesh = SubResource("BoxMesh_a1cfr")
 shape = SubResource("BoxShape3D_p4wxm")
 
 [node name="RockBankA88" type="Node3D" parent="Geometry/Boundaries" unique_id=1696615521 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.28114995, 0, -0.980487, 0, 1.02, 0, 0.980487, 0, -0.28114995, -15.25, -0.35, -149)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -6729,6 +6830,7 @@ mesh = SubResource("BoxMesh_85xso")
 shape = SubResource("BoxShape3D_if0qh")
 
 [node name="RockBankA89" type="Node3D" parent="Geometry/Boundaries" unique_id=1582227170 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.14195657, 0, 1.0100734, 0, 1.02, 0, -1.0100734, 0, 0.14195657, -4.75, -0.35, -149)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -6760,6 +6862,7 @@ mesh = SubResource("BoxMesh_c55g3")
 shape = SubResource("BoxShape3D_xj8ca")
 
 [node name="RockBankA90" type="Node3D" parent="Geometry/Boundaries" unique_id=1982341606 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.89780766, 0, -0.06278074, 0, 0.9, 0, 0.06278074, 0, 0.89780766, -2.75, -0.35, -147)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -6791,6 +6894,7 @@ mesh = SubResource("BoxMesh_hh5ho")
 shape = SubResource("BoxShape3D_vuy5f")
 
 [node name="RockSmallB45" type="Node3D" parent="Geometry/Boundaries" unique_id=1236532037 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(1.2163378e-08, 0, -1.02, 0, 1.02, 0, 1.02, 0, 1.2163378e-08, -51.25, -0.35, -27)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -6853,6 +6957,7 @@ mesh = SubResource("BoxMesh_wouty")
 shape = SubResource("BoxShape3D_svy8w")
 
 [node name="RockBankA92" type="Node3D" parent="Geometry/Boundaries" unique_id=1514950863 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.14195654, 0, 1.0100734, 0, 1.02, 0, -1.0100734, 0, -0.14195654, -51.25, -0.35, -21)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -6884,6 +6989,7 @@ mesh = SubResource("BoxMesh_y7lbj")
 shape = SubResource("BoxShape3D_cwp01")
 
 [node name="RockSmallB46" type="Node3D" parent="Geometry/Boundaries" unique_id=529815154 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(0.8803328, 0, 0.18712053, 0, 0.9, 0, -0.18712053, 0, 0.8803328, -49.25, -0.35, -31)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -6915,6 +7021,7 @@ mesh = SubResource("BoxMesh_r4qhp")
 shape = SubResource("BoxShape3D_fll7c")
 
 [node name="RockBankA93" type="Node3D" parent="Geometry/Boundaries" unique_id=1933135283 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.28114995, 0, -0.980487, 0, 1.02, 0, 0.980487, 0, 0.28114995, -49.25, -0.35, -29)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -6977,6 +7084,7 @@ mesh = SubResource("BoxMesh_dymk7")
 shape = SubResource("BoxShape3D_etm4o")
 
 [node name="RockSmallB47" type="Node3D" parent="Geometry/Boundaries" unique_id=355704982 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(-0.4148713, 0, 0.9318164, 0, 1.02, 0, -0.9318164, 0, -0.4148713, -47.25, -0.35, -33)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -7008,6 +7116,7 @@ mesh = SubResource("BoxMesh_44888")
 shape = SubResource("BoxShape3D_l7bd8")
 
 [node name="RockBankA95" type="Node3D" parent="Geometry/Boundaries" unique_id=1041282412 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.79465276, 0, 0.4225244, 0, 0.9, 0, -0.4225244, 0, 0.79465276, -47.25, -0.35, -15)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -7039,6 +7148,7 @@ mesh = SubResource("BoxMesh_6n3eg")
 shape = SubResource("BoxShape3D_kojjm")
 
 [node name="RockBankA96" type="Node3D" parent="Geometry/Boundaries" unique_id=920516586 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.5405178, 0, -0.8650089, 0, 1.02, 0, 0.8650089, 0, 0.5405178, -26.75, -0.35, -19)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -7101,6 +7211,7 @@ mesh = SubResource("BoxMesh_sb46s")
 shape = SubResource("BoxShape3D_g7shq")
 
 [node name="RockBankA97" type="Node3D" parent="Geometry/Boundaries" unique_id=1681770025 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.6556434, 0, 0.78136533, 0, 1.02, 0, -0.78136533, 0, -0.6556434, -24.75, -0.35, -23)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -7132,6 +7243,7 @@ mesh = SubResource("BoxMesh_urpbn")
 shape = SubResource("BoxShape3D_fspp1")
 
 [node name="RockBankA98" type="Node3D" parent="Geometry/Boundaries" unique_id=562034701 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.6474058, 0, 0.6251925, 0, 0.9, 0, -0.6251925, 0, 0.6474058, -27, -0.35, -18.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -7163,6 +7275,7 @@ mesh = SubResource("BoxMesh_6ww6h")
 shape = SubResource("BoxShape3D_2pcv5")
 
 [node name="RockSmallB49" type="Node3D" parent="Geometry/Boundaries" unique_id=505590049 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(0.75800776, 0, -0.6825132, 0, 1.02, 0, 0.6825132, 0, 0.75800776, 11, -0.35, -69.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -7225,6 +7338,7 @@ mesh = SubResource("BoxMesh_c02s3")
 shape = SubResource("BoxShape3D_v7hfg")
 
 [node name="RockBankA100" type="Node3D" parent="Geometry/Boundaries" unique_id=1864106410 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.84561825, 0, 0.5703769, 0, 1.02, 0, -0.5703769, 0, -0.84561825, 11, -0.35, -58.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -7256,6 +7370,7 @@ mesh = SubResource("BoxMesh_nke0e")
 shape = SubResource("BoxShape3D_72uix")
 
 [node name="RockSmallB50" type="Node3D" parent="Geometry/Boundaries" unique_id=888902488 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(0.44999996, 0, 0.7794229, 0, 0.9, 0, -0.7794229, 0, 0.44999996, 13, -0.35, -73.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -7287,6 +7402,7 @@ mesh = SubResource("BoxMesh_u17k5")
 shape = SubResource("BoxShape3D_j75fc")
 
 [node name="RockBankA101" type="Node3D" parent="Geometry/Boundaries" unique_id=357288475 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.91676986, 0, -0.44713867, 0, 1.02, 0, 0.44713867, 0, 0.91676986, 10.75, -0.35, -59)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -7349,6 +7465,7 @@ mesh = SubResource("BoxMesh_6h2me")
 shape = SubResource("BoxShape3D_k0drv")
 
 [node name="RockSmallB51" type="Node3D" parent="Geometry/Boundaries" unique_id=588708919 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(-0.9700776, 0, 0.31519738, 0, 1.02, 0, -0.31519738, 0, -0.9700776, 31.25, -0.35, -55)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -7380,6 +7497,7 @@ mesh = SubResource("BoxMesh_iw5sx")
 shape = SubResource("BoxShape3D_6cxx1")
 
 [node name="RockBankA103" type="Node3D" parent="Geometry/Boundaries" unique_id=1036319960 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.2177297, 0, 0.87326616, 0, 0.9, 0, -0.87326616, 0, 0.2177297, 33.25, -0.35, -71)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -7411,6 +7529,7 @@ mesh = SubResource("BoxMesh_ut1xf")
 shape = SubResource("BoxShape3D_4w12n")
 
 [node name="RockBankA104" type="Node3D" parent="Geometry/Boundaries" unique_id=85026190 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(1.0045038, 0, -0.17712142, 0, 1.02, 0, 0.17712142, 0, 1.0045038, 33.25, -0.35, -69)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -7473,6 +7592,7 @@ mesh = SubResource("BoxMesh_qa0lq")
 shape = SubResource("BoxShape3D_oxf32")
 
 [node name="RockBankA105" type="Node3D" parent="Geometry/Boundaries" unique_id=1358868536 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-1.0193787, 0, 0.03559744, 0, 1.02, 0, -0.03559744, 0, -1.0193787, 33, -0.35, -69.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -7504,6 +7624,7 @@ mesh = SubResource("BoxMesh_om2mf")
 shape = SubResource("BoxShape3D_ihcav")
 
 [node name="RockBankA106" type="Node3D" parent="Geometry/Boundaries" unique_id=825794500 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.031409513, 0, 0.89945173, 0, 0.9, 0, -0.89945173, 0, -0.031409513, -43.25, -0.35, -117)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -7535,6 +7656,7 @@ mesh = SubResource("BoxMesh_ir0ku")
 shape = SubResource("BoxShape3D_fo36o")
 
 [node name="RockSmallB53" type="Node3D" parent="Geometry/Boundaries" unique_id=111856495 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(1.0144123, 0, 0.10661903, 0, 1.02, 0, -0.10661903, 0, 1.0144123, -43.25, -0.35, -115)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -7597,6 +7719,7 @@ mesh = SubResource("BoxMesh_eey27")
 shape = SubResource("BoxShape3D_ip4oc")
 
 [node name="RockBankA108" type="Node3D" parent="Geometry/Boundaries" unique_id=225490968 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.9897016, 0, -0.24676023, 0, 1.02, 0, 0.24676023, 0, -0.9897016, -41.25, -0.35, -121)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -7628,6 +7751,7 @@ mesh = SubResource("BoxMesh_q78sv")
 shape = SubResource("BoxShape3D_wv22e")
 
 [node name="RockSmallB54" type="Node3D" parent="Geometry/Boundaries" unique_id=1833731981 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(-0.27811524, 0, 0.8559509, 0, 0.9, 0, -0.8559509, 0, -0.27811524, -41.25, -0.35, -119)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -7659,6 +7783,7 @@ mesh = SubResource("BoxMesh_6qxxq")
 shape = SubResource("BoxShape3D_5rakc")
 
 [node name="RockBankA109" type="Node3D" parent="Geometry/Boundaries" unique_id=1032820430 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.9457275, 0, 0.3820987, 0, 1.02, 0, -0.3820987, 0, 0.9457275, -41.25, -0.35, -107)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -7721,6 +7846,7 @@ mesh = SubResource("BoxMesh_nsciw")
 shape = SubResource("BoxShape3D_xtka5")
 
 [node name="RockSmallB55" type="Node3D" parent="Geometry/Boundaries" unique_id=1006006042 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(-0.8833459, 0, -0.50999993, 0, 1.02, 0, 0.50999993, 0, -0.8833459, -39.25, -0.35, -105)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -7752,6 +7878,7 @@ mesh = SubResource("BoxMesh_phvpi")
 shape = SubResource("BoxShape3D_n1lpt")
 
 [node name="RockBankA111" type="Node3D" parent="Geometry/Boundaries" unique_id=50581831 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.50327355, 0, 0.7461338, 0, 0.9, 0, -0.7461338, 0, -0.50327355, -18.75, -0.35, -121)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -7783,6 +7910,7 @@ mesh = SubResource("BoxMesh_bvsah")
 shape = SubResource("BoxShape3D_hnrb2")
 
 [node name="RockBankA112" type="Node3D" parent="Geometry/Boundaries" unique_id=1714161471 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.80377096, 0, 0.62797475, 0, 1.02, 0, -0.62797475, 0, 0.80377096, -18.75, -0.35, -109)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -7845,6 +7973,7 @@ mesh = SubResource("BoxMesh_yw0tn")
 shape = SubResource("BoxShape3D_crsmj")
 
 [node name="RockBankA113" type="Node3D" parent="Geometry/Boundaries" unique_id=1003227711 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.70855147, 0, -0.7337266, 0, 1.02, 0, 0.7337266, 0, -0.70855147, -19, -0.35, -119.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -7876,6 +8005,7 @@ mesh = SubResource("BoxMesh_71fjc")
 shape = SubResource("BoxShape3D_m4jxf")
 
 [node name="RockBankA114" type="Node3D" parent="Geometry/Boundaries" unique_id=623750533 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.68943995, 0, 0.57850885, 0, 0.9, 0, -0.57850885, 0, -0.68943995, -16.75, -0.35, -113)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -7907,6 +8037,7 @@ mesh = SubResource("BoxMesh_worei")
 shape = SubResource("BoxShape3D_51kgc")
 
 [node name="RockSmallB57" type="Node3D" parent="Geometry/Boundaries" unique_id=597639602 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(0.599541, 0, 0.82519734, 0, 1.02, 0, -0.82519734, 0, 0.599541, -19, -0.35, -108.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -7969,6 +8100,7 @@ mesh = SubResource("BoxMesh_7d72e")
 shape = SubResource("BoxShape3D_mnei4")
 
 [node name="RockBankA116" type="Node3D" parent="Geometry/Boundaries" unique_id=727346501 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.47886106, 0, -0.9006065, 0, 1.02, 0, 0.9006065, 0, -0.47886106, 37, -0.35, -58.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -8000,6 +8132,7 @@ mesh = SubResource("BoxMesh_0hukr")
 shape = SubResource("BoxShape3D_lb5ti")
 
 [node name="RockSmallB58" type="Node3D" parent="Geometry/Boundaries" unique_id=391746589 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(-0.82219094, 0, 0.3660629, 0, 0.9, 0, -0.3660629, 0, -0.82219094, 39, -0.35, -71.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -8031,6 +8164,7 @@ mesh = SubResource("BoxMesh_7ehx0")
 shape = SubResource("BoxShape3D_ll7bs")
 
 [node name="RockBankA117" type="Node3D" parent="Geometry/Boundaries" unique_id=613714739 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.34886056, 0, 0.95848644, 0, 1.02, 0, -0.95848644, 0, 0.34886056, 39, -0.35, -56.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -8093,6 +8227,7 @@ mesh = SubResource("BoxMesh_6th4e")
 shape = SubResource("BoxShape3D_iuqjs")
 
 [node name="RockSmallB59" type="Node3D" parent="Geometry/Boundaries" unique_id=355141413 instance=ExtResource("8_f7gg8")]
+visible = false
 transform = Transform3D(-0.21207015, 0, -0.9977105, 0, 1.02, 0, 0.9977105, 0, -0.21207015, 43, -0.35, -56.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("9_s5vaa")
@@ -8124,6 +8259,7 @@ mesh = SubResource("BoxMesh_a2ug7")
 shape = SubResource("BoxShape3D_278iq")
 
 [node name="RockBankA119" type="Node3D" parent="Geometry/Boundaries" unique_id=606711113 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.89124125, 0, 0.12525585, 0, 0.9, 0, -0.12525585, 0, -0.89124125, 45, -0.35, -71.25)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -8155,6 +8291,7 @@ mesh = SubResource("BoxMesh_gb72l")
 shape = SubResource("BoxShape3D_0p38i")
 
 [node name="RockBankA120" type="Node3D" parent="Geometry/Boundaries" unique_id=823566482 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.07115164, 0, 1.0175153, 0, 1.02, 0, -1.0175153, 0, 0.07115164, 45, -0.35, -56.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -8217,6 +8354,7 @@ mesh = SubResource("BoxMesh_gekvy")
 shape = SubResource("BoxShape3D_eas7q")
 
 [node name="RockBankA121" type="Node3D" parent="Geometry/Boundaries" unique_id=2146592027 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(0.071151696, 0, -1.0175153, 0, 1.02, 0, 1.0175153, 0, 0.071151696, 49.25, -0.35, -63)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -8248,6 +8386,7 @@ mesh = SubResource("BoxMesh_8tmms")
 shape = SubResource("BoxShape3D_f38pl")
 
 [node name="RockBankA122" type="Node3D" parent="Geometry/Boundaries" unique_id=2065851433 instance=ExtResource("3_x1yrk")]
+visible = false
 transform = Transform3D(-0.89124125, 0, -0.1252558, 0, 0.9, 0, 0.1252558, 0, -0.89124125, 47, -0.35, -58.75)
 script = ExtResource("4_hgblb")
 model_scene = ExtResource("5_wuc8b")
@@ -8581,3 +8720,5 @@ size = 185.0
 [node name="BulletPool" type="Node3D" parent="." unique_id=87257846 groups=["bullet_pool"]]
 script = ExtResource("26_lun6x")
 bullet_scene = ExtResource("27_gvmvw")
+
+[node name="RiverbankDressing" parent="Geometry" instance=ExtResource("RB_Dressing")]

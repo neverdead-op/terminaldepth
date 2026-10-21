@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3]
+[ext_resource type="Script" path="res://scripts/riverbank_module.gd" id="1"]
+[ext_resource type="PackedScene" path="res://assets/environment/riverbank/tripo/v2/RB02_PIER_SECTION_4M/SM_RB_PIER_SECTION_4M_A.glb" id="2"]
+[node name="RB_pier_section_4m" type="Node3D"]
+script = ExtResource("1")
+model_scene = ExtResource("2")
+target_size = Vector3(4.0, 2.0, 4.0)
+solid = false

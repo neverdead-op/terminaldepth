@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3]
+[ext_resource type="Script" path="res://scripts/riverbank_module.gd" id="1"]
+[ext_resource type="PackedScene" path="res://assets/environment/riverbank/tripo/v2/RB02_ROOF_SEGMENT_4M_VARIANT_B/SM_RB_ROOF_SEGMENT_4M_B.glb" id="2"]
+[node name="RB_roof_segment_4m_variant_b" type="Node3D"]
+script = ExtResource("1")
+model_scene = ExtResource("2")
+target_size = Vector3(4.0, 3.0, 4.0)
+solid = false
